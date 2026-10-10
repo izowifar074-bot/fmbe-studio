@@ -1,0 +1,223 @@
+{
+  "report_schema": "ak47_fmbe_ai_report",
+  "report_version": 1,
+  "compiled_date": "2026-10-10",
+  "runtime": "Minecraft Bedrock / NetEase; exact game build unknown",
+  "mode": "single_player_pure_commands",
+  "baseline_source": "AK47_命令提取.txt",
+  "baseline_status": "user_confirmed_normal_run_aim_and_fire; exact full lifecycle coverage unknown",
+  "reload_source": "AK47_C23_reload.mccmd.json",
+  "reload_status": "candidate_not_ingame_verified_in_available_evidence",
+  "model": {
+    "foxes": 75,
+    "parts": 75,
+    "nonuniform_scale_parts": 69,
+    "uniform_scale_parts": 6,
+    "materials": {
+      "black_concrete": 40,
+      "gray_concrete": 28,
+      "acacia_planks": 7
+    },
+    "id_formula": "a+5*b+25*c",
+    "grid": [
+      "x=0.5+2*a",
+      "y=100+2*c",
+      "z=0.5+2*b"
+    ],
+    "index_ranges": {
+      "a": [
+        0,
+        4
+      ],
+      "b": [
+        0,
+        4
+      ],
+      "c": [
+        0,
+        2
+      ]
+    },
+    "base_model_offset": [
+      0.66,
+      -0.174,
+      0.245
+    ]
+  },
+  "tags": {
+    "gun_player": "k47p",
+    "gun_fox": "k47f",
+    "initialize": "初始化",
+    "normal": "testa",
+    "run": "testb",
+    "aim": "testc"
+  },
+  "render": {
+    "main_driver": {
+      "world_block": "04-02",
+      "coordinate": [
+        -4,
+        -59,
+        5
+      ],
+      "animation": "animation.player.sleeping",
+      "controller": "controller.animation.fox.move"
+    },
+    "root_driver": {
+      "world_block": "04-13",
+      "coordinate": [
+        -4,
+        -48,
+        5
+      ],
+      "animation": "animation.minecart.move.v1.0",
+      "controller": "k47u"
+    },
+    "old_sampler": "04-18 k47e return 0",
+    "mode_writer": "04-19 k47q v.k64=1",
+    "correction": "+(1-q.frame_alpha)*sampled_entity_delta",
+    "delta_sampling": "alpha_wrap_heuristic_with_warmup",
+    "warmup_wrap_count": 3,
+    "delta_reject_L1_gt": 3,
+    "follow_distance": 2,
+    "follow_every_tick": true
+  },
+  "pose": {
+    "target_variable": "v.k90",
+    "normal": 0,
+    "run": 1,
+    "aim": 2,
+    "transition_seconds": 0.22,
+    "easing": "u*u*(3-2*u)",
+    "run_major_angle_degrees": 75,
+    "pivot_forward_after_run_shift": 0.45,
+    "primary_sway_hz": 2.2
+  },
+  "fire": {
+    "trigger": "snowball",
+    "branch_factor": 2,
+    "branch_depth": 9,
+    "max_terminal_runs": 512,
+    "step_blocks": 0.125,
+    "nominal_max_distance": 64,
+    "damage": 11,
+    "exclude_entity_types": [
+      "fox",
+      "player",
+      "snowball"
+    ],
+    "auxiliary_entities_required": 0
+  },
+  "world_blocks": {
+    "total": 109,
+    "impulse": 3,
+    "repeating": 8,
+    "chain": 98,
+    "delay_ticks": 0,
+    "groups": [
+      {
+        "id": "01",
+        "title": "重新召唤与设置狐狸",
+        "count": 33
+      },
+      {
+        "id": "02",
+        "title": "持枪与动作检测",
+        "count": 20
+      },
+      {
+        "id": "03",
+        "title": "跟随",
+        "count": 1
+      },
+      {
+        "id": "04",
+        "title": "渲染与初始化",
+        "count": 21
+      },
+      {
+        "id": "05",
+        "title": "常态",
+        "count": 2
+      },
+      {
+        "id": "06",
+        "title": "机瞄",
+        "count": 2
+      },
+      {
+        "id": "07",
+        "title": "跑动",
+        "count": 2
+      },
+      {
+        "id": "08",
+        "title": "开火",
+        "count": 12
+      },
+      {
+        "id": "09",
+        "title": "清理与声音",
+        "count": 14
+      },
+      {
+        "id": "10",
+        "title": "初始化按钮",
+        "count": 1
+      },
+      {
+        "id": "11",
+        "title": "清理实体按钮",
+        "count": 1
+      }
+    ],
+    "separate_structure_template_commands": 6
+  },
+  "reload": {
+    "duration_seconds": 2.6,
+    "magazine_ids": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      25,
+      26,
+      27,
+      28,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69
+    ],
+    "bolt_ids": [
+      3,
+      24
+    ],
+    "timer": "v.k110",
+    "active": "v.k111",
+    "signal_controller": "k47t23",
+    "adds_entities": false,
+    "ammo_logic": false,
+    "rollback_exact_baseline_match": true
+  },
+  "do_not_regress": [
+    "do_not_replace_root_when_only_editing_pose",
+    "do_not_install_multiple_persistent_full_pose_drivers",
+    "do_not_treat_disabled_command_block_as_uninstalled_animation",
+    "do_not_infer_cross_entity_shared_state_from_identical_variable_names",
+    "do_not_treat_old_handoff_unfixed_status_as_latest_state",
+    "do_not_claim_all_culling_or_lifecycle_edges_solved"
+  ]
+}

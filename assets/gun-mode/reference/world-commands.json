@@ -1,0 +1,4962 @@
+[
+  {
+    "position": [
+      -14,
+      -60,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute if entity @a[tag=换弹] run playanimation @e[type=fox,name=k47f,tag=k47f] animation.player.riding.arms none 0 \"((v.k111??0)==0)?{v.k110=0;v.k111=1;};return 1;\" k47t23",
+    "block": {
+      "name": "minecraft:repeating_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 1,
+      "tickDelay": 0,
+      "legacyCommandMode": 1,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -14,
+        -59,
+        5
+      ],
+      "mode": "repeat"
+    }
+  },
+  {
+    "position": [
+      -14,
+      -59,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a remove 换弹",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -14,
+        -58,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -12,
+      -60,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute if entity @a[tag=testa,tag=!休止] run playanimation @e[type=fox,name=k47f,tag=k47f] animation.player.riding.arms none 0 \"v.k90=0;return 1;\" k47t22",
+    "block": {
+      "name": "minecraft:repeating_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 1,
+      "tickDelay": 0,
+      "legacyCommandMode": 1,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -12,
+        -59,
+        5
+      ],
+      "mode": "repeat"
+    }
+  },
+  {
+    "position": [
+      -12,
+      -59,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a remove testa",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -12,
+        -58,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -10,
+      -60,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute if entity @a[tag=k47p,tag=testc,c=1,tag=!休止] run playanimation @e[type=fox,name=k47f,tag=k47f] animation.player.holding.zombie none 0 \"v.k90=2;return 1;\" k47t22",
+    "block": {
+      "name": "minecraft:repeating_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 1,
+      "tickDelay": 0,
+      "legacyCommandMode": 1,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -10,
+        -59,
+        5
+      ],
+      "mode": "repeat"
+    }
+  },
+  {
+    "position": [
+      -10,
+      -59,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a remove testc",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -10,
+        -58,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -8,
+      -60,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute if entity @a[tag=k47p,tag=testb,c=1,tag=!休止] run playanimation @e[type=fox,name=k47f,tag=k47f] animation.player.riding.arms.zombie none 0 \"v.k90=1;return 1;\" k47t22",
+    "block": {
+      "name": "minecraft:repeating_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 1,
+      "tickDelay": 0,
+      "legacyCommandMode": 1,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -8,
+        -59,
+        5
+      ],
+      "mode": "repeat"
+    }
+  },
+  {
+    "position": [
+      -8,
+      -59,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a remove testb",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -8,
+        -58,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -60,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a remove k47p",
+    "block": {
+      "name": "minecraft:repeating_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 1,
+      "tickDelay": 0,
+      "legacyCommandMode": 1,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -59,
+        5
+      ],
+      "mode": "repeat"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -59,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a[hasitem={item=snowball,location=slot.weapon.mainhand}] add k47p",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -58,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -58,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute unless entity @a[tag=k47p] as @a[hasitem={item=snowball}] at @s run tp @e[type=fox] ~~50~",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 75,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -57,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -57,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a remove 跳跃",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -56,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -56,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a remove 潜行",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -55,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -55,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a remove 移动",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -54,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -54,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute as @a[tag=k47p] at @s anchored feet unless entity @s[r=0.03] as @s at @s unless block ~ ~ ~ water 0 unless block ~ ~ ~ lava 0 unless entity @s[y=~1.82,dy=0] if entity @s[y=~1.80,dy=0] run tag @s add 移动",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -53,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -53,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute as @a[tag=k47p] at @s unless entity @s[y=~1.5,dy=0] if entity @s[y=~0.7,dy=0] run tag @s add 潜行",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -52,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -52,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute as @a[tag=k47p] at @s if block ~~-0.1~ air 0 run tag @s add 跳跃",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -51,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -51,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute as @a[tag=!移动] if entity @s[tag=移动2] run tag @s add 回调",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -50,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -50,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute as @a[tag=!潜行] if entity @s[tag=潜行2] run tag @s add 回调",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -49,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -49,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a[tag=!跳跃] remove 跳跃2",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -48,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -48,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute as @a[tag=移动,tag=!移动2] run tag @s[tag=!跳跃,tag=!回调] add testb",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -47,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -47,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a[tag=移动] add 移动2",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -46,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -46,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute as @a[tag=潜行,tag=!潜行2] run tag @s[tag=!跳跃] add testc",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -45,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -45,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a[tag=潜行] add 潜行2",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -44,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -44,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a[tag=回调] add testa",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -43,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -43,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a[tag=回调] remove 潜行2",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -42,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -42,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a[tag=回调] remove 移动2",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -41,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -6,
+      -41,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a remove 回调",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -6,
+        -40,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -5,
+      -60,
+      -5
+    ],
+    "dimension": 0,
+    "command": "tag @p add 初始化",
+    "block": {
+      "name": "minecraft:command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 3
+      },
+      "val": 3,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 0,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 0,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 1,
+      "lastSuccessCount": 1,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 3,
+      "facingName": "south",
+      "nextPosition": [
+        -5,
+        -60,
+        -4
+      ],
+      "mode": "impulse"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -60,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute as @a[tag=初始化] run testfor @s",
+    "block": {
+      "name": "minecraft:repeating_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 1,
+      "tickDelay": 0,
+      "legacyCommandMode": 1,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -59,
+        5
+      ],
+      "mode": "repeat"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -59,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute if entity @a[tag=k47p,tag=初始化,c=1] run playanimation @e[type=fox,name=k47f,tag=k47f] animation.player.sleeping none 0 \"v.k44=v.k41+5*v.k42+25*v.k43;v.k3=0;v.k4=0;v.k5=1;v.k6=1;v.k7=0;v.k8=0;v.k9=0;v.k10=1;v.k11=0;(v.k44<37)?{(v.k44<18)?{(v.k44<9)?{(v.k44<4)?{(v.k44<2)?{(v.k44<1)?{v.k0=0.595;v.k1=-0.174;v.k2=0.245;v.k12=0.076;v.k13=2.250730875446;}:{v.k0=0.577;v.k1=-0.111;v.k2=0.245;v.k12=0.058;v.k13=2.421170990558;};}:{(v.k44<3)?{v.k0=0.4;v.k1=(-0.328/2);v.k2=0.245;v.k12=0.071;v.k13=1;}:{v.k0=0.734;v.k1=-0.117;v.k2=0.298;v.k3=1;v.k5=0;v.k6=0;v.k7=1;v.k10=0;v.k11=1;v.k12=0.013;v.k13=2.353393621658;};};}:{(v.k44<6)?{(v.k44<5)?{v.k0=0.031;v.k1=-0.222;v.k2=0.224;v.k4=1;v.k5=0;v.k6=0;v.k8=1;v.k9=1;v.k10=0;v.k12=0.021;v.k13=2.992052966172;}:{v.k0=0.031;v.k1=-0.222;v.k2=0.245;v.k4=1;v.k5=0;v.k6=0;v.k8=1;v.k9=1;v.k10=0;v.k12=0.021;v.k13=2.992052966172;};}:{(v.k44<7)?{v.k0=0.031;v.k1=-0.222;v.k2=0.266;v.k4=1;v.k5=0;v.k6=0;v.k8=1;v.k9=1;v.k10=0;v.k12=0.021;v.k13=2.992052966172;}:{(v.k44<8)?{v.k0=0.475;v.k1=-0.221;v.k2=0.245;v.k3=0.258819045103;v.k5=0.965925826289;v.k6=0.965925826289;v.k8=-0.258819045103;v.k12=0.032;v.k13=1.391941090708;}:{v.k0=0.418;v.k1=-0.4175;v.k2=0.245;v.k3=(1.92304789529/2);v.k5=-0.274721127882;v.k6=-0.274721127882;v.k8=(-1.92304789529/2);v.k12=0.058;v.k13=(1.227284639441/2);};};};};}:{(v.k44<13)?{(v.k44<11)?{(v.k44<10)?{v.k0=0.515;v.k1=-0.2745;v.k2=0.245;v.k3=0.997833411043;v.k5=0.065791213751;v.k6=0.065791213751;v.k8=-0.997833411043;v.k12=0.011;v.k13=2.879355988601;}:{v.k0=0.5715;v.k1=-0.32;v.k2=0.245;v.k12=0.011;v.k13=3.118857599711;};}:{(v.k44<12)?{v.k0=(1.283/2);v.k1=-0.289;v.k2=0.245;v.k3=-0.882746759342;v.k5=0.469849080951;v.k6=0.469849080951;v.k8=0.882746759342;v.k12=0.011;v.k13=2.526861150267;}:{v.k0=0.65;v.k1=-0.239;v.k2=0.245;v.k4=0.984807753012;v.k5=(0.347296355334/2);v.k6=0;v.k7=(-0.347296355334/2);v.k8=0.984807753012;v.k9=1;v.k10=0;v.k12=0.025;v.k13=(2.77128129211/2);};};}:{(v.k44<15)?{(v.k44<14)?{v.k0=0.728;v.k1=-0.242;v.k2=0.245;v.k12=0.045;v.k13=1.831817555205;}:{v.k0=0.728;v.k1=-0.267;v.k2=0.245;v.k12=0.039;v.k13=1.894661866863;};}:{(v.k44<16)?{v.k0=0.7295585;v.k1=-0.3004619;v.k2=0.245;v.k3=-0.09294986035;v.k5=0.995670790704;v.k6=0.995670790704;v.k8=0.09294986035;v.k12=0.039;v.k13=1.894661866863;}:{(v.k44<17)?{v.k0=0.7342206;v.k1=-0.3336342;v.k2=0.245;v.k3=-0.185094923616;v.k5=(1.965441293197/2);v.k6=(1.965441293197/2);v.k8=0.185094923616;v.k12=0.039;v.k13=1.894661866863;}:{v.k0=0.7419458;v.k1=-0.3662294;v.k2=0.245;v.k3=-0.275637355817;v.k5=0.961261695938;v.k6=0.961261695938;v.k8=0.275637355817;v.k12=0.039;v.k13=1.894661866863;};};};};};}:{(v.k44<27)?{(v.k44<22)?{(v.k44<20)?{(v.k44<19)?{v.k0=0.7526673;v.k1=-0.3979656;v.k2=0.245;v.k3=-0.363793204411;v.k5=0.931479739138;v.k6=0.931479739138;v.k8=0.363793204411;v.k12=0.039;v.k13=1.894661866863;}:{v.k0=0.7662922;v.k1=-0.4285677;v.k2=0.245;v.k3=-0.44879918072;v.k5=(1.787265280125/2);v.k6=(1.787265280125/2);v.k8=0.44879918072;v.k12=0.039;v.k13=1.894661866863;};}:{(v.k44<21)?{v.k0=0.565;v.k1=-0.08;v.k2=0.245;v.k12=0.014;v.k13=4.511889056387;}:{v.k0=0.597;v.k1=-0.205;v.k2=0.204;v.k12=0.009;v.k13=6.018490028423;};};}:{(v.k44<24)?{(v.k44<23)?{v.k0=0.597;v.k1=-0.205;v.k2=0.286;v.k12=0.009;v.k13=6.018490028423;}:{v.k0=0.558;v.k1=-0.171;v.k2=0.288;v.k3=-0.121869343405;v.k5=(1.985092303283/2);v.k6=(1.985092303283/2);v.k8=0.121869343405;v.k12=0.008;v.k13=4.344536799246;};}:{(v.k44<25)?{v.k0=0.731;v.k1=-0.117;v.k2=0.334;v.k12=0.014;v.k13=1.511857892037;}:{(v.k44<26)?{v.k0=0.7827027;v.k1=-0.4577709;v.k2=0.245;v.k3=(-1.059838528466/2);v.k5=0.848048096156;v.k6=0.848048096156;v.k8=(1.059838528466/2);v.k12=0.039;v.k13=1.894661866863;}:{v.k0=0.8017565;v.k1=-0.4853224;v.k2=0.245;v.k3=(-1.212902169872/2);v.k5=0.795120796848;v.k6=0.795120796848;v.k8=(1.212902169872/2);v.k12=0.039;v.k13=1.894661866863;};};};};}:{(v.k44<32)?{(v.k44<29)?{(v.k44<28)?{v.k0=0.8232888;v.k1=-0.5109835;v.k2=0.245;v.k3=-0.677731999574;v.k5=0.735309007666;v.k6=0.735309007666;v.k8=0.677731999574;v.k12=0.039;v.k13=1.894661866863;}:{v.k0=0.847113;v.k1=-0.5345321;v.k2=0.245;v.k3=-0.743144825477;v.k5=0.669130606359;v.k6=0.669130606359;v.k8=0.743144825477;v.k12=0.039;v.k13=1.894661866863;};}:{(v.k44<30)?{v.k0=0.785;v.k1=-0.171;v.k2=0.245;v.k12=0.08;v.k13=0.460977222865;}:{(v.k44<31)?{v.k0=1.028;v.k1=-0.171;v.k2=0.245;v.k12=0.08;v.k13=0.460977222865;}:{v.k0=0.804;v.k1=-0.095;v.k2=0.245;v.k12=0.048;v.k13=0.540061724867;};};};}:{(v.k44<34)?{(v.k44<33)?{v.k0=0.993;v.k1=-0.095;v.k2=0.245;v.k12=0.048;v.k13=0.540061724867;}:{v.k0=1.207;v.k1=-0.151;v.k2=0.245;v.k12=0.023;v.k13=4.196271637081;};}:{(v.k44<35)?{v.k0=1.128;v.k1=-0.126;v.k2=0.245;v.k4=1;v.k5=0;v.k6=0;v.k8=1;v.k9=1;v.k10=0;v.k12=0.032;v.k13=1.802775637732;}:{(v.k44<36)?{v.k0=1.111;v.k1=-0.096;v.k2=0.245;v.k3=(1.168609452981/2);v.k5=0.811534340987;v.k6=0.811534340987;v.k8=(-1.168609452981/2);v.k12=0.026;v.k13=1.539376747009;}:{v.k0=1.299;v.k1=-0.151;v.k2=0.245;v.k12=0.036;v.k13=0.763762615826;};};};};};};}:{(v.k44<56)?{(v.k44<46)?{(v.k44<41)?{(v.k44<39)?{(v.k44<38)?{v.k0=1.443;v.k1=-0.151;v.k2=0.245;v.k12=0.022;v.k13=(0.522232967867/2);}:{v.k0=1.316;v.k1=-0.107;v.k2=0.245;v.k4=1;v.k5=0;v.k6=0;v.k8=1;v.k9=1;v.k10=0;v.k12=0.027;v.k13=1.972026594367;};}:{(v.k44<40)?{v.k0=1.316;v.k1=-0.031;v.k2=0.218;v.k4=1;v.k5=0;v.k6=0;v.k8=1;v.k9=1;v.k10=0;v.k12=0.009;v.k13=2.494438257849;}:{v.k0=1.316;v.k1=-0.031;v.k2=0.272;v.k4=1;v.k5=0;v.k6=0;v.k8=1;v.k9=1;v.k10=0;v.k12=0.009;v.k13=2.494438257849;};};}:{(v.k44<43)?{(v.k44<42)?{v.k0=1.316;v.k1=-0.003;v.k2=0.245;v.k3=1;v.k5=0;v.k6=0;v.k7=1;v.k10=0;v.k11=1;v.k12=0.009;v.k13=(5.291502622129/2);}:{v.k0=0.758;v.k1=-0.058;v.k2=0.245;v.k12=0.026;v.k13=(3.328201177351/2);};}:{(v.k44<44)?{v.k0=0.712;v.k1=-0.026;v.k2=0.227;v.k12=0.016;v.k13=1;}:{(v.k44<45)?{v.k0=0.712;v.k1=-0.026;v.k2=0.263;v.k12=0.016;v.k13=1;}:{v.k0=0.432;v.k1=(-0.328/2);v.k2=0.2865;v.k12=0.007;v.k13=1;};};};};}:{(v.k44<51)?{(v.k44<48)?{(v.k44<47)?{v.k0=0.463;v.k1=(-0.328/2);v.k2=0.2865;v.k12=0.007;v.k13=1;}:{v.k0=0.753;v.k1=(-0.328/2);v.k2=0.2865;v.k12=0.007;v.k13=1;};}:{(v.k44<49)?{v.k0=0.5815;v.k1=-0.2495;v.k2=0.245;v.k3=0.983060298916;v.k5=0.183282428768;v.k6=0.183282428768;v.k8=-0.983060298916;v.k12=0.009;v.k13=2.58234819926;}:{(v.k44<50)?{v.k0=0.5795;v.k1=-0.288;v.k2=0.245;v.k3=0.768221279511;v.k5=(-1.280368799536/2);v.k6=(-1.280368799536/2);v.k8=-0.768221279511;v.k12=0.009;v.k13=1.613508943611;}:{v.k0=0.353;v.k1=-0.168;v.k2=0.245;v.k3=-0.087155742748;v.k5=0.996194698092;v.k6=0.996194698092;v.k8=0.087155742748;v.k12=0.061;v.k13=1.384930607245;};};};}:{(v.k44<53)?{(v.k44<52)?{v.k0=0.2;v.k1=-0.165;v.k2=0.245;v.k12=0.06;v.k13=2.309401076759;}:{v.k0=0.185;v.k1=-0.222;v.k2=0.245;v.k12=0.06;v.k13=2.198484326379;};}:{(v.k44<54)?{v.k0=0.15;v.k1=-0.279;v.k2=0.245;v.k12=0.06;v.k13=1.914854215513;}:{(v.k44<55)?{v.k0=0.4455;v.k1=-0.319;v.k2=0.245;v.k3=0.962083357855;v.k5=-0.272755591213;v.k6=-0.272755591213;v.k8=-0.962083357855;v.k12=0.055;v.k13=1.914754672157;}:{v.k0=0.905;v.k1=-0.171;v.k2=0.245;v.k12=0.074;v.k13=1.782042557201;};};};};};}:{(v.k44<65)?{(v.k44<60)?{(v.k44<58)?{(v.k44<57)?{v.k0=0.898;v.k1=-0.095;v.k2=0.245;v.k12=0.044;v.k13=2.01133153544;}:{v.k0=0.8538759;v.k1=-0.5404701;v.k2=0.245;v.k3=-0.759639127639;v.k5=0.650344828349;v.k6=0.650344828349;v.k8=0.759639127639;v.k12=0.043;v.k13=1.855225179086;};}:{(v.k44<59)?{v.k0=0.6977936;v.k1=-0.3321591;v.k2=0.223;v.k3=0.986342748607;v.k5=(0.329411488991/2);v.k6=(0.329411488991/2);v.k8=-0.986342748607;v.k12=0.005;v.k13=4.556573273854;}:{v.k0=0.7278098;v.k1=-0.4306148;v.k2=0.223;v.k3=0.910469268407;v.k5=0.413576729624;v.k6=0.413576729624;v.k8=-0.910469268407;v.k12=0.005;v.k13=4.556573273854;};};}:{(v.k44<62)?{(v.k44<61)?{v.k0=0.7822086;v.k1=-0.5179949;v.k2=0.223;v.k3=0.772962888119;v.k5=0.63445123815;v.k6=0.63445123815;v.k8=-0.772962888119;v.k12=0.005;v.k13=4.556573273854;}:{v.k0=0.7740745;v.k1=-0.3194213;v.k2=0.223;v.k3=0.986342748607;v.k5=(0.329411488991/2);v.k6=(0.329411488991/2);v.k8=-0.986342748607;v.k12=0.005;v.k13=(8.173992904328/2);};}:{(v.k44<63)?{v.k0=0.7982229;v.k1=-0.39863;v.k2=0.223;v.k3=0.910469268407;v.k5=0.413576729624;v.k6=0.413576729624;v.k8=-0.910469268407;v.k12=0.005;v.k13=(8.173992904328/2);}:{(v.k44<(192/3))?{v.k0=0.8419874;v.k1=-0.4689282;v.k2=0.223;v.k3=0.772962888119;v.k5=0.63445123815;v.k6=0.63445123815;v.k8=-0.772962888119;v.k12=0.005;v.k13=(8.173992904328/2);}:{v.k0=0.6977936;v.k1=-0.3321591;v.k2=0.267;v.k3=0.986342748607;v.k5=(0.329411488991/2);v.k6=(0.329411488991/2);v.k8=-0.986342748607;v.k12=0.005;v.k13=4.556573273854;};};};};}:{(v.k44<70)?{(v.k44<67)?{(v.k44<66)?{v.k0=0.7278098;v.k1=-0.4306148;v.k2=0.267;v.k3=0.910469268407;v.k5=0.413576729624;v.k6=0.413576729624;v.k8=-0.910469268407;v.k12=0.005;v.k13=4.556573273854;}:{v.k0=0.7822086;v.k1=-0.5179949;v.k2=0.267;v.k3=0.772962888119;v.k5=0.63445123815;v.k6=0.63445123815;v.k8=-0.772962888119;v.k12=0.005;v.k13=4.556573273854;};}:{(v.k44<68)?{v.k0=0.7740745;v.k1=-0.3194213;v.k2=0.267;v.k3=0.986342748607;v.k5=(0.329411488991/2);v.k6=(0.329411488991/2);v.k8=-0.986342748607;v.k12=0.005;v.k13=(8.173992904328/2);}:{(v.k44<69)?{v.k0=0.7982229;v.k1=-0.39863;v.k2=0.267;v.k3=0.910469268407;v.k5=0.413576729624;v.k6=0.413576729624;v.k8=-0.910469268407;v.k12=0.005;v.k13=(8.173992904328/2);}:{v.k0=0.8419874;v.k1=-0.4689282;v.k2=0.267;v.k3=0.772962888119;v.k5=0.63445123815;v.k6=0.63445123815;v.k8=-0.772962888119;v.k12=0.005;v.k13=(8.173992904328/2);};};};}:{(v.k44<72)?{(v.k44<71)?{v.k0=1.055;v.k1=-0.091;v.k2=0.245;v.k12=0.019;v.k13=2.762531257265;}:{v.k0=1.193;v.k1=-0.188;v.k2=0.245;v.k12=0.008;v.k13=(19.297020495403/3);};}:{(v.k44<73)?{v.k0=1.416;v.k1=-0.151;v.k2=0.245;v.k12=0.033;v.k13=(2.534608929252/2);}:{(v.k44<74)?{v.k0=1.316;v.k1=-0.035;v.k2=0.245;v.k4=1;v.k5=0;v.k6=0;v.k8=1;v.k9=1;v.k10=0;v.k12=0.006;v.k13=2.309401076759;}:{v.k0=0.744;v.k1=-0.039;v.k2=0.245;v.k12=0.01;v.k13=3;};};};};};};};v.k110=(v.k110??2.6);v.k111=(v.k111??0);(v.k111==1)?{v.k110=math.min(2.6,v.k110+math.max(0,q.delta_time));(v.k110>=2.6)?{v.k111=0;};};t.k80=(v.k111==1)?v.k110:2.6;t.k81=math.max(0,math.min(1,t.k80/0.28));t.k81=t.k81*t.k81*(3-2*t.k81);t.k82=math.max(0,math.min(1,(t.k80-2.18)/0.42));t.k82=t.k82*t.k82*(3-2*t.k82);t.k81=t.k81*(1-t.k82);t.k82=math.max(0,math.min(1,(t.k80-0.35)/0.47));t.k82=t.k82*t.k82*(3-2*t.k82);t.k83=math.max(0,math.min(1,(t.k80-1.18)/0.60));t.k83=t.k83*t.k83*(3-2*t.k83);t.k84=t.k82-t.k83;t.k85=math.max(0,math.min(1,(t.k80-1.90)/0.14));t.k85=t.k85*t.k85*(3-2*t.k85);t.k86=math.max(0,math.min(1,(t.k80-2.04)/0.10));t.k86=t.k86*t.k86*(3-2*t.k86);t.k87=t.k85-t.k86;v.k90=(v.k90??0);v.k91=(v.k91??0);v.k92=(v.k92??0);v.k93=(v.k93??1);v.k94=(v.k94??0);v.k95=(v.k95??0);v.k96=(v.k96??0);v.k97=(v.k97??0);(v.k90!=v.k96)?{v.k94=v.k91;v.k95=v.k92;v.k93=0;v.k96=v.k90;};t.k50=math.max(0,q.delta_time);v.k93=math.min(1,v.k93+t.k50/0.22);v.k97=math.mod(v.k97+t.k50,5);t.k51=v.k93*v.k93*(3-2*v.k93);v.k91=v.k94+((v.k90==1)-v.k94)*t.k51;v.k92=v.k95+((v.k90==2)-v.k95)*t.k51;((v.k44>=13&&v.k44<=19)||(v.k44>=25&&v.k44<=28)||(v.k44>=57&&v.k44<=69))?{t.k88=math.cos(-18*t.k84);t.k89=math.sin(-18*t.k84);t.k90=v.k0-0.728;t.k91=v.k1+0.242;v.k0=t.k88*t.k90-t.k89*t.k91+0.728-0.07*t.k84;v.k1=t.k89*t.k90+t.k88*t.k91-0.242-0.52*t.k84;t.k90=v.k3;t.k91=v.k6;v.k3=t.k88*t.k90-t.k89*t.k91;v.k6=t.k89*t.k90+t.k88*t.k91;t.k90=v.k4;t.k91=v.k7;v.k4=t.k88*t.k90-t.k89*t.k91;v.k7=t.k89*t.k90+t.k88*t.k91;t.k90=v.k5;t.k91=v.k8;v.k5=t.k88*t.k90-t.k89*t.k91;v.k8=t.k89*t.k90+t.k88*t.k91;};(v.k44==3||v.k44==24)?{v.k0=v.k0-0.075*t.k87;};t.k98=v.k91*(1-t.k81);t.k99=v.k92*(1-t.k81);t.k52=v.k97*792;t.k53=math.sin(t.k52);t.k54=math.cos(2*t.k52);t.k55=math.sin(75*t.k98+18*t.k81);t.k56=math.cos(75*t.k98+18*t.k81);t.k57=math.sin((-6+0.45*t.k54)*t.k98-8*t.k81);t.k58=math.cos((-6+0.45*t.k54)*t.k98-8*t.k81);t.k59=math.sin((-12+0.8*t.k53)*t.k98-24*t.k81);t.k60=math.cos((-12+0.8*t.k53)*t.k98-24*t.k81);t.k61=t.k58*t.k56;t.k62=-t.k57;t.k63=t.k58*t.k55;t.k64=t.k60*t.k57*t.k56-t.k59*t.k55;t.k65=t.k60*t.k58;t.k66=t.k60*t.k57*t.k55+t.k59*t.k56;t.k67=-t.k59*t.k57*t.k56-t.k60*t.k55;t.k68=-t.k59*t.k58;t.k69=-t.k59*t.k57*t.k55+t.k60*t.k56;t.k70=v.k0-0.66;t.k71=v.k1+0.174;t.k72=v.k2-0.245;v.k0=t.k61*t.k70+t.k62*t.k71+t.k63*t.k72+0.66-0.21*t.k98+0.03*t.k99;v.k1=t.k64*t.k70+t.k65*t.k71+t.k66*t.k72-0.174-0.116*t.k98+0.025*t.k99+0.006*(t.k54-1)*t.k98+0.15*t.k81;v.k2=t.k67*t.k70+t.k68*t.k71+t.k69*t.k72+0.245-0.125*t.k98-0.245*t.k99+0.010*t.k53*t.k98-0.07*t.k81;t.k70=v.k3;t.k71=v.k6;t.k72=v.k9;v.k3=t.k61*t.k70+t.k62*t.k71+t.k63*t.k72;v.k6=t.k64*t.k70+t.k65*t.k71+t.k66*t.k72;v.k9=t.k67*t.k70+t.k68*t.k71+t.k69*t.k72;t.k70=v.k4;t.k71=v.k7;t.k72=v.k10;v.k4=t.k61*t.k70+t.k62*t.k71+t.k63*t.k72;v.k7=t.k64*t.k70+t.k65*t.k71+t.k66*t.k72;v.k10=t.k67*t.k70+t.k68*t.k71+t.k69*t.k72;t.k70=v.k5;t.k71=v.k8;t.k72=v.k11;v.k5=t.k61*t.k70+t.k62*t.k71+t.k63*t.k72;v.k8=t.k64*t.k70+t.k65*t.k71+t.k66*t.k72;v.k11=t.k67*t.k70+t.k68*t.k71+t.k69*t.k72;t.k0=q.camera_rotation(0);t.k1=q.camera_rotation(1);t.k2=math.sin(t.k0);t.k3=math.cos(t.k0);t.k4=math.sin(t.k1);t.k5=math.cos(t.k1);t.k6=-t.k4*t.k3;t.k7=-t.k2;t.k8=t.k5*t.k3;t.k9=-t.k4*t.k2;t.k10=t.k3;t.k11=t.k5*t.k2;t.k12=-t.k5;t.k13=-t.k4;v.k20=t.k6*v.k3+t.k9*v.k6+t.k12*v.k9;v.k21=t.k6*v.k4+t.k9*v.k7+t.k12*v.k10;v.k22=t.k6*v.k5+t.k9*v.k8+t.k12*v.k11;v.k23=t.k7*v.k3+t.k10*v.k6;v.k24=t.k7*v.k4+t.k10*v.k7;v.k25=t.k7*v.k5+t.k10*v.k8;v.k26=t.k8*v.k3+t.k11*v.k6+t.k13*v.k9;v.k27=t.k8*v.k4+t.k11*v.k7+t.k13*v.k10;v.k28=t.k8*v.k5+t.k11*v.k8+t.k13*v.k11;return 0;\" controller.animation.fox.move",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -58,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -58,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47x0] animation.player.attack.rotations none 0 \"v.k41=0;v.attack_body_rot_y=math.atan2(-v.k24,math.sqrt(v.k23*v.k23+v.k25*v.k25));return 0;\" k47r",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -57,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -57,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47x1] animation.player.attack.rotations none 0 \"v.k41=1;v.attack_body_rot_y=math.atan2(-v.k24,math.sqrt(v.k23*v.k23+v.k25*v.k25));return 0;\" k47r",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -56,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -56,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47x2] animation.player.attack.rotations none 0 \"v.k41=2;v.attack_body_rot_y=math.atan2(-v.k24,math.sqrt(v.k23*v.k23+v.k25*v.k25));return 0;\" k47r",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -55,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -55,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47x3] animation.player.attack.rotations none 0 \"v.k41=3;v.attack_body_rot_y=math.atan2(-v.k24,math.sqrt(v.k23*v.k23+v.k25*v.k25));return 0;\" k47r",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -54,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -54,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47x4] animation.player.attack.rotations none 0 \"v.k41=4;v.attack_body_rot_y=math.atan2(-v.k24,math.sqrt(v.k23*v.k23+v.k25*v.k25));return 0;\" k47r",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -53,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -53,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47z0] animation.creeper.swelling none 0 \"v.k42=0;v.swelling_scale1=math.sqrt(32/7*math.max(v.k12,0.000001));v.k33=v.swelling_scale1;v.swelling_scale2=math.max(v.k13,0.000001)*v.k33;return 0;\" k47s",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -52,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -52,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47z1] animation.creeper.swelling none 0 \"v.k42=1;v.swelling_scale1=math.sqrt(32/7*math.max(v.k12,0.000001));v.k33=v.swelling_scale1;v.swelling_scale2=math.max(v.k13,0.000001)*v.k33;return 0;\" k47s",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -51,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -51,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47z2] animation.creeper.swelling none 0 \"v.k42=2;v.swelling_scale1=math.sqrt(32/7*math.max(v.k12,0.000001));v.k33=v.swelling_scale1;v.swelling_scale2=math.max(v.k13,0.000001)*v.k33;return 0;\" k47s",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -50,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -50,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47z3] animation.creeper.swelling none 0 \"v.k42=3;v.swelling_scale1=math.sqrt(32/7*math.max(v.k12,0.000001));v.k33=v.swelling_scale1;v.swelling_scale2=math.max(v.k13,0.000001)*v.k33;return 0;\" k47s",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -49,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -49,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47z4] animation.creeper.swelling none 0 \"v.k42=4;v.swelling_scale1=math.sqrt(32/7*math.max(v.k12,0.000001));v.k33=v.swelling_scale1;v.swelling_scale2=math.max(v.k13,0.000001)*v.k33;return 0;\" k47s",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -48,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -48,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f] animation.minecart.move.v1.0 none 0 \"t.k0=q.frame_alpha;v.k73=(v.k73??t.k0);v.k74=(v.k74??0);v.k75=(v.k75??q.position(0));v.k76=(v.k76??q.position(1));v.k77=(v.k77??q.position(2));v.k70=(v.k70??0);v.k71=(v.k71??0);v.k72=(v.k72??0);(t.k0<v.k73)?{(v.k74<3)?{v.k74=v.k74+1;};v.k70=q.position(0)-v.k75;v.k71=q.position(1)-v.k76;v.k72=q.position(2)-v.k77;v.k75=q.position(0);v.k76=q.position(1);v.k77=q.position(2);(v.k74<3||math.abs(v.k70)+math.abs(v.k71)+math.abs(v.k72)>3)?{v.k70=0;v.k71=0;v.k72=0;};};v.k73=t.k0;t.k0=q.camera_rotation(0);t.k1=q.camera_rotation(1);t.k2=math.sin(t.k0);t.k3=math.cos(t.k0);t.k4=math.sin(t.k1);t.k5=math.cos(t.k1);t.k6=-t.k4*t.k3;t.k7=-t.k2;t.k8=t.k5*t.k3;t.k9=-t.k4*t.k2;t.k10=t.k3;t.k11=t.k5*t.k2;t.k12=-t.k5;t.k13=-t.k4;t.k2=(v.k64==1)?(1-q.frame_alpha):((v.k64==2)?(0-q.frame_alpha):0);t.k14=q.rotation_to_camera(0);t.k15=q.rotation_to_camera(1);t.k16=q.distance_from_camera;t.k17=math.cos(t.k14);t.k18=math.sin(t.k14);t.k19=-math.sin(t.k15)*t.k17*t.k16+t.k6*v.k0+t.k9*v.k1+t.k12*v.k2-1+t.k2*v.k70;t.k20=-t.k18*t.k16+t.k7*v.k0+t.k10*v.k1-0.0078125+t.k2*v.k71;t.k21=math.cos(t.k15)*t.k17*t.k16+t.k8*v.k0+t.k11*v.k1+t.k13*v.k2+t.k2*v.k72;t.k22=math.cos(q.body_y_rotation);t.k23=math.sin(q.body_y_rotation);t.k24=16*q.model_scale;v.hurt=0;v.rail_rotation.z=0;v.rail_offset.x=t.k24*(t.k22*t.k19+t.k23*t.k21);v.rail_offset.y=q.model_scale*(18.5+16*t.k20);v.rail_offset.z=t.k24*(t.k23*t.k19-t.k22*t.k21);return 0;\" k47u",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -47,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -47,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47y0] animation.ender_dragon.neck_head_movement none 0 \"v.k43=0;t.k0=16/math.sqrt(32/7*math.max(v.k12,0.000001));t.k1=math.max(v.k13,0.000001);v.head_position_x=0;v.head_position_y=t.k0*10/7*t.k1*v.k12;v.head_position_z=-t.k0*16/7*v.k12;v.head_rotation_x=180;v.head_rotation_y=0;v.head_rotation_z=180;return 0;\" k47h",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -46,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -46,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47y1] animation.ender_dragon.neck_head_movement none 0 \"v.k43=1;t.k0=16/math.sqrt(32/7*math.max(v.k12,0.000001));t.k1=math.max(v.k13,0.000001);v.head_position_x=0;v.head_position_y=t.k0*10/7*t.k1*v.k12;v.head_position_z=-t.k0*16/7*v.k12;v.head_rotation_x=180;v.head_rotation_y=0;v.head_rotation_z=180;return 0;\" k47h",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -45,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -45,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47y2] animation.ender_dragon.neck_head_movement none 0 \"v.k43=2;t.k0=16/math.sqrt(32/7*math.max(v.k12,0.000001));t.k1=math.max(v.k13,0.000001);v.head_position_x=0;v.head_position_y=t.k0*10/7*t.k1*v.k12;v.head_position_z=-t.k0*16/7*v.k12;v.head_rotation_x=180;v.head_rotation_y=0;v.head_rotation_z=180;return 0;\" k47h",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -44,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -44,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f] animation.warden.move none 0 \"v.head_x_rot=0;v.head_z_rot=0;v.body_x_rot=(math.abs(v.k25)+math.abs(v.k23)>0.0000001)?math.atan2(v.k25,-v.k23):math.atan2(-v.k20,-v.k22);v.body_z_rot=(math.abs(v.k25)+math.abs(v.k23)>0.0000001)?math.atan2(-v.k21,v.k27):0;return 0;\" k47b",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -43,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -43,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f] animation.player.riding.arms none 0 \"return 0;\" k47e",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -42,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -42,
+      5
+    ],
+    "dimension": 0,
+    "command": "playanimation @e[type=fox,name=k47f,tag=k47f] animation.player.riding.arms none 0 \"v.k64=1;return 0;\" k47q",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -41,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -41,
+      5
+    ],
+    "dimension": 0,
+    "command": "scoreboard players set @a[tag=初始化] ammo 30",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 1,
+        "facing_direction": 1
+      },
+      "val": 9,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 0,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 1,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 285557,
+      "trackOutput": 1,
+      "conditional": true,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -40,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -4,
+      -40,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a remove 初始化",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -4,
+        -39,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      -3,
+      -60,
+      -5
+    ],
+    "dimension": 0,
+    "command": "kill @e",
+    "block": {
+      "name": "minecraft:command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 3
+      },
+      "val": 3,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 0,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 0,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 1,
+      "lastSuccessCount": 75,
+      "lastExecution": 71687,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 3,
+      "facingName": "south",
+      "nextPosition": [
+        -3,
+        -60,
+        -4
+      ],
+      "mode": "impulse"
+    }
+  },
+  {
+    "position": [
+      -2,
+      -60,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute as @a[tag=k47p,c=1,hasitem={item=snowball,location=slot.weapon.mainhand}] at @s anchored eyes positioned ^ ^ ^2 run tp @e[type=fox,tag=k47f] ~ ~ ~ 0 0",
+    "block": {
+      "name": "minecraft:repeating_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 1,
+      "tickDelay": 0,
+      "legacyCommandMode": 1,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292015,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        -2,
+        -59,
+        5
+      ],
+      "mode": "repeat"
+    }
+  },
+  {
+    "position": [
+      0,
+      -60,
+      5
+    ],
+    "dimension": 0,
+    "command": "kill @e[type=fox,name=k47f]",
+    "block": {
+      "name": "minecraft:command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 0,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 0,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 1,
+      "lastSuccessCount": 0,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -59,
+        5
+      ],
+      "mode": "impulse"
+    }
+  },
+  {
+    "position": [
+      0,
+      -59,
+      5
+    ],
+    "dimension": 0,
+    "command": "summon fox 0.5 100 0.5 0 0 minecraft:ageable_grow_up k47f",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -58,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -58,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute at @e[type=fox,name=k47f] run summon fox ~2 ~ ~ 0 0 minecraft:ageable_grow_up k47f",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -57,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -57,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute at @e[type=fox,name=k47f] run summon fox ~4 ~ ~ 0 0 minecraft:ageable_grow_up k47f",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 2,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -56,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -56,
+      5
+    ],
+    "dimension": 0,
+    "command": "summon fox 8.5 100 0.5 0 0 minecraft:ageable_grow_up k47f",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -55,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -55,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute at @e[type=fox,name=k47f] run summon fox ~ ~ ~2 0 0 minecraft:ageable_grow_up k47f",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 5,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -54,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -54,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute at @e[type=fox,name=k47f] run summon fox ~ ~ ~4 0 0 minecraft:ageable_grow_up k47f",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 10,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -53,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -53,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute at @e[type=fox,name=k47f,x=0,y=100,z=0,dx=8,dy=0,dz=0] run summon fox ~ ~ ~8 0 0 minecraft:ageable_grow_up k47f",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 5,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -52,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -52,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute at @e[type=fox,name=k47f] run summon fox ~ ~2 ~ 0 0 minecraft:ageable_grow_up k47f",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 25,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -51,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -51,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute at @e[type=fox,name=k47f,x=0,y=100,z=0,dx=8,dy=0,dz=8] run summon fox ~ ~4 ~ 0 0 minecraft:ageable_grow_up k47f",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 25,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -50,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -50,
+      5
+    ],
+    "dimension": 0,
+    "command": "effect @e[type=fox,name=k47f] resistance infinite 4 true",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 75,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -49,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -49,
+      5
+    ],
+    "dimension": 0,
+    "command": "effect @e[type=fox,name=k47f] instant_health infinite 4 true",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 75,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -48,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -48,
+      5
+    ],
+    "dimension": 0,
+    "command": "effect @e[type=fox,name=k47f] invisibility infinite 0 true",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 75,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -47,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -47,
+      5
+    ],
+    "dimension": 0,
+    "command": "effect @e[type=fox,name=k47f] slowness infinite 255 true",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 75,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -46,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -46,
+      5
+    ],
+    "dimension": 0,
+    "command": "replaceitem entity @e[type=fox,name=k47f] slot.weapon.mainhand 0 gray_concrete 1",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 75,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -45,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -45,
+      5
+    ],
+    "dimension": 0,
+    "command": "replaceitem entity @e[type=fox,name=k47f,x=0,y=100,z=0,dx=8,dy=2,dz=6] slot.weapon.mainhand 0 black_concrete 1",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 40,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -44,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -44,
+      5
+    ],
+    "dimension": 0,
+    "command": "replaceitem entity @e[type=fox,name=k47f,x=0,y=104,z=0,dx=8,dy=0,dz=0] slot.weapon.mainhand 0 acacia_planks 1",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 5,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -43,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -43,
+      5
+    ],
+    "dimension": 0,
+    "command": "replaceitem entity @e[type=fox,name=k47f,x=0,y=104,z=2,dx=2,dy=0,dz=0] slot.weapon.mainhand 0 acacia_planks 1",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 2,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -42,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -42,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @e[type=fox,name=k47f,x=0,y=100,z=0,dx=0,dy=4,dz=8] add k47x0",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -41,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -41,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @e[type=fox,name=k47f,x=2,y=100,z=0,dx=0,dy=4,dz=8] add k47x1",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -40,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -40,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @e[type=fox,name=k47f,x=4,y=100,z=0,dx=0,dy=4,dz=8] add k47x2",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -39,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -39,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @e[type=fox,name=k47f,x=6,y=100,z=0,dx=0,dy=4,dz=8] add k47x3",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -38,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -38,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @e[type=fox,name=k47f,x=8,y=100,z=0,dx=0,dy=4,dz=8] add k47x4",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -37,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -37,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @e[type=fox,name=k47f,x=0,y=100,z=0,dx=8,dy=4,dz=0] add k47z0",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -36,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -36,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @e[type=fox,name=k47f,x=0,y=100,z=2,dx=8,dy=4,dz=0] add k47z1",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -35,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -35,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @e[type=fox,name=k47f,x=0,y=100,z=4,dx=8,dy=4,dz=0] add k47z2",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -34,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -34,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @e[type=fox,name=k47f,x=0,y=100,z=6,dx=8,dy=4,dz=0] add k47z3",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -33,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -33,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @e[type=fox,name=k47f,x=0,y=100,z=8,dx=8,dy=4,dz=0] add k47z4",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -32,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -32,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @e[type=fox,name=k47f,x=0,y=100,z=0,dx=8,dy=0,dz=8] add k47y0",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -31,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -31,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @e[type=fox,name=k47f,x=0,y=102,z=0,dx=8,dy=0,dz=8] add k47y1",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -30,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -30,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @e[type=fox,name=k47f,x=0,y=104,z=0,dx=8,dy=0,dz=8] add k47y2",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -29,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -29,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @e[type=fox,name=k47f] add k47f",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 1,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -28,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      0,
+      -28,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute as @a[tag=k47p,c=1] at @s anchored eyes positioned ^ ^ ^2 run tp @e[type=fox,tag=k47f] ~ ~ ~ 0 0",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 75,
+      "lastExecution": 76804,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        0,
+        -27,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -60,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute as @a[tag=k47p,c=1,tag=!休止] at @s anchored eyes run tp @e[type=snowball] ^ ^ ^",
+    "block": {
+      "name": "minecraft:repeating_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 1,
+      "tickDelay": 0,
+      "legacyCommandMode": 1,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -59,
+        5
+      ],
+      "mode": "repeat"
+    }
+  },
+  {
+    "position": [
+      2,
+      -59,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute at @a[tag=k47p,c=1,tag=!休止] if entity @e[type=snowball] as @e[type=fox,tag=k47f,c=2] as @e[type=fox,tag=k47f,c=2] as @e[type=fox,tag=k47f,c=2] as @e[type=fox,tag=k47f,c=2] as @e[type=fox,tag=k47f,c=2] as @e[type=fox,tag=k47f,c=2] as @e[type=fox,tag=k47f,c=2] as @e[type=fox,tag=k47f,c=2] as @e[type=fox,tag=k47f,c=2] run execute as @e[type=snowball] at @s rotated as @a[tag=k47p,c=1] positioned ~-0.5 ~-0.5 ~-0.5 unless entity @e[type=!fox,type=!player,type=!snowball,dx=0,dy=0,dz=0] positioned ~0.5 ~0.5 ~0.5 run tp @s ^ ^ ^0.5 true",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -58,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -58,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute at @a[tag=k47p,c=1,tag=!休止] at @e[type=snowball] positioned ~-0.5 ~-0.5 ~-0.5 run damage @e[type=!fox,type=!player,type=!snowball,dx=0,dy=0,dz=0,c=1] 11 projectile entity @a[tag=k47p,c=1]",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -57,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -57,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute at @a[tag=k47p,c=1,tag=!休止] at @e[type=snowball] run particle minecraft:basic_crit_particle ~ ~ ~",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -56,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -56,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute if entity @e[type=snowball] run camerashake add @a[tag=k47p,tag=!休止] 0.1 0.3 rotational",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -55,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -55,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute if entity @e[type=snowball] run scoreboard players set test fire 5",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -54,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -54,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute if score test fire matches 1..6 run scoreboard players remove test fire 1",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -53,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -53,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute if score test fire matches 1..6 run tag @a[tag=k47p,tag=!潜行,tag=!休止] add 回调",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -52,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -52,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute if score test fire matches 1..6 run tag @a[tag=k47p,tag=!潜行,tag=!休止] add testa",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -51,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -51,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute if entity @e[type=snowball] as @a[tag=k47p,tag=!休止] at @s run playsound mob.zombie.woodbreak @s ~ ~ ~ 1 1",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -50,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -50,
+      5
+    ],
+    "dimension": 0,
+    "command": "stopsound @a[tag=k47p] random.bow",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -49,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -49,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute if entity @e[type=snowball] as @a[scores={ammo=1..30},tag=!休止] run scoreboard players remove @s ammo 1",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -48,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -48,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute if entity @e[type=snowball] as @a[scores={ammo=0..30},tag=!休止] run titleraw @s actionbar {\"rawtext\":[{\"translate\":\"%%3\",\"with\":{\"rawtext\":[{\"selector\":\"@s[scores={ammo=0..19}]\"},{\"selector\":\"@s[scores={ammo=0..9}]\"},{\"text\":\"§4\"},{\"text\":\"§6\"},{\"text\":\"§r\"}]}},{\"score\":{\"name\":\"@s\",\"objective\":\"ammo\"}}]}",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -47,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -47,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute if entity @e[type=snowball] as @a[scores={ammo=..0},tag=!休止] run scoreboard players set @s reload 1",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -46,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -46,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute if entity @e[type=snowball] as @a[scores={ammo=..0},tag=!休止] run playanimation @e[type=fox,name=k47f,tag=k47f] animation.player.riding.arms none 0 \"v.k90=0;return 1;\" k47t22",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -45,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -45,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute if entity @e[type=snowball] as @a[scores={ammo=..0},tag=!休止] run tag @s add 休止",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -44,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -44,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a[scores={reload=1}] add 换弹",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -43,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -43,
+      5
+    ],
+    "dimension": 0,
+    "command": "scoreboard players add @a[scores={reload=1..}] reload 1",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -42,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -42,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a[scores={reload=65..}] remove 休止",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -41,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -41,
+      5
+    ],
+    "dimension": 0,
+    "command": "title @a[scores={reload=65..}] actionbar 30",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -40,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -40,
+      5
+    ],
+    "dimension": 0,
+    "command": "scoreboard players set @a[scores={reload=65..}] ammo 30",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -39,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -39,
+      5
+    ],
+    "dimension": 0,
+    "command": "tag @a[scores={reload=65..}] add testa",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -38,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -38,
+      5
+    ],
+    "dimension": 0,
+    "command": "scoreboard players set @a[scores={reload=65..}] reload 0",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -37,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -37,
+      5
+    ],
+    "dimension": 0,
+    "command": "execute at @a[tag=k47p,c=1] run kill @e[type=snowball]",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -36,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      2,
+      -36,
+      5
+    ],
+    "dimension": 0,
+    "command": "stopsound @a[tag=k47p] random.bow",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        2,
+        -35,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      4,
+      -60,
+      5
+    ],
+    "dimension": 0,
+    "command": "kill @e[type=item]",
+    "block": {
+      "name": "minecraft:repeating_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 1,
+      "tickDelay": 0,
+      "legacyCommandMode": 1,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        4,
+        -59,
+        5
+      ],
+      "mode": "repeat"
+    }
+  },
+  {
+    "position": [
+      4,
+      -59,
+      5
+    ],
+    "dimension": 0,
+    "command": "kill @e[type=xp_orb]",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        4,
+        -58,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      4,
+      -58,
+      5
+    ],
+    "dimension": 0,
+    "command": "stopsound @a[tag=k47p] random.bow",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        4,
+        -57,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      4,
+      -57,
+      5
+    ],
+    "dimension": 0,
+    "command": "stopsound @a[tag=k47p] mob.fox.ambient",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        4,
+        -56,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      4,
+      -56,
+      5
+    ],
+    "dimension": 0,
+    "command": "stopsound @a[tag=k47p] mob.fox.aggro",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        4,
+        -55,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      4,
+      -55,
+      5
+    ],
+    "dimension": 0,
+    "command": "stopsound @a[tag=k47p] mob.fox.bite",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        4,
+        -54,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      4,
+      -54,
+      5
+    ],
+    "dimension": 0,
+    "command": "stopsound @a[tag=k47p] mob.fox.death",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        4,
+        -53,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      4,
+      -53,
+      5
+    ],
+    "dimension": 0,
+    "command": "stopsound @a[tag=k47p] mob.fox.eat",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        4,
+        -52,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      4,
+      -52,
+      5
+    ],
+    "dimension": 0,
+    "command": "stopsound @a[tag=k47p] mob.fox.hurt",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        4,
+        -51,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      4,
+      -51,
+      5
+    ],
+    "dimension": 0,
+    "command": "stopsound @a[tag=k47p] mob.fox.screech",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        4,
+        -50,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      4,
+      -50,
+      5
+    ],
+    "dimension": 0,
+    "command": "stopsound @a[tag=k47p] mob.fox.sleep",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        4,
+        -49,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      4,
+      -49,
+      5
+    ],
+    "dimension": 0,
+    "command": "stopsound @a[tag=k47p] mob.fox.sniff",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        4,
+        -48,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      4,
+      -48,
+      5
+    ],
+    "dimension": 0,
+    "command": "stopsound @a[tag=k47p] mob.fox.spit",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        4,
+        -47,
+        5
+      ],
+      "mode": "chain"
+    }
+  },
+  {
+    "position": [
+      4,
+      -47,
+      5
+    ],
+    "dimension": 0,
+    "command": "stopsound @a[tag=k47p] entity.fox.teleport",
+    "block": {
+      "name": "minecraft:chain_command_block",
+      "states": {
+        "conditional_bit": 0,
+        "facing_direction": 1
+      },
+      "val": 1,
+      "version": 18168865
+    },
+    "scheduling": {
+      "auto": 1,
+      "powered": 0,
+      "conditionMet": 1,
+      "executeOnFirstTick": 0,
+      "tickDelay": 0,
+      "legacyCommandMode": 2,
+      "legacyConditionalMode": 0,
+      "legacyRedstoneMode": 0,
+      "lastSuccessCount": 0,
+      "lastExecution": 292037,
+      "trackOutput": 1,
+      "conditional": false,
+      "facingDirection": 1,
+      "facingName": "up",
+      "nextPosition": [
+        4,
+        -46,
+        5
+      ],
+      "mode": "chain"
+    }
+  }
+]

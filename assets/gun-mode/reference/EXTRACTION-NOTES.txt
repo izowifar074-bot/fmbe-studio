@@ -1,0 +1,43 @@
+AK47存档_1007(2).zip 提取说明
+
+源 ZIP 保持不变。提取前后 SHA-256 均为：
+ecb78e859e2d5de27b606fc813b6e3de646a580033ada77b59ab111759681df0
+
+工作仅限本目录；没有执行游戏命令，没有转换 Java，没有访问 AI API。
+
+解密和当前有效数据：
+- ZIP CRC 校验通过。
+- 识别网易 80 1d 30 01 文件头，以本世界 CURRENT 和实际 MANIFEST-000374 文件名独立推导 8 字节 XOR 周期，没有复用旧世界密钥。
+- original 保存原文件副本；decrypted 保存解密结果。
+- 使用原生 amulet-leveldb 1.0.7 / CPython 3.12 在单独 leveldb-read-copy 恢复并读取当前有效记录，未改写 decrypted 原始解密数据库。
+- 另用独立 Python 解析 MANIFEST 活动表集合、SST、WAL sequence 和删除标记。活跃 WAL 为 000376.log，共 4 个 write batch、191 项更新。独立重放得到的 432 条当前键值与原生库逐字节一致。
+- MANIFEST、WAL 的 CRC32C 校验通过；活动 SST footer magic 及全部访问表块 CRC32C 校验通过。
+
+世界命令：
+- 当前世界有 124 个命令块，均有非空 Command，122 种不同命令文本。不是旧报告中的 109。
+- 44 个 subchunk 全部解析成功；全部 124 个 NBT 命令块位置均在当前方块调色板找到对应命令块。
+- 实际方块类型为 9 个循环、112 个连锁、3 个脉冲；状态来自 subchunk palette，未使用 LastExecution 或 LPCommandMode 替代实际类型。
+- commands.json 保存完整 Command、位置、维度、方块名/状态、调度信息与全部原始 NBT。
+- condition 使用 conditional_bit，方向使用 facing_direction；redstone 需求为 !NBT.auto。poweredAtSave/conditionMet/SuccessCount 是保存时状态，不代表下一 tick 必然执行结果。
+- 当前记分板目标为 fire、ammo、reload；定义和现存分数分别保存在 scoreboards.json 与 scoreboard-objectives.json。当前124条命令没有 scoreboard objectives add。
+
+物理链分组：
+- chain-groups.json 根据实际箭头位置遍历，下一块必须为 chain_command_block；共 12 组，覆盖全部124，无漏项、环或多入边。
+- G01 (-14,-60,5): 2 条，换弹触发；G02 (-12,-60,5): 2 条，普通姿态；G03 (-10,-60,5): 2 条，跑动姿态；G04 (-8,-60,5): 2 条，机瞄姿态。
+- G05 (-6,-60,5): 20 条，玩家持握/姿态检测；G06 (-5,-60,-5): 1 条，初始化按钮；G07 (-4,-60,5): 21 条，初始化与动画控制器。
+- G08 (-3,-60,-5): 1 条，全局 kill @e 按钮；G09 (-2,-60,5): 1 条，狐狸跟随；G10 (0,-60,5): 33 条，狐狸构建初始化。
+- G11 (2,-60,5): 25 条，射击弹药和换弹；G12 (4,-60,5): 14 条，全局掉落物/经验球清理及声音抑制。
+- 组列表顺序不是多个循环起点之间的执行先后证明。
+
+原文参考交付：
+- AK47_current_124_reference.mccmd.json：数字 mccmd:1；sections/items/cmd/block 结构；block.type 为 impulse/repeating/chain；conditional/redstone 为布尔，delay 为整数。124条命令多重集合与原始提取完全一致。
+- 全部为原文参考；G08 和 G12 另标 optional。referenceOnly/optional 是阅读和下游处理声明，不假设任意导入器会自动禁用它们。
+- 全局清除等原命令没有修改、也没有执行。
+
+结构模板独立处理：
+- structures.json 保留两个完整结构记录。
+- structure-commands.json 提取 mystructure:mozhi 的10条及 mystructure:nianhua 的6条，共16条，不混进当前世界124条计数。
+- AK47_structure_templates_reference.mccmd.json 单独保存模板16条原文参考。
+
+验证记录：verification.json、leveldb-integrity.json。
+可复现脚本执行顺序：extract_world.py → enrich_extract.py → verify_leveldb.py → group_chains.py。

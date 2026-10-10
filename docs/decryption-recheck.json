@@ -1,0 +1,101 @@
+{
+  "sourceSha256": "ecb78e859e2d5de27b606fc813b6e3de646a580033ada77b59ab111759681df0",
+  "sourceUnchanged": true,
+  "freshZipCrcPassed": true,
+  "freshDecryptionMatchesSavedFiles": [
+    {
+      "file": "db/000376.log",
+      "matchesSavedDecryption": true,
+      "bytes": 970037
+    },
+    {
+      "file": "db/000378.ldb",
+      "matchesSavedDecryption": true,
+      "bytes": 30296
+    },
+    {
+      "file": "db/CURRENT",
+      "matchesSavedDecryption": true,
+      "bytes": 16
+    },
+    {
+      "file": "db/MANIFEST-000374",
+      "matchesSavedDecryption": true,
+      "bytes": 464
+    },
+    {
+      "file": "level.dat",
+      "matchesSavedDecryption": true,
+      "bytes": 4150
+    },
+    {
+      "file": "level.dat_old",
+      "matchesSavedDecryption": true,
+      "bytes": 4150
+    },
+    {
+      "file": "levelname.txt",
+      "matchesSavedDecryption": true,
+      "bytes": 10
+    },
+    {
+      "file": "netease_world_behavior_packs.json",
+      "matchesSavedDecryption": true,
+      "bytes": 5
+    },
+    {
+      "file": "netease_world_resource_packs.json",
+      "matchesSavedDecryption": true,
+      "bytes": 5
+    },
+    {
+      "file": "world_icon.jpeg",
+      "matchesSavedDecryption": true,
+      "bytes": 70715
+    },
+    {
+      "file": "world_icon.json",
+      "matchesSavedDecryption": true,
+      "bytes": 34
+    }
+  ],
+  "freshIndependentLeveldbReplay": {
+    "replayedCurrentRecords": 432,
+    "nativeCurrentRecords": 432,
+    "allCurrentEntriesMatchNative": true,
+    "allLogCrcPassed": true,
+    "sstCrcPassed": true
+  },
+  "all124CommandsAndSchedulingMatchRawExtraction": true,
+  "originalFollowChain": {
+    "position": [
+      -2,
+      -60,
+      5
+    ],
+    "command": "execute as @a[tag=k47p,c=1,hasitem={item=snowball,location=slot.weapon.mainhand}] at @s anchored eyes positioned ^ ^ ^2 run tp @e[type=fox,tag=k47f] ~ ~ ~ 0 0",
+    "block": {
+      "type": "repeating",
+      "conditional": false,
+      "redstone": false,
+      "delay": 0
+    }
+  },
+  "originalSoundChain": {
+    "headPosition": [
+      4,
+      -60,
+      5
+    ],
+    "headCommand": "kill @e[type=item]",
+    "headBlock": {
+      "type": "repeating",
+      "conditional": false,
+      "redstone": false,
+      "delay": 0
+    },
+    "totalCommands": 14,
+    "stopsoundCommands": 12
+  },
+  "attribution": "The original save has both valid chain heads. The previously reported omissions were introduced by sandbox export/tick classification, not missing source commands."
+}

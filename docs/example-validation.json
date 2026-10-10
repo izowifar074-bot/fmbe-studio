@@ -1,0 +1,34 @@
+[
+  {
+    "name": "机械臂 · 连接与旋转",
+    "parts": 8,
+    "entities": 8,
+    "budget": 32,
+    "maxResidual": 4.4145154198815817e-10,
+    "exportable": true
+  },
+  {
+    "name": "拱桥 · 参数化重复",
+    "parts": 33,
+    "entities": 35,
+    "budget": 80,
+    "maxResidual": 7.702913862317473e-10,
+    "exportable": true
+  },
+  {
+    "name": "轮廓薄件 · 保留孔洞",
+    "parts": 21,
+    "entities": 93,
+    "budget": 100,
+    "maxResidual": 7.09616365668353e-10,
+    "exportable": true
+  },
+  {
+    "name": "空间框架 · 16 根杆",
+    "parts": 16,
+    "entities": 16,
+    "budget": 24,
+    "maxResidual": 7.505942534180576e-10,
+    "exportable": true
+  }
+]

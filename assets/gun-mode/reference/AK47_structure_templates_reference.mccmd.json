@@ -1,0 +1,233 @@
+{
+  "mccmd": 1,
+  "title": "AK47 结构模板 16 命令 · 独立原文参考",
+  "subtitle": "不计入当前世界 124 命令块",
+  "referenceOnly": true,
+  "notes": [
+    "保持模板内 Command 原文；仅提取，不加载结构、不执行命令。"
+  ],
+  "sections": [
+    {
+      "title": "structuretemplate_mystructure:mozhi",
+      "optional": true,
+      "referenceOnly": true,
+      "items": [
+        {
+          "label": "T01-001",
+          "cmd": "execute if entity @e[type=snowball] as @a[scores={ammo=..0},tag=!休止] run tag @s add 休止",
+          "where": "structuretemplate_mystructure:mozhi，模板局部位置 [0, 0, 0]，保留NBT原位置 [2, -46, 5]",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "note": "结构模板内保存的命令，并非当前世界额外常驻命令方块。",
+          "warn": ""
+        },
+        {
+          "label": "T01-002",
+          "cmd": "tag @a[scores={reload=1}] add 换弹",
+          "where": "structuretemplate_mystructure:mozhi，模板局部位置 [0, 1, 0]，保留NBT原位置 [2, -45, 5]",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "note": "结构模板内保存的命令，并非当前世界额外常驻命令方块。",
+          "warn": ""
+        },
+        {
+          "label": "T01-003",
+          "cmd": "scoreboard players add @a[scores={reload=1..}] reload 1",
+          "where": "structuretemplate_mystructure:mozhi，模板局部位置 [0, 2, 0]，保留NBT原位置 [2, -44, 5]",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "note": "结构模板内保存的命令，并非当前世界额外常驻命令方块。",
+          "warn": ""
+        },
+        {
+          "label": "T01-004",
+          "cmd": "tag @a[scores={reload=65..}] remove 休止",
+          "where": "structuretemplate_mystructure:mozhi，模板局部位置 [0, 3, 0]，保留NBT原位置 [2, -43, 5]",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "note": "结构模板内保存的命令，并非当前世界额外常驻命令方块。",
+          "warn": ""
+        },
+        {
+          "label": "T01-005",
+          "cmd": "title @a[scores={reload=65..}] actionbar 30",
+          "where": "structuretemplate_mystructure:mozhi，模板局部位置 [0, 4, 0]，保留NBT原位置 [2, -42, 5]",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "note": "结构模板内保存的命令，并非当前世界额外常驻命令方块。",
+          "warn": ""
+        },
+        {
+          "label": "T01-006",
+          "cmd": "scoreboard players set @a[scores={reload=65..}] ammo 30",
+          "where": "structuretemplate_mystructure:mozhi，模板局部位置 [0, 5, 0]，保留NBT原位置 [2, -41, 5]",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "note": "结构模板内保存的命令，并非当前世界额外常驻命令方块。",
+          "warn": ""
+        },
+        {
+          "label": "T01-007",
+          "cmd": "tag @a[scores={reload=65..}] add testa",
+          "where": "structuretemplate_mystructure:mozhi，模板局部位置 [0, 6, 0]，保留NBT原位置 [2, -40, 5]",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "note": "结构模板内保存的命令，并非当前世界额外常驻命令方块。",
+          "warn": ""
+        },
+        {
+          "label": "T01-008",
+          "cmd": "scoreboard players set @a[scores={reload=65..}] reload 0",
+          "where": "structuretemplate_mystructure:mozhi，模板局部位置 [0, 7, 0]，保留NBT原位置 [2, -39, 5]",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "note": "结构模板内保存的命令，并非当前世界额外常驻命令方块。",
+          "warn": ""
+        },
+        {
+          "label": "T01-009",
+          "cmd": "execute at @a[tag=k47p,c=1] run kill @e[type=snowball]",
+          "where": "structuretemplate_mystructure:mozhi，模板局部位置 [0, 8, 0]，保留NBT原位置 [2, -38, 5]",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "note": "结构模板内保存的命令，并非当前世界额外常驻命令方块。",
+          "warn": ""
+        },
+        {
+          "label": "T01-010",
+          "cmd": "stopsound @a[tag=k47p] random.bow",
+          "where": "structuretemplate_mystructure:mozhi，模板局部位置 [0, 9, 0]，保留NBT原位置 [2, -37, 5]",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "note": "结构模板内保存的命令，并非当前世界额外常驻命令方块。",
+          "warn": ""
+        }
+      ]
+    },
+    {
+      "title": "structuretemplate_mystructure:nianhua",
+      "optional": true,
+      "referenceOnly": true,
+      "items": [
+        {
+          "label": "T02-001",
+          "cmd": "tag @a remove 跳跃",
+          "where": "structuretemplate_mystructure:nianhua，模板局部位置 [0, 0, 0]，保留NBT原位置 [-6, -60, 5]",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "note": "结构模板内保存的命令，并非当前世界额外常驻命令方块。",
+          "warn": ""
+        },
+        {
+          "label": "T02-002",
+          "cmd": "tag @a remove 潜行",
+          "where": "structuretemplate_mystructure:nianhua，模板局部位置 [0, 1, 0]，保留NBT原位置 [-6, -59, 5]",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "note": "结构模板内保存的命令，并非当前世界额外常驻命令方块。",
+          "warn": ""
+        },
+        {
+          "label": "T02-003",
+          "cmd": "tag @a remove 移动",
+          "where": "structuretemplate_mystructure:nianhua，模板局部位置 [0, 2, 0]，保留NBT原位置 [-6, -58, 5]",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "note": "结构模板内保存的命令，并非当前世界额外常驻命令方块。",
+          "warn": ""
+        },
+        {
+          "label": "T02-004",
+          "cmd": "execute as @a[tag=k47p] at @s anchored feet unless entity @s[r=0.03] as @s at @s unless block ~ ~ ~ water 0 unless block ~ ~ ~ lava 0 unless entity @s[y=~1.82,dy=0] if entity @s[y=~1.80,dy=0] run tag @s add 移动",
+          "where": "structuretemplate_mystructure:nianhua，模板局部位置 [0, 3, 0]，保留NBT原位置 [-6, -57, 5]",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "note": "结构模板内保存的命令，并非当前世界额外常驻命令方块。",
+          "warn": ""
+        },
+        {
+          "label": "T02-005",
+          "cmd": "execute as @a[tag=k47p] at @s unless entity @s[y=~1.5,dy=0] if entity @s[y=~0.7,dy=0] run tag @s add 潜行",
+          "where": "structuretemplate_mystructure:nianhua，模板局部位置 [0, 4, 0]，保留NBT原位置 [-6, -56, 5]",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "note": "结构模板内保存的命令，并非当前世界额外常驻命令方块。",
+          "warn": ""
+        },
+        {
+          "label": "T02-006",
+          "cmd": "execute as @a[tag=k47p] at @s if block ~~-0.1~ air 0 run tag @s add 跳跃",
+          "where": "structuretemplate_mystructure:nianhua，模板局部位置 [0, 5, 0]，保留NBT原位置 [-6, -55, 5]",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "note": "结构模板内保存的命令，并非当前世界额外常驻命令方块。",
+          "warn": ""
+        }
+      ]
+    }
+  ]
+}

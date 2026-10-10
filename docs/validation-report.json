@@ -1,0 +1,57 @@
+{
+  "version": "0.2.1",
+  "tests": 46,
+  "passed": 46,
+  "failed": 0,
+  "typecheck": "passed",
+  "build": "passed",
+  "resourceBaseline": "v1.21.120.4",
+  "resourceCommit": "091dbd3ff9cf3c4205eb3c53ba4a673374b08472",
+  "netEaseValidation": "not performed",
+  "browserChecks": [
+    "render mechanical arm",
+    "parameter update",
+    "part inspection",
+    "raw command execution",
+    "checkpoint restore",
+    "API PNG 1024x768",
+    "five actual model outputs, normal/aim/reload PNGs",
+    "generation history switching",
+    "small model capture framing"
+  ],
+  "gunMode": {
+    "worldCommands": 124,
+    "structureCommands": 16,
+    "referenceParts": 75,
+    "sourceLevelVersion": [
+      1,
+      21,
+      120,
+      0,
+      0
+    ],
+    "provider": "https://api.deepseek.com",
+    "model": "deepseek-flash",
+    "liveGeneratedParts": 72,
+    "liveGeneratedFoxes": 72,
+    "liveCalls": 5,
+    "liveGenerationTokens": 134746,
+    "connectivityTokens": 44,
+    "newNetEaseInGameValidation": false,
+    "testCoverage": [
+      "reference corners at multiple camera angles",
+      "regenerated identity mapping",
+      "pose and reload rigid geometry",
+      "manual visual reload vs 65 tick empty refill",
+      "low entity conditional chains",
+      "one entity capacity rejection",
+      "explicit carrier timing model",
+      "pure command exports",
+      "provider failure retains valid candidate",
+      "credential is never returned"
+    ]
+  },
+  "limitations": "See README.md, docs/status.md and docs/gun-mode.md",
+  "multiGunReport": "multi-gun-validation.json",
+  "multiGunCases": 5
+}

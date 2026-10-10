@@ -1,0 +1,731 @@
+{
+  "sourceHash": "ecb78e859e2d5de27b606fc813b6e3de646a580033ada77b59ab111759681df0",
+  "referenceWorldBlocks": 124,
+  "parts": 74,
+  "entities": 74,
+  "rootPreserved": true,
+  "rootExpressionHash": "d04b0118",
+  "magazineIds": [
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "boltIds": [
+    11,
+    12,
+    13,
+    14
+  ],
+  "scoreboards": [
+    "fire",
+    "ammo",
+    "reload"
+  ],
+  "gameplay": {
+    "magazineCapacity": 30,
+    "reloadVisualSeconds": 2.6,
+    "reloadUnlockTicks": 65,
+    "rayBranchCount": 512,
+    "rayStep": 0.5,
+    "nominalRayDistance": 256,
+    "damage": 11
+  },
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "code": "GUN_EVIDENCE",
+      "message": "采用当前网易存档的命令与换弹基线；当前预览为源码几何对照，未重新进行网易客户端安装验证"
+    }
+  ],
+  "renderProfile": "Fixed rotation convention and shared render-origin/held-item transform selected by independent source geometry fixtures; remaining parts and camera views checked. NOT measured in game.",
+  "installationValidation": {
+    "passed": true,
+    "foxes": 74,
+    "rows": [
+      {
+        "label": "S000",
+        "affected": 0
+      },
+      {
+        "label": "S1",
+        "affected": 1
+      },
+      {
+        "label": "S2",
+        "affected": 1
+      },
+      {
+        "label": "S3",
+        "affected": 1
+      },
+      {
+        "label": "S4",
+        "affected": 1
+      },
+      {
+        "label": "S5",
+        "affected": 1
+      },
+      {
+        "label": "S6",
+        "affected": 1
+      },
+      {
+        "label": "S7",
+        "affected": 1
+      },
+      {
+        "label": "S8",
+        "affected": 1
+      },
+      {
+        "label": "S9",
+        "affected": 1
+      },
+      {
+        "label": "S10",
+        "affected": 1
+      },
+      {
+        "label": "S11",
+        "affected": 1
+      },
+      {
+        "label": "S12",
+        "affected": 1
+      },
+      {
+        "label": "S13",
+        "affected": 1
+      },
+      {
+        "label": "S14",
+        "affected": 1
+      },
+      {
+        "label": "S15",
+        "affected": 1
+      },
+      {
+        "label": "S16",
+        "affected": 1
+      },
+      {
+        "label": "S17",
+        "affected": 1
+      },
+      {
+        "label": "S18",
+        "affected": 1
+      },
+      {
+        "label": "S19",
+        "affected": 1
+      },
+      {
+        "label": "S20",
+        "affected": 1
+      },
+      {
+        "label": "S21",
+        "affected": 1
+      },
+      {
+        "label": "S22",
+        "affected": 1
+      },
+      {
+        "label": "S23",
+        "affected": 1
+      },
+      {
+        "label": "S24",
+        "affected": 1
+      },
+      {
+        "label": "S25",
+        "affected": 1
+      },
+      {
+        "label": "S26",
+        "affected": 1
+      },
+      {
+        "label": "S27",
+        "affected": 1
+      },
+      {
+        "label": "S28",
+        "affected": 1
+      },
+      {
+        "label": "S29",
+        "affected": 1
+      },
+      {
+        "label": "S30",
+        "affected": 1
+      },
+      {
+        "label": "S31",
+        "affected": 1
+      },
+      {
+        "label": "S32",
+        "affected": 1
+      },
+      {
+        "label": "S33",
+        "affected": 1
+      },
+      {
+        "label": "S34",
+        "affected": 1
+      },
+      {
+        "label": "S35",
+        "affected": 1
+      },
+      {
+        "label": "S36",
+        "affected": 1
+      },
+      {
+        "label": "S37",
+        "affected": 1
+      },
+      {
+        "label": "S38",
+        "affected": 1
+      },
+      {
+        "label": "S39",
+        "affected": 1
+      },
+      {
+        "label": "S40",
+        "affected": 1
+      },
+      {
+        "label": "S41",
+        "affected": 1
+      },
+      {
+        "label": "S42",
+        "affected": 1
+      },
+      {
+        "label": "S43",
+        "affected": 1
+      },
+      {
+        "label": "S44",
+        "affected": 1
+      },
+      {
+        "label": "S45",
+        "affected": 1
+      },
+      {
+        "label": "S46",
+        "affected": 1
+      },
+      {
+        "label": "S47",
+        "affected": 1
+      },
+      {
+        "label": "S48",
+        "affected": 1
+      },
+      {
+        "label": "S49",
+        "affected": 1
+      },
+      {
+        "label": "S50",
+        "affected": 1
+      },
+      {
+        "label": "S51",
+        "affected": 1
+      },
+      {
+        "label": "S52",
+        "affected": 1
+      },
+      {
+        "label": "S53",
+        "affected": 1
+      },
+      {
+        "label": "S54",
+        "affected": 1
+      },
+      {
+        "label": "S55",
+        "affected": 1
+      },
+      {
+        "label": "S56",
+        "affected": 1
+      },
+      {
+        "label": "S57",
+        "affected": 1
+      },
+      {
+        "label": "S58",
+        "affected": 1
+      },
+      {
+        "label": "S59",
+        "affected": 1
+      },
+      {
+        "label": "S60",
+        "affected": 1
+      },
+      {
+        "label": "S61",
+        "affected": 1
+      },
+      {
+        "label": "S62",
+        "affected": 1
+      },
+      {
+        "label": "S63",
+        "affected": 1
+      },
+      {
+        "label": "S64",
+        "affected": 1
+      },
+      {
+        "label": "S65",
+        "affected": 1
+      },
+      {
+        "label": "S66",
+        "affected": 1
+      },
+      {
+        "label": "S67",
+        "affected": 1
+      },
+      {
+        "label": "S68",
+        "affected": 1
+      },
+      {
+        "label": "S69",
+        "affected": 1
+      },
+      {
+        "label": "S70",
+        "affected": 1
+      },
+      {
+        "label": "S71",
+        "affected": 1
+      },
+      {
+        "label": "S72",
+        "affected": 1
+      },
+      {
+        "label": "S73",
+        "affected": 1
+      },
+      {
+        "label": "S74",
+        "affected": 1
+      },
+      {
+        "label": "E75",
+        "affected": 74
+      },
+      {
+        "label": "E76",
+        "affected": 74
+      },
+      {
+        "label": "E77",
+        "affected": 74
+      },
+      {
+        "label": "E78",
+        "affected": 74
+      },
+      {
+        "label": "M0",
+        "affected": 1
+      },
+      {
+        "label": "M1",
+        "affected": 1
+      },
+      {
+        "label": "M2",
+        "affected": 1
+      },
+      {
+        "label": "M3",
+        "affected": 1
+      },
+      {
+        "label": "M4",
+        "affected": 1
+      },
+      {
+        "label": "M5",
+        "affected": 1
+      },
+      {
+        "label": "M6",
+        "affected": 1
+      },
+      {
+        "label": "M7",
+        "affected": 1
+      },
+      {
+        "label": "M8",
+        "affected": 1
+      },
+      {
+        "label": "M9",
+        "affected": 1
+      },
+      {
+        "label": "M10",
+        "affected": 1
+      },
+      {
+        "label": "M11",
+        "affected": 1
+      },
+      {
+        "label": "M12",
+        "affected": 1
+      },
+      {
+        "label": "M13",
+        "affected": 1
+      },
+      {
+        "label": "M14",
+        "affected": 1
+      },
+      {
+        "label": "M15",
+        "affected": 1
+      },
+      {
+        "label": "M16",
+        "affected": 1
+      },
+      {
+        "label": "M17",
+        "affected": 1
+      },
+      {
+        "label": "M18",
+        "affected": 1
+      },
+      {
+        "label": "M19",
+        "affected": 1
+      },
+      {
+        "label": "M20",
+        "affected": 1
+      },
+      {
+        "label": "M21",
+        "affected": 1
+      },
+      {
+        "label": "M22",
+        "affected": 1
+      },
+      {
+        "label": "M23",
+        "affected": 1
+      },
+      {
+        "label": "M24",
+        "affected": 1
+      },
+      {
+        "label": "M25",
+        "affected": 1
+      },
+      {
+        "label": "M26",
+        "affected": 1
+      },
+      {
+        "label": "M27",
+        "affected": 1
+      },
+      {
+        "label": "M28",
+        "affected": 1
+      },
+      {
+        "label": "M29",
+        "affected": 1
+      },
+      {
+        "label": "M30",
+        "affected": 1
+      },
+      {
+        "label": "M31",
+        "affected": 1
+      },
+      {
+        "label": "M32",
+        "affected": 1
+      },
+      {
+        "label": "M33",
+        "affected": 1
+      },
+      {
+        "label": "M34",
+        "affected": 1
+      },
+      {
+        "label": "M35",
+        "affected": 1
+      },
+      {
+        "label": "M36",
+        "affected": 1
+      },
+      {
+        "label": "M37",
+        "affected": 1
+      },
+      {
+        "label": "M38",
+        "affected": 1
+      },
+      {
+        "label": "M39",
+        "affected": 1
+      },
+      {
+        "label": "M40",
+        "affected": 1
+      },
+      {
+        "label": "M41",
+        "affected": 1
+      },
+      {
+        "label": "M42",
+        "affected": 1
+      },
+      {
+        "label": "M43",
+        "affected": 1
+      },
+      {
+        "label": "M44",
+        "affected": 1
+      },
+      {
+        "label": "M45",
+        "affected": 1
+      },
+      {
+        "label": "M46",
+        "affected": 1
+      },
+      {
+        "label": "M47",
+        "affected": 1
+      },
+      {
+        "label": "M48",
+        "affected": 1
+      },
+      {
+        "label": "M49",
+        "affected": 1
+      },
+      {
+        "label": "M50",
+        "affected": 1
+      },
+      {
+        "label": "M51",
+        "affected": 1
+      },
+      {
+        "label": "M52",
+        "affected": 1
+      },
+      {
+        "label": "M53",
+        "affected": 1
+      },
+      {
+        "label": "M54",
+        "affected": 1
+      },
+      {
+        "label": "M55",
+        "affected": 1
+      },
+      {
+        "label": "M56",
+        "affected": 1
+      },
+      {
+        "label": "M57",
+        "affected": 1
+      },
+      {
+        "label": "M58",
+        "affected": 1
+      },
+      {
+        "label": "M59",
+        "affected": 1
+      },
+      {
+        "label": "M60",
+        "affected": 1
+      },
+      {
+        "label": "M61",
+        "affected": 1
+      },
+      {
+        "label": "M62",
+        "affected": 1
+      },
+      {
+        "label": "M63",
+        "affected": 1
+      },
+      {
+        "label": "M64",
+        "affected": 1
+      },
+      {
+        "label": "M65",
+        "affected": 1
+      },
+      {
+        "label": "M66",
+        "affected": 1
+      },
+      {
+        "label": "M67",
+        "affected": 1
+      },
+      {
+        "label": "M68",
+        "affected": 1
+      },
+      {
+        "label": "M69",
+        "affected": 1
+      },
+      {
+        "label": "M70",
+        "affected": 1
+      },
+      {
+        "label": "M71",
+        "affected": 1
+      },
+      {
+        "label": "M72",
+        "affected": 1
+      },
+      {
+        "label": "M73",
+        "affected": 1
+      },
+      {
+        "label": "Tx0",
+        "affected": 15
+      },
+      {
+        "label": "Tx1",
+        "affected": 15
+      },
+      {
+        "label": "Tx2",
+        "affected": 15
+      },
+      {
+        "label": "Tx3",
+        "affected": 15
+      },
+      {
+        "label": "Tx4",
+        "affected": 14
+      },
+      {
+        "label": "Tz0",
+        "affected": 15
+      },
+      {
+        "label": "Tz1",
+        "affected": 15
+      },
+      {
+        "label": "Tz2",
+        "affected": 15
+      },
+      {
+        "label": "Tz3",
+        "affected": 15
+      },
+      {
+        "label": "Tz4",
+        "affected": 14
+      },
+      {
+        "label": "Ty0",
+        "affected": 25
+      },
+      {
+        "label": "Ty1",
+        "affected": 25
+      },
+      {
+        "label": "Ty2",
+        "affected": 24
+      },
+      {
+        "label": "TAG",
+        "affected": 74
+      },
+      {
+        "label": "FOLLOW",
+        "affected": 0,
+        "deferred": true
+      }
+    ],
+    "scope": "实际 G10 召唤/材质/空间标签命令重放；按分离网格检查实体原点，不模拟物理/加载/剔除；最终跟随由独立时序模型处理"
+  },
+  "translationValidation": {
+    "maxCornerError": 8.570928940666824e-14,
+    "count": 74,
+    "scope": "normal pose at camera yaw/pitch 0 after 3 initial evaluations; source geometry check, not game evidence"
+  },
+  "netEaseTestedThisRun": false
+}

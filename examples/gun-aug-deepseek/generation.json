@@ -1,0 +1,209 @@
+{
+  "id": "aug",
+  "budget": 85,
+  "prompt": "制作一把 AUG 风格无托游戏步枪：弹匣必须在握把后方，短而厚的枪托机匣、倾斜前握把、一体式瞄准镜、完整扳机护圈孔，黑灰材质。要求细节层次接近参考 AK47，三姿态和换弹绑定正确；不能把 AK/M4 的前置弹匣布局换个名称。请直接交付可运行模型，并根据实际预算和预览反馈修正。",
+  "jobId": "870489bd-5e6d-47fe-82f1-33afcab8d844",
+  "status": "completed",
+  "usage": [
+    {
+      "prompt_tokens": 2254,
+      "completion_tokens": 77,
+      "total_tokens": 2331,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 846
+    },
+    {
+      "prompt_tokens": 3120,
+      "completion_tokens": 77,
+      "total_tokens": 3197,
+      "prompt_tokens_details": {
+        "cached_tokens": 2304
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 9
+      },
+      "prompt_cache_hit_tokens": 2304,
+      "prompt_cache_miss_tokens": 816
+    },
+    {
+      "prompt_tokens": 9120,
+      "completion_tokens": 18000,
+      "total_tokens": 27120,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 18000
+      },
+      "prompt_cache_hit_tokens": 3072,
+      "prompt_cache_miss_tokens": 6048
+    },
+    {
+      "prompt_tokens": 27141,
+      "completion_tokens": 11733,
+      "total_tokens": 38874,
+      "prompt_tokens_details": {
+        "cached_tokens": 26880
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 7142
+      },
+      "prompt_cache_hit_tokens": 26880,
+      "prompt_cache_miss_tokens": 261
+    },
+    {
+      "prompt_tokens": 39768,
+      "completion_tokens": 10673,
+      "total_tokens": 50441,
+      "prompt_tokens_details": {
+        "cached_tokens": 38784
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 5846
+      },
+      "prompt_cache_hit_tokens": 38784,
+      "prompt_cache_miss_tokens": 984
+    },
+    {
+      "prompt_tokens": 51270,
+      "completion_tokens": 1013,
+      "total_tokens": 52283,
+      "prompt_tokens_details": {
+        "cached_tokens": 50432
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 254
+      },
+      "prompt_cache_hit_tokens": 50432,
+      "prompt_cache_miss_tokens": 838
+    }
+  ],
+  "events": [
+    {
+      "at": "2026-10-10T18:02:37.941Z",
+      "stage": "skill_loaded",
+      "message": "已自动加载 fmbe-guns 技能与几何接口",
+      "detail": {
+        "skill": "fmbe-guns",
+        "baselineBlocks": 124
+      }
+    },
+    {
+      "at": "2026-10-10T18:02:37.942Z",
+      "stage": "model_call",
+      "message": "DeepSeek 正在设计 / 修正（第 1 轮）"
+    },
+    {
+      "at": "2026-10-10T18:02:40.436Z",
+      "stage": "reference_read",
+      "message": "模型读取资料：overview"
+    },
+    {
+      "at": "2026-10-10T18:02:40.438Z",
+      "stage": "reference_read",
+      "message": "模型读取资料：geometry"
+    },
+    {
+      "at": "2026-10-10T18:02:40.439Z",
+      "stage": "model_call",
+      "message": "DeepSeek 正在设计 / 修正（第 2 轮）"
+    },
+    {
+      "at": "2026-10-10T18:02:41.490Z",
+      "stage": "reference_read",
+      "message": "模型读取资料：runtime"
+    },
+    {
+      "at": "2026-10-10T18:02:41.491Z",
+      "stage": "reference_read",
+      "message": "模型读取资料：model"
+    },
+    {
+      "at": "2026-10-10T18:02:41.492Z",
+      "stage": "model_call",
+      "message": "DeepSeek 正在设计 / 修正（第 3 轮）"
+    },
+    {
+      "at": "2026-10-10T18:03:59.447Z",
+      "stage": "model_call",
+      "message": "DeepSeek 正在设计 / 修正（第 4 轮）"
+    },
+    {
+      "at": "2026-10-10T18:04:38.474Z",
+      "stage": "compiling",
+      "message": "编译几何、重建狐狸编号与换弹绑定"
+    },
+    {
+      "at": "2026-10-10T18:04:38.735Z",
+      "stage": "candidate_ready",
+      "message": "候选已通过编译：63 只狐狸",
+      "detail": {
+        "entities": 63,
+        "parts": 63
+      }
+    },
+    {
+      "at": "2026-10-10T18:04:39.067Z",
+      "stage": "preview_ready",
+      "message": "实际命令预览图已生成，等待下一轮模型请求"
+    },
+    {
+      "at": "2026-10-10T18:04:39.067Z",
+      "stage": "model_call",
+      "message": "DeepSeek 正在设计 / 修正（第 5 轮）"
+    },
+    {
+      "at": "2026-10-10T18:05:17.063Z",
+      "stage": "preview_delivered",
+      "message": "预览图已随本轮请求送达模型，收到模型响应",
+      "detail": {
+        "sourceHash": "a91558c0"
+      }
+    },
+    {
+      "at": "2026-10-10T18:05:17.063Z",
+      "stage": "compiling",
+      "message": "编译几何、重建狐狸编号与换弹绑定"
+    },
+    {
+      "at": "2026-10-10T18:05:17.352Z",
+      "stage": "candidate_ready",
+      "message": "候选已通过编译：66 只狐狸",
+      "detail": {
+        "entities": 66,
+        "parts": 66
+      }
+    },
+    {
+      "at": "2026-10-10T18:05:17.679Z",
+      "stage": "preview_ready",
+      "message": "实际命令预览图已生成，等待下一轮模型请求"
+    },
+    {
+      "at": "2026-10-10T18:05:17.679Z",
+      "stage": "model_call",
+      "message": "DeepSeek 正在设计 / 修正（第 6 轮）"
+    },
+    {
+      "at": "2026-10-10T18:05:23.794Z",
+      "stage": "preview_delivered",
+      "message": "预览图已随本轮请求送达模型，收到模型响应",
+      "detail": {
+        "sourceHash": "b43087b3"
+      }
+    },
+    {
+      "at": "2026-10-10T18:05:24.293Z",
+      "stage": "completed",
+      "message": "枪械已生成并载入，命令包已准备好"
+    }
+  ],
+  "name": "AUG 风格无托游戏步枪 v2",
+  "entities": 66
+}

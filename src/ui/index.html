@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FMBE Studio · 造型实验室</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">F</span>
+          <div>FMBE <b>STUDIO</b><small>造型实验室</small></div>
+          <span class="version">0.2.1 / 枪械模式</span>
+        </div>
+        <div class="top-status">
+          <i></i><span id="connection">连接本地内核</span>
+        </div>
+        <div class="toolbar">
+          <button id="undo" title="撤销">↶</button
+          ><button id="redo" title="重做">↷</button
+          ><button id="save">保存工程</button
+          ><button id="import">打开工程</button
+          ><button id="export" class="primary">
+            导出实验包 <span>↗</span>
+          </button>
+        </div>
+      </header>
+      <div class="compat">
+        <span class="compat-dot"></span><strong>BEDROCK 1.21.120.4</strong
+        ><span>原版资源已锁定</span><span class="divider"></span
+        ><span>网易客户端与持物补偿待校准</span
+        ><button id="capabilities">查看能力边界 ↗</button>
+      </div>
+      <main>
+        <aside class="sidebar">
+          <div class="project-head">
+            <span class="eyebrow">WORKSPACE</span>
+            <h1 id="project-name">正在载入…</h1>
+            <div class="project-meta">
+              <span id="revision">修订 —</span><span>本地自动保存</span>
+            </div>
+          </div>
+          <div class="sample-picker">
+            <label for="examples">示例工程</label
+            ><select id="examples" aria-label="示例工程"></select
+            ><button id="load-example" class="subtle">载入示例</button>
+          </div>
+          <div class="budget-card">
+            <div><span>实体预算</span><span id="budget-ratio">— / —</span></div>
+            <div class="budget-track"><i id="budget-bar"></i></div>
+            <div class="budget-bottom">
+              <span id="part-count">— 个设计部件</span
+              ><label
+                >上限
+                <input
+                  id="budget"
+                  type="number"
+                  min="1"
+                  max="1024"
+                  value="32"
+                  aria-label="实体预算"
+              /></label>
+            </div>
+            <button id="optimize" class="outline">◇ 寻找更低成本候选</button>
+          </div>
+          <div class="section-heading">
+            <span>场景结构</span><span id="tree-count" class="count">0</span>
+          </div>
+          <input
+            id="tree-filter"
+            placeholder="搜索部件 / 实体…"
+            aria-label="搜索场景"
+          />
+          <div id="tree" class="tree"></div>
+          <div class="sidebar-footer">
+            <span class="tiny-dot"></span
+            ><span>API 优先 · 可回放 · 原生命令</span>
+          </div>
+        </aside>
+        <section class="stage">
+          <div class="stage-toolbar">
+            <div class="view-tabs">
+              <button id="view-editor" class="active">自由观察</button
+              ><button id="view-player">玩家摄像机</button>
+            </div>
+            <div class="viewport-actions">
+              <button id="fit" title="适应全部模型">⌖ 聚焦</button
+              ><button id="screenshot" title="保存当前视图">截图</button>
+            </div>
+          </div>
+          <div id="viewport">
+            <div id="canvas-host"></div>
+            <div class="viewport-label">
+              <span class="live-dot"></span
+              ><span id="view-label">命令仿真结果</span>
+            </div>
+            <div class="axis-label">Y ↑<br />X → &nbsp; Z ↗</div>
+            <div class="view-controls">
+              <label
+                ><input type="checkbox" id="show-grid" checked /> 网格</label
+              ><label><input type="checkbox" id="show-fox" /> 狐狸骨骼</label
+              ><label
+                ><input type="checkbox" id="show-reference" /> 目标线框</label
+              >
+            </div>
+            <div class="viewport-help" id="viewport-help">
+              左键旋转 · 右键平移 · 滚轮缩放 · 点击选择部件
+            </div>
+            <div class="empty-state" id="empty-state" hidden>
+              场景为空<br /><small>载入示例，或在右侧写一段造型程序</small>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="play-controls">
+              <button id="reset" title="重新从导出命令初始化">↺</button
+              ><button id="play" class="play" title="播放">▶</button
+              ><button id="step" title="推进一帧">▸│</button>
+            </div>
+            <span class="time" id="time">00:00.000</span>
+            <div class="timeline-track">
+              <span id="timeline-progress"></span>
+            </div>
+            <span id="frame-info">帧 0 · tick 0</span
+            ><button id="checkpoint">快照</button
+            ><button id="restore" disabled>恢复</button>
+          </div>
+          <div class="diagnostics-head">
+            <div>
+              <span class="section-heading">执行与诊断</span
+              ><span id="diagnostics-count" class="count">0</span>
+            </div>
+            <span id="verification-state">等待编译</span>
+          </div>
+          <div id="diagnostics" class="diagnostics"></div>
+        </section>
+        <aside class="inspector">
+          <div class="inspector-tabs">
+            <button data-tab="params" class="active">参数</button
+            ><button data-tab="source">源码</button
+            ><button data-tab="commands">命令</button
+            ><button data-tab="inspect">检视</button
+            ><button data-tab="api">API</button>
+          </div>
+          <section id="tab-params" class="tab-panel">
+            <div class="panel-title">
+              <span class="eyebrow">PARAMETRIC DESIGN</span>
+              <h2>用关系描述形状</h2>
+              <p>坐标与旋转交给求解器。每次修改重新编译成真实动画命令。</p>
+            </div>
+            <div id="parameters"></div>
+            <div id="selection"></div>
+            <div class="camera-panel">
+              <h3>玩家摄像机</h3>
+              <div class="field">
+                <label>视角</label
+                ><select id="camera-mode">
+                  <option value="first_person">第一人称</option>
+                  <option value="third_person">第三人称（后方）</option>
+                  <option value="third_person_front">第三人称（前方）</option>
+                  <option value="free">自由摄像机</option>
+                </select>
+              </div>
+              <label class="field-label">视点位置 · 格</label>
+              <div class="vector-fields" id="camera-position">
+                <input
+                  value="0"
+                  type="number"
+                  step="0.25"
+                  aria-label="摄像机 X"
+                /><input
+                  value="2"
+                  type="number"
+                  step="0.25"
+                  aria-label="摄像机 Y"
+                /><input
+                  value="-7"
+                  type="number"
+                  step="0.25"
+                  aria-label="摄像机 Z"
+                />
+              </div>
+              <label class="field-label">俯仰 / 偏航 · 度</label>
+              <div class="vector-fields two" id="camera-rotation">
+                <input
+                  value="0"
+                  type="number"
+                  step="5"
+                  aria-label="俯仰角"
+                /><input value="0" type="number" step="5" aria-label="偏航角" />
+              </div>
+              <div class="field">
+                <label>FOV</label
+                ><input
+                  id="camera-fov"
+                  type="number"
+                  min="20"
+                  max="120"
+                  value="70"
+                />
+              </div>
+              <button id="camera-apply" class="outline">应用玩家视角</button
+              ><small class="note"
+                >当前不模拟摄像机碰撞、摇晃与姿态眼高变化。</small
+              >
+            </div>
+          </section>
+          <section id="tab-source" class="tab-panel" hidden>
+            <div class="editor-heading">
+              <span>build.js</span><span>受限 JavaScript SDK</span>
+            </div>
+            <textarea
+              id="source"
+              spellcheck="false"
+              aria-label="造型源码"
+            ></textarea>
+            <div class="editor-footer">
+              <span id="source-status">修改后点击编译</span
+              ><button id="build" class="primary">编译并预览</button>
+            </div>
+            <details class="sdk-help">
+              <summary>SDK 速查</summary>
+              <pre>
+param(name, value, {min,max,step})
+box(id, {size,position,rotation,material})
+beamBetween(id, {from,to,section,up})
+arc(id, {center,radius,start,end,segments})
+profilePrism(id, {outline,holes,thickness})
+group(id, {position,rotation}, () =&gt; {})
+part.anchor("front.center")
+attach(movingAnchor, fixedAnchor)
+
+单位：格 / 度。截面为 [宽,高]。
+常用材质：stone iron copper dark
+white wood gold red blue cyan</pre
+              >
+            </details>
+          </section>
+          <section id="tab-commands" class="tab-panel" hidden>
+            <div class="panel-title">
+              <span class="eyebrow">ANIMATION LAB</span>
+              <h2>原生命令实验</h2>
+              <p>六个 playanimation 参数独立解析。未实现语义会出现在诊断中。</p>
+            </div>
+            <textarea
+              id="commands"
+              spellcheck="false"
+              aria-label="命令实验源码"
+            ></textarea
+            ><label class="check-row"
+              ><input type="checkbox" id="raw-reset" checked />
+              执行前清空实验场景</label
+            ><button id="execute" class="primary wide">执行命令</button
+            ><button id="load-compiled" class="outline">
+              载入当前编译命令
+            </button>
+            <pre id="command-results"></pre>
+            <div class="resource-search">
+              <h3>原版动画库 <span id="animation-count"></span></h3>
+              <input
+                id="animation-search"
+                placeholder="搜索 animation.…"
+                aria-label="搜索动画"
+              />
+              <div id="animation-list"></div>
+              <pre id="animation-definition"></pre>
+            </div>
+          </section>
+          <section id="tab-inspect" class="tab-panel" hidden>
+            <div class="panel-title">
+              <span class="eyebrow">TRACEABLE RESULTS</span>
+              <h2>从结果追到来源</h2>
+              <p>
+                点击场景中的部件或狐狸，查看来源、命令、骨骼矩阵与运行变量。
+              </p>
+            </div>
+            <div id="inspect-content"><p class="muted">尚未选择部件。</p></div>
+          </section>
+          <section id="tab-api" class="tab-panel" hidden>
+            <div class="panel-title">
+              <span class="eyebrow">LOCAL API</span>
+              <h2>让程序完成构建</h2>
+              <p>界面与未来的 AI 调用同一套 API。现在无需配置模型。</p>
+            </div>
+            <div class="api-address">http://127.0.0.1:18120</div>
+            <div class="api-route">
+              <b>GET</b><code>/api/context</code
+              ><small>当前工程、预算和运行结果</small>
+            </div>
+            <div class="api-route">
+              <b>POST</b><code>/api/design/apply</code
+              ><small>按修订原子修改参数或源码</small>
+            </div>
+            <div class="api-route">
+              <b>POST</b><code>/api/experiment/commands</code
+              ><small>运行原生命令</small>
+            </div>
+            <div class="api-route">
+              <b>POST</b><code>/api/experiment/optimize</code
+              ><small>生成实体成本候选</small>
+            </div>
+            <div class="api-route">
+              <b>GET</b><code>/api/simulation/frame</code
+              ><small>无副作用读取当前帧</small>
+            </div>
+            <div class="api-route">
+              <b>POST</b><code>/api/export</code
+              ><small>导出明确标记的实验包</small>
+            </div>
+            <h3>局部修改示例</h3>
+            <pre id="api-example"></pre>
+            <a
+              class="outline link-button"
+              href="/api/openapi.json"
+              target="_blank"
+              >打开接口索引 ↗</a
+            ><a
+              class="outline link-button"
+              href="/api/capabilities"
+              target="_blank"
+              >读取能力与限制 ↗</a
+            >
+          </section>
+        </aside>
+      </main>
+      <footer class="statusbar">
+        <span id="status-message">正在初始化工作台…</span
+        ><span id="performance">—</span
+        ><span>本地运行 · 数据保存在程序 data 文件夹</span>
+      </footer>
+    </div>
+    <input type="file" id="file-input" accept=".json" hidden />
+    <div id="toast" role="status" hidden></div>
+    <dialog id="modal">
+      <div class="modal-heading">
+        <h2 id="modal-title"></h2>
+        <button id="modal-close" aria-label="关闭">×</button>
+      </div>
+      <div id="modal-body"></div>
+    </dialog>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
+

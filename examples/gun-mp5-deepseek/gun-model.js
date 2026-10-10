@@ -1,0 +1,93 @@
+// MP5 风格冲锋枪 v2：短护木、弯弹匣、环形前准星、鼓形照门、伸缩托、侧置拉机柄
+// 坐标：X 枪口前方，Y 上，Z 侧向；单位=游戏格，角度=度。全部部件保持两条尺寸相等以控制狐狸数。
+const magCurve = param("magCurve", 28, {min:20, max:36, step:1, label:"弹匣弯曲角度"});
+
+// ---------- 机匣 ----------
+box("recv_body",{name:"机匣主体",size:[0.300,0.072,0.072],position:[-0.020,0.000,0],material:"black",motionGroup:"static"});
+box("recv_top",{name:"上机匣盖",size:[0.270,0.052,0.052],position:[-0.030,0.047,0],material:"black",motionGroup:"static"});
+box("recv_spine",{name:"机匣盖顶脊",size:[0.250,0.012,0.012],position:[-0.035,0.079,0],material:"gray",motionGroup:"static"});
+box("recv_rear_cap",{name:"尾部端盖",size:[0.042,0.080,0.080],position:[-0.178,0.004,0],material:"black",motionGroup:"static"});
+box("recv_rail_L",{name:"机匣左侧下沿",size:[0.300,0.008,0.008],position:[-0.020,-0.030,-0.039],material:"gray",motionGroup:"static"});
+box("recv_rail_R",{name:"机匣右侧下沿",size:[0.300,0.008,0.008],position:[-0.020,-0.030,0.039],material:"gray",motionGroup:"static"});
+box("magwell",{name:"弹匣井",size:[0.135,0.050,0.050],position:[0.020,-0.052,0],material:"black",motionGroup:"static"});
+box("selector",{name:"快慢机拨杆",size:[0.115,0.009,0.009],position:[-0.055,0.008,0.041],rotation:[0,0,6],material:"gray",motionGroup:"static"});
+box("selector_knob",{name:"快慢机圆钮",size:[0.014,0.014,0.014],position:[-0.055,0.008,0.046],material:"gray",motionGroup:"static"});
+box("recv_front_collar",{name:"机匣前箍",size:[0.016,0.076,0.076],position:[0.130,0.000,0],material:"black",motionGroup:"static"});
+box("rivet_1",{name:"机匣侧铆钉1",size:[0.006,0.006,0.006],position:[-0.150,0.010,0.039],material:"gray",motionGroup:"static"});
+box("rivet_2",{name:"机匣侧铆钉2",size:[0.006,0.006,0.006],position:[0.090,0.010,0.039],material:"gray",motionGroup:"static"});
+
+// ---------- 握把与扳机护圈（三段围成护圈孔）----------
+box("grip_mount",{name:"握把连接座",size:[0.058,0.030,0.030],position:[-0.135,-0.044,0],rotation:[0,0,-14],material:"black",motionGroup:"static"});
+box("grip_body",{name:"握把主体",size:[0.155,0.054,0.054],position:[-0.172,-0.112,0],rotation:[0,0,-100],material:"black",motionGroup:"static"});
+box("grip_base",{name:"握把底端",size:[0.020,0.058,0.058],position:[-0.187,-0.191,0],rotation:[0,0,-100],material:"black",motionGroup:"static"});
+box("guard_rear",{name:"护圈后段",size:[0.085,0.010,0.010],position:[-0.128,-0.095,0],rotation:[0,0,-84],material:"black",motionGroup:"static"});
+box("guard_bottom",{name:"护圈底段",size:[0.112,0.010,0.010],position:[-0.078,-0.140,0],material:"black",motionGroup:"static"});
+box("guard_front",{name:"护圈前段",size:[0.075,0.010,0.010],position:[-0.014,-0.105,0],rotation:[0,0,60],material:"black",motionGroup:"static"});
+box("trigger_upper",{name:"扳机上段",size:[0.052,0.009,0.009],position:[-0.082,-0.072,0],rotation:[0,0,-78],material:"gray",motionGroup:"static"});
+box("trigger_lower",{name:"扳机下段",size:[0.021,0.009,0.009],position:[-0.0885,-0.100,0],rotation:[0,0,-130],material:"gray",motionGroup:"static"});
+box("mag_catch",{name:"弹匣卡榫",size:[0.022,0.030,0.022],position:[-0.010,-0.062,0],rotation:[0,0,-8],material:"black",motionGroup:"static"});
+
+// ---------- 弯弹匣（整组随换弹抽出复位）----------
+box("mag_entry",{name:"弹匣入口",size:[0.105,0.038,0.038],position:[0.010,-0.080,0],material:"black",motionGroup:"magazine"});
+const segN = 9, step = 0.030;
+let c = [0.010,-0.080];
+for (let i=0;i<segN;i++){
+  const th = i*magCurve/(segN-1);
+  box("mag_seg_"+(i+1),{name:"弹匣分段"+(i+1),size:[0.095,0.030,0.030],position:[c[0],c[1],0],rotation:[0,0,th],material:"black",motionGroup:"magazine"});
+  const mid = (th + (i+1)*magCurve/(segN-1))/2 * Math.PI/180;
+  c = [c[0]+step*Math.sin(mid), c[1]-step*Math.cos(mid)];
+}
+box("mag_floor",{name:"弹匣底板",size:[0.105,0.034,0.034],position:[c[0],c[1],0],rotation:[0,0,magCurve+2],material:"gray",motionGroup:"magazine"});
+box("mag_rib_a_L",{name:"弹匣左侧棱1",size:[0.085,0.005,0.005],position:[0.01595,-0.15469,-0.017],rotation:[0,0,8.75],material:"gray",motionGroup:"magazine"});
+box("mag_rib_a_R",{name:"弹匣右侧棱1",size:[0.085,0.005,0.005],position:[0.01595,-0.15469,0.017],rotation:[0,0,8.75],material:"gray",motionGroup:"magazine"});
+box("mag_rib_b_L",{name:"弹匣左侧棱2",size:[0.085,0.005,0.005],position:[0.03768,-0.24186,-0.017],rotation:[0,0,19.25],material:"gray",motionGroup:"magazine"});
+box("mag_rib_b_R",{name:"弹匣右侧棱2",size:[0.085,0.005,0.005],position:[0.03768,-0.24186,0.017],rotation:[0,0,19.25],material:"gray",motionGroup:"magazine"});
+box("mag_rib_c_L",{name:"弹匣左侧棱3",size:[0.085,0.005,0.005],position:[0.06086,-0.29715,-0.017],rotation:[0,0,26.25],material:"gray",motionGroup:"magazine"});
+box("mag_rib_c_R",{name:"弹匣右侧棱3",size:[0.085,0.005,0.005],position:[0.06086,-0.29715,0.017],rotation:[0,0,26.25],material:"gray",motionGroup:"magazine"});
+
+// ---------- 短护木 ----------
+box("hg_body",{name:"护木主体",size:[0.195,0.054,0.054],position:[0.245,-0.002,0],material:"black",motionGroup:"static"});
+box("hg_rear_cap",{name:"护木后箍",size:[0.016,0.058,0.058],position:[0.145,-0.002,0],material:"black",motionGroup:"static"});
+box("hg_front_cap",{name:"护木前箍",size:[0.016,0.052,0.052],position:[0.348,-0.002,0],material:"black",motionGroup:"static"});
+box("hg_rib_L",{name:"护木左侧棱",size:[0.170,0.007,0.007],position:[0.245,-0.004,-0.028],material:"gray",motionGroup:"static"});
+box("hg_rib_R",{name:"护木右侧棱",size:[0.170,0.007,0.007],position:[0.245,-0.004,0.028],material:"gray",motionGroup:"static"});
+box("hg_rib_bottom",{name:"护木底棱",size:[0.170,0.007,0.007],position:[0.245,-0.030,0],material:"gray",motionGroup:"static"});
+
+// ---------- 枪管 / 前护罩 / 拉机柄导管 ----------
+box("barrel",{name:"枪管",size:[0.275,0.024,0.024],position:[0.475,0.000,0],material:"black",motionGroup:"static"});
+box("barrel_root",{name:"枪管座",size:[0.030,0.050,0.050],position:[0.350,0.000,0],material:"black",motionGroup:"static"});
+box("barrel_ring",{name:"枪管前环",size:[0.018,0.032,0.032],position:[0.590,0.000,0],material:"black",motionGroup:"static"});
+box("muzzle",{name:"枪口套",size:[0.045,0.030,0.030],position:[0.625,0.000,0],material:"gray",motionGroup:"static"});
+box("muzzle_face",{name:"枪口端面",size:[0.0015,0.020,0.020],position:[0.6475,0.000,0],material:"black",motionGroup:"static"});
+box("cocking_tube",{name:"拉机柄导管",size:[0.360,0.026,0.026],position:[0.355,0.048,0],material:"black",motionGroup:"static"});
+box("barrel_under",{name:"枪管下护条",size:[0.170,0.008,0.008],position:[0.455,-0.019,0],material:"gray",motionGroup:"static"});
+box("front_shroud",{name:"机匣前护罩",size:[0.020,0.060,0.060],position:[0.175,0.010,0],material:"black",motionGroup:"static"});
+
+// ---------- 环形前准星（座+底环+两立柱+顶环+准星柱）----------
+box("fs_base",{name:"前准星座",size:[0.026,0.095,0.026],position:[0.545,0.055,0],material:"black",motionGroup:"static"});
+box("fs_ring_bottom",{name:"前准星环底",size:[0.012,0.012,0.062],position:[0.545,0.108,0],material:"black",motionGroup:"static"});
+box("fs_ring_L",{name:"前准星环左柱",size:[0.012,0.040,0.012],position:[0.545,0.135,-0.025],material:"black",motionGroup:"static"});
+box("fs_ring_R",{name:"前准星环右柱",size:[0.012,0.040,0.012],position:[0.545,0.135,0.025],material:"black",motionGroup:"static"});
+box("fs_ring_top",{name:"前准星环顶",size:[0.012,0.012,0.062],position:[0.545,0.161,0],material:"black",motionGroup:"static"});
+box("fs_post",{name:"前准星柱",size:[0.008,0.036,0.008],position:[0.545,0.130,0],material:"gray",motionGroup:"static"});
+
+// ---------- 鼓形照门（基座+鼓体+两端刻环+左右耳）----------
+box("rs_base",{name:"照门基座",size:[0.062,0.032,0.032],position:[-0.130,0.088,0],material:"black",motionGroup:"static"});
+box("rs_drum",{name:"鼓形照门鼓体",size:[0.044,0.044,0.050],position:[-0.130,0.114,0],material:"black",motionGroup:"static"});
+box("rs_notch_L",{name:"鼓形照门左刻环",size:[0.038,0.038,0.006],position:[-0.130,0.114,-0.028],material:"gray",motionGroup:"static"});
+box("rs_notch_R",{name:"鼓形照门右刻环",size:[0.038,0.038,0.006],position:[-0.130,0.114,0.028],material:"gray",motionGroup:"static"});
+box("rs_ear_L",{name:"照门左耳",size:[0.016,0.026,0.016],position:[-0.130,0.142,-0.031],material:"black",motionGroup:"static"});
+box("rs_ear_R",{name:"照门右耳",size:[0.016,0.026,0.016],position:[-0.130,0.142,0.031],material:"black",motionGroup:"static"});
+
+// ---------- 侧置拉机柄（bolt 动作组）----------
+box("bolt_tube",{name:"拉机柄滑套",size:[0.150,0.016,0.016],position:[0.400,0.062,-0.020],material:"black",motionGroup:"bolt"});
+box("bolt_knob",{name:"拉机柄握把",size:[0.020,0.020,0.038],position:[0.355,0.062,-0.044],material:"black",motionGroup:"bolt"});
+box("bolt_stop",{name:"拉机柄前挡块",size:[0.018,0.024,0.024],position:[0.478,0.062,-0.020],material:"black",motionGroup:"bolt"});
+
+// ---------- 伸缩托（双导轨+托座+三片托板）----------
+box("stock_rail_L",{name:"伸缩托左导轨",size:[0.260,0.017,0.017],position:[-0.300,0.012,-0.026],material:"black",motionGroup:"static"});
+box("stock_rail_R",{name:"伸缩托右导轨",size:[0.260,0.017,0.017],position:[-0.300,0.012,0.026],material:"black",motionGroup:"static"});
+box("stock_hinge",{name:"托座连接块",size:[0.050,0.040,0.040],position:[-0.405,0.012,0],material:"black",motionGroup:"static"});
+box("butt_post_M",{name:"托板中片",size:[0.022,0.135,0.022],position:[-0.442,-0.020,0.000],material:"black",motionGroup:"static"});
+box("butt_post_L",{name:"托板左片",size:[0.022,0.135,0.022],position:[-0.442,-0.020,-0.023],material:"black",motionGroup:"static"});
+box("butt_post_R",{name:"托板右片",size:[0.022,0.135,0.022],position:[-0.442,-0.020,0.023],material:"black",motionGroup:"static"});

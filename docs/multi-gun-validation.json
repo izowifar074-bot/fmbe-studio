@@ -1,0 +1,152 @@
+{
+  "version": "0.2.1",
+  "model": "deepseek-flash",
+  "provider": "https://api.deepseek.com",
+  "createdAt": "2026-10-10T18:25:05.083Z",
+  "basis": "User-confirmed current AK47 command system. Additional client-edge investigation is excluded by user clarification.",
+  "cases": [
+    {
+      "id": "m4a1",
+      "name": "M4A1 风格卡宾枪（黑灰 / 直插弹匣 + 拉机柄）R2",
+      "entities": 72,
+      "parts": 72,
+      "budget": 85,
+      "magazineParts": 10,
+      "boltParts": 3,
+      "rootPreserved": true,
+      "constructionPassed": true,
+      "maxCornerError": 8.015858290931479e-14,
+      "commandBlocks": 258,
+      "calls": 5,
+      "tokens": 134746,
+      "repairedErrors": [],
+      "preview": {
+        "evidence": "legacy event alone does not prove final image delivery"
+      },
+      "jobId": "f3dd3960-05ea-4dac-8e99-ce1ef24a519e",
+      "sourceSha256": "f27ff98555fa09d664f9cf927740ae97e8cfea8ea1f66e001e275a4faba1b7d0",
+      "commandSha256": "5abd9a8c26c7aaf08509d1abde897c04d02a1264718b4f04517db391395cd8a9",
+      "images": {
+        "normal": "m4a1-side.png",
+        "aim": "m4a1-aim.png",
+        "reload": "m4a1-reload.png"
+      }
+    },
+    {
+      "id": "mp5",
+      "name": "MP5 风格游戏冲锋枪 v2",
+      "entities": 73,
+      "parts": 73,
+      "budget": 75,
+      "magazineParts": 17,
+      "boltParts": 3,
+      "rootPreserved": true,
+      "constructionPassed": true,
+      "maxCornerError": 5.835814249978626e-13,
+      "commandBlocks": 260,
+      "calls": 5,
+      "tokens": 106000,
+      "repairedErrors": [
+        "当前 5×5×5 身份编码最多支持 125 只狐狸；实际需要 141 只狐狸，预算 75"
+      ],
+      "preview": {
+        "evidence": "legacy event alone does not prove final image delivery"
+      },
+      "jobId": "a3d09f11-c635-4652-a283-86d54064bf46",
+      "sourceSha256": "2fc6a231f4852456df09c8af825b39e02138ff5fd4465fddf9712a61bac34cb7",
+      "commandSha256": "acbc34d57c9f9fc306870ff635da2a8859953e5e0fc6dd8090d597066d8bf9bc",
+      "images": {
+        "normal": "mp5-side.png",
+        "aim": "mp5-aim.png",
+        "reload": "mp5-reload.png"
+      }
+    },
+    {
+      "id": "g17",
+      "name": "G17 风格游戏手枪",
+      "entities": 44,
+      "parts": 44,
+      "budget": 55,
+      "magazineParts": 5,
+      "boltParts": 18,
+      "rootPreserved": true,
+      "constructionPassed": true,
+      "maxCornerError": 6.655290724060379e-13,
+      "commandBlocks": 200,
+      "calls": 5,
+      "tokens": 110926,
+      "repairedErrors": [
+        "当前 5×5×5 身份编码最多支持 125 只狐狸；实际需要 240 只狐狸，预算 55；R001 表达式 46096 字符，超过当前导出上限 32000"
+      ],
+      "preview": {
+        "evidence": "legacy event alone does not prove final image delivery"
+      },
+      "jobId": "6fb57b11-a612-481c-9547-dadc25af9f03",
+      "sourceSha256": "f7c917a5ed2d9b2cf672360229bb924e7c987c2bd3843e8337808e0f482982f6",
+      "commandSha256": "28e4b9353b7465dccdec6d37c993e53cbd1b26b4e7407240e2288e365606795e",
+      "images": {
+        "normal": "g17-side.png",
+        "aim": "g17-aim.png",
+        "reload": "g17-reload.png"
+      }
+    },
+    {
+      "id": "awp",
+      "name": "AWP 风格狙击枪 v2（黑灰·长枪管·拇指孔枪托·分段镜·全部件等截面）",
+      "entities": 74,
+      "parts": 74,
+      "budget": 90,
+      "magazineParts": 7,
+      "boltParts": 4,
+      "rootPreserved": true,
+      "constructionPassed": true,
+      "maxCornerError": 8.570928940666824e-14,
+      "commandBlocks": 262,
+      "calls": 5,
+      "tokens": 127862,
+      "repairedErrors": [
+        "实际需要 118 只狐狸，预算 90"
+      ],
+      "preview": {
+        "evidence": "legacy event alone does not prove final image delivery"
+      },
+      "jobId": "087135e5-28ff-4828-9617-2f9caad33fdb",
+      "sourceSha256": "63cc7227d957691b319629379555bc93776ce659f193f5d95057910ef57d481f",
+      "commandSha256": "7f1d8737d878808d5d15ebef7a3bb6f132fee42d1a2b2a2a048acab94977f53b",
+      "images": {
+        "normal": "awp-side.png",
+        "aim": "awp-aim.png",
+        "reload": "awp-reload.png"
+      }
+    },
+    {
+      "id": "aug",
+      "name": "AUG 风格无托游戏步枪 v2",
+      "entities": 66,
+      "parts": 66,
+      "budget": 85,
+      "magazineParts": 6,
+      "boltParts": 2,
+      "rootPreserved": true,
+      "constructionPassed": true,
+      "maxCornerError": 5.093271314869433e-13,
+      "commandBlocks": 246,
+      "calls": 6,
+      "tokens": 174246,
+      "repairedErrors": [],
+      "preview": {
+        "captured": 2,
+        "delivered": 2,
+        "sourceHash": "b43087b3"
+      },
+      "jobId": "870489bd-5e6d-47fe-82f1-33afcab8d844",
+      "sourceSha256": "7004601ce627d638c66e9302a42d07c0623eadbe7d3b9c5f35ada75e89edcaa5",
+      "commandSha256": "e34735c0e9380c64df2b2e864f6b6ae21c01eaa75ba4b86d95f1faa0fc727abb",
+      "images": {
+        "normal": "aug-side.png",
+        "aim": "aug-aim.png",
+        "reload": "aug-reload.png"
+      }
+    }
+  ]
+}

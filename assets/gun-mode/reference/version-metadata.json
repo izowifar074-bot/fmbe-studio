@@ -1,0 +1,56 @@
+{
+  "source": "decrypted/level.dat",
+  "sourceSha256": "666c974a163148af6712d20cd199399d0b35ead826462451fff0744f624a7a42",
+  "header": {
+    "levelDatFormatVersion": 10,
+    "declaredPayloadBytes": 4142,
+    "actualPayloadBytes": 4142,
+    "parsedPayloadBytes": 4142
+  },
+  "versionRelatedRootFields": {
+    "InventoryVersion": {
+      "nbtType": "String",
+      "value": "1.21.120"
+    },
+    "MinimumCompatibleClientVersion": {
+      "nbtType": "List[Int]",
+      "value": [
+        1,
+        21,
+        120,
+        0,
+        0
+      ]
+    },
+    "NetworkVersion": {
+      "nbtType": "Int",
+      "value": 860
+    },
+    "StorageVersion": {
+      "nbtType": "Int",
+      "value": 10
+    },
+    "WorldVersion": {
+      "nbtType": "Int",
+      "value": 1
+    },
+    "lastOpenedWithVersion": {
+      "nbtType": "List[Int]",
+      "value": [
+        1,
+        21,
+        120,
+        0,
+        0
+      ]
+    }
+  },
+  "requestedFieldsPresent": {
+    "lastOpenedWithVersion": true,
+    "MinimumCompatibleClientVersion": true,
+    "baseGameVersion": false
+  },
+  "userTarget": "Minecraft Bedrock / NetEase 1.21.120",
+  "evidenceBoundary": "These are version-related fields stored in this level.dat. They do not by themselves identify the exact NetEase launcher/client build or prove compatibility with the requested 1.21.120 target.",
+  "playerDataIncluded": false
+}

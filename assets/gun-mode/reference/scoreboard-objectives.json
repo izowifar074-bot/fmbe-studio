@@ -1,0 +1,41 @@
+{
+  "objectives": [
+    {
+      "name": "fire",
+      "displayName": "fire",
+      "criteria": "dummy",
+      "scores": [
+        {
+          "Score": 0,
+          "ScoreboardId": 1
+        }
+      ],
+      "source": "current scoreboards record"
+    },
+    {
+      "name": "ammo",
+      "displayName": "ammo",
+      "criteria": "dummy",
+      "scores": [
+        {
+          "Score": 30,
+          "ScoreboardId": 2
+        }
+      ],
+      "source": "current scoreboards record"
+    },
+    {
+      "name": "reload",
+      "displayName": "reload",
+      "criteria": "dummy",
+      "scores": [
+        {
+          "Score": 0,
+          "ScoreboardId": 2
+        }
+      ],
+      "source": "current scoreboards record"
+    }
+  ],
+  "definitionCommands": []
+}

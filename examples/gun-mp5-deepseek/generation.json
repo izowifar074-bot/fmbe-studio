@@ -1,0 +1,166 @@
+{
+  "id": "mp5",
+  "budget": 75,
+  "prompt": "制作一把 MP5 风格游戏冲锋枪，细节接近参考 AK47 水平。需要可辨认的短护木、弯弹匣、环形前准星、鼓形照门、伸缩托和侧置拉机柄；黑灰材质，保留护圈孔，支持三姿态与换弹。请使用实际实体预算并提交完整造型，不要只改参考名称。",
+  "jobId": "a3d09f11-c635-4652-a283-86d54064bf46",
+  "status": "completed",
+  "usage": [
+    {
+      "prompt_tokens": 2211,
+      "completion_tokens": 79,
+      "total_tokens": 2290,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 803
+    },
+    {
+      "prompt_tokens": 3079,
+      "completion_tokens": 76,
+      "total_tokens": 3155,
+      "prompt_tokens_details": {
+        "cached_tokens": 2176
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 8
+      },
+      "prompt_cache_hit_tokens": 2176,
+      "prompt_cache_miss_tokens": 903
+    },
+    {
+      "prompt_tokens": 9078,
+      "completion_tokens": 17998,
+      "total_tokens": 27076,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 17998
+      },
+      "prompt_cache_hit_tokens": 3072,
+      "prompt_cache_miss_tokens": 6006
+    },
+    {
+      "prompt_tokens": 27097,
+      "completion_tokens": 5027,
+      "total_tokens": 32124,
+      "prompt_tokens_details": {
+        "cached_tokens": 18176
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1220
+      },
+      "prompt_cache_hit_tokens": 18176,
+      "prompt_cache_miss_tokens": 8921
+    },
+    {
+      "prompt_tokens": 32245,
+      "completion_tokens": 9110,
+      "total_tokens": 41355,
+      "prompt_tokens_details": {
+        "cached_tokens": 32000
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 4839
+      },
+      "prompt_cache_hit_tokens": 32000,
+      "prompt_cache_miss_tokens": 245
+    }
+  ],
+  "events": [
+    {
+      "at": "2026-10-10T17:49:54.883Z",
+      "stage": "skill_loaded",
+      "message": "已自动加载 fmbe-guns 技能与几何接口",
+      "detail": {
+        "skill": "fmbe-guns",
+        "baselineBlocks": 124
+      }
+    },
+    {
+      "at": "2026-10-10T17:49:54.884Z",
+      "stage": "model_call",
+      "message": "DeepSeek 正在设计 / 修正（第 1 轮）"
+    },
+    {
+      "at": "2026-10-10T17:49:56.561Z",
+      "stage": "reference_read",
+      "message": "模型读取资料：overview"
+    },
+    {
+      "at": "2026-10-10T17:49:56.562Z",
+      "stage": "reference_read",
+      "message": "模型读取资料：geometry"
+    },
+    {
+      "at": "2026-10-10T17:49:56.563Z",
+      "stage": "model_call",
+      "message": "DeepSeek 正在设计 / 修正（第 2 轮）"
+    },
+    {
+      "at": "2026-10-10T17:49:57.880Z",
+      "stage": "reference_read",
+      "message": "模型读取资料：runtime"
+    },
+    {
+      "at": "2026-10-10T17:49:57.882Z",
+      "stage": "reference_read",
+      "message": "模型读取资料：model"
+    },
+    {
+      "at": "2026-10-10T17:49:57.882Z",
+      "stage": "model_call",
+      "message": "DeepSeek 正在设计 / 修正（第 3 轮）"
+    },
+    {
+      "at": "2026-10-10T17:51:12.565Z",
+      "stage": "model_call",
+      "message": "DeepSeek 正在设计 / 修正（第 4 轮）"
+    },
+    {
+      "at": "2026-10-10T17:51:28.401Z",
+      "stage": "compiling",
+      "message": "编译几何、重建狐狸编号与换弹绑定"
+    },
+    {
+      "at": "2026-10-10T17:51:28.439Z",
+      "stage": "validation_failed",
+      "message": "当前 5×5×5 身份编码最多支持 125 只狐狸；实际需要 141 只狐狸，预算 75"
+    },
+    {
+      "at": "2026-10-10T17:51:28.439Z",
+      "stage": "model_call",
+      "message": "DeepSeek 正在设计 / 修正（第 5 轮）"
+    },
+    {
+      "at": "2026-10-10T17:52:00.242Z",
+      "stage": "compiling",
+      "message": "编译几何、重建狐狸编号与换弹绑定"
+    },
+    {
+      "at": "2026-10-10T17:52:00.473Z",
+      "stage": "candidate_ready",
+      "message": "候选已通过编译：73 只狐狸",
+      "detail": {
+        "entities": 73,
+        "parts": 73
+      }
+    },
+    {
+      "at": "2026-10-10T17:52:00.776Z",
+      "stage": "preview_observed",
+      "message": "已把实际命令预览交给模型检查"
+    },
+    {
+      "at": "2026-10-10T17:52:01.271Z",
+      "stage": "completed",
+      "message": "枪械已生成并载入，命令包已准备好"
+    }
+  ],
+  "name": "MP5 风格游戏冲锋枪 v2",
+  "entities": 73
+}

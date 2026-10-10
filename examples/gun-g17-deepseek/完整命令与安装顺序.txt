@@ -1,0 +1,622 @@
+【00 新世界前置：只执行一次】
+P001 | impulse | 无条件 | 需要红石 | 延迟0
+scoreboard objectives add fire dummy
+
+P002 | impulse | 无条件 | 需要红石 | 延迟0
+scoreboard objectives add ammo dummy
+
+P003 | impulse | 无条件 | 需要红石 | 延迟0
+scoreboard objectives add reload dummy
+
+P004 | impulse | 无条件 | 需要红石 | 延迟0
+scoreboard players set test fire 0
+
+P005 | impulse | 无条件 | 需要红石 | 延迟0
+scoreboard players set @p ammo 30
+
+P006 | impulse | 无条件 | 需要红石 | 延迟0
+scoreboard players set @p reload 0
+
+
+【换弹触发及标签复位】
+G01-001 | repeating | 无条件 | 保持开启 | 延迟0
+execute if entity @a[tag=换弹] run playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f] animation.player.riding.arms none 0 "((v.k111??0)==0)?{v.k110=0;v.k111=1;};return 1;" ga995c3t23
+
+G01-002 | chain | 无条件 | 保持开启 | 延迟0
+tag @a remove 换弹
+
+
+【普通姿态触发】
+G02-001 | repeating | 无条件 | 保持开启 | 延迟0
+execute if entity @a[tag=testa,tag=!休止] run playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f] animation.player.riding.arms none 0 "v.k90=0;return 1;" ga995c3t22
+
+G02-002 | chain | 无条件 | 保持开启 | 延迟0
+tag @a remove testa
+
+
+【跑动姿态触发】
+G03-001 | repeating | 无条件 | 保持开启 | 延迟0
+execute if entity @a[tag=ga995c3p,tag=testc,c=1,tag=!休止] run playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f] animation.player.holding.zombie none 0 "v.k90=2;return 1;" ga995c3t22
+
+G03-002 | chain | 无条件 | 保持开启 | 延迟0
+tag @a remove testc
+
+
+【机瞄姿态触发】
+G04-001 | repeating | 无条件 | 保持开启 | 延迟0
+execute if entity @a[tag=ga995c3p,tag=testb,c=1,tag=!休止] run playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f] animation.player.riding.arms.zombie none 0 "v.k90=1;return 1;" ga995c3t22
+
+G04-002 | chain | 无条件 | 保持开启 | 延迟0
+tag @a remove testb
+
+
+【持握及玩家姿态检测】
+G05-001 | repeating | 无条件 | 保持开启 | 延迟0
+tag @a remove ga995c3p
+
+G05-002 | chain | 无条件 | 保持开启 | 延迟0
+tag @a[hasitem={item=snowball,location=slot.weapon.mainhand}] add ga995c3p
+
+G05-003 | chain | 无条件 | 保持开启 | 延迟0
+execute unless entity @a[tag=ga995c3p] as @a[hasitem={item=snowball}] at @s run tp @e[type=fox,tag=ga995c3f] ~~50~
+
+G05-004 | chain | 无条件 | 保持开启 | 延迟0
+tag @a remove 跳跃
+
+G05-005 | chain | 无条件 | 保持开启 | 延迟0
+tag @a remove 潜行
+
+G05-006 | chain | 无条件 | 保持开启 | 延迟0
+tag @a remove 移动
+
+G05-007 | chain | 无条件 | 保持开启 | 延迟0
+execute as @a[tag=ga995c3p] at @s anchored feet unless entity @s[r=0.03] as @s at @s unless block ~ ~ ~ water 0 unless block ~ ~ ~ lava 0 unless entity @s[y=~1.82,dy=0] if entity @s[y=~1.80,dy=0] run tag @s add 移动
+
+G05-008 | chain | 无条件 | 保持开启 | 延迟0
+execute as @a[tag=ga995c3p] at @s unless entity @s[y=~1.5,dy=0] if entity @s[y=~0.7,dy=0] run tag @s add 潜行
+
+G05-009 | chain | 无条件 | 保持开启 | 延迟0
+execute as @a[tag=ga995c3p] at @s if block ~~-0.1~ air 0 run tag @s add 跳跃
+
+G05-010 | chain | 无条件 | 保持开启 | 延迟0
+execute as @a[tag=!移动] if entity @s[tag=移动2] run tag @s add 回调
+
+G05-011 | chain | 无条件 | 保持开启 | 延迟0
+execute as @a[tag=!潜行] if entity @s[tag=潜行2] run tag @s add 回调
+
+G05-012 | chain | 无条件 | 保持开启 | 延迟0
+tag @a[tag=!跳跃] remove 跳跃2
+
+G05-013 | chain | 无条件 | 保持开启 | 延迟0
+execute as @a[tag=移动,tag=!移动2] run tag @s[tag=!跳跃,tag=!回调] add testb
+
+G05-014 | chain | 无条件 | 保持开启 | 延迟0
+tag @a[tag=移动] add 移动2
+
+G05-015 | chain | 无条件 | 保持开启 | 延迟0
+execute as @a[tag=潜行,tag=!潜行2] run tag @s[tag=!跳跃] add testc
+
+G05-016 | chain | 无条件 | 保持开启 | 延迟0
+tag @a[tag=潜行] add 潜行2
+
+G05-017 | chain | 无条件 | 保持开启 | 延迟0
+tag @a[tag=回调] add testa
+
+G05-018 | chain | 无条件 | 保持开启 | 延迟0
+tag @a[tag=回调] remove 潜行2
+
+G05-019 | chain | 无条件 | 保持开启 | 延迟0
+tag @a[tag=回调] remove 移动2
+
+G05-020 | chain | 无条件 | 保持开启 | 延迟0
+tag @a remove 回调
+
+
+【初始化触发按钮】
+G06-001 | impulse | 无条件 | 需要红石 | 延迟0
+tag @p add 初始化
+
+
+【初始化与动画控制器链】
+G07-001 | repeating | 无条件 | 保持开启 | 延迟0
+execute as @a[tag=初始化] run testfor @s
+
+G07-002 | chain | 有条件 | 保持开启 | 延迟0
+execute if entity @a[tag=ga995c3p,tag=初始化,c=1] run playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f] animation.player.sleeping none 0 "v.k44=v.k41+5*v.k42+25*v.k43;(v.k44<22)?{(v.k44<11)?{(v.k44<5)?{(v.k44<2)?{(v.k44<1)?{v.k0=0.65;v.k1=-0.104;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.048;v.k13=2.327373340628;}:{v.k0=0.52;v.k1=-0.104;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.048;v.k13=0.456435464588;};}:{(v.k44<3)?{v.k0=0.545;v.k1=-0.104;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.052;v.k13=0.877058019307;}:{(v.k44<4)?{v.k0=0.645;v.k1=-0.077;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.008;v.k13=5.361902647382;}:{v.k0=0.672;v.k1=-0.092;v.k2=0.264;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.02;v.k13=1.702938636593;};};};}:{(v.k44<8)?{(v.k44<6)?{v.k0=0.562;v.k1=-0.104;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.05;v.k13=0.346410161514;}:{(v.k44<7)?{v.k0=0.574;v.k1=-0.104;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.05;v.k13=0.346410161514;}:{v.k0=0.586;v.k1=-0.104;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.05;v.k13=0.346410161514;};};}:{(v.k44<9)?{v.k0=0.598;v.k1=-0.104;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.05;v.k13=0.346410161514;}:{(v.k44<10)?{v.k0=0.708;v.k1=-0.104;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.05;v.k13=0.346410161514;}:{v.k0=0.72;v.k1=-0.104;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.05;v.k13=0.346410161514;};};};};}:{(v.k44<16)?{(v.k44<13)?{(v.k44<12)?{v.k0=0.781;v.k1=-0.1;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.024;v.k13=0.866025403784;}:{v.k0=0.774;v.k1=-0.134;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.012;v.k13=1.290994448736;};}:{(v.k44<14)?{v.k0=0.758;v.k1=-0.075;v.k2=0.245;v.k3=0;v.k4=1;v.k5=0;v.k6=-1;v.k7=0;v.k8=0;v.k9=0;v.k10=0;v.k11=1;v.k12=0.01;v.k13=1.61245154966;}:{(v.k44<15)?{v.k0=0.758;v.k1=-0.062;v.k2=0.245;v.k3=-1;v.k4=0;v.k5=0;v.k6=0;v.k7=0;v.k8=1;v.k9=0;v.k10=1;v.k11=0;v.k12=0.008;v.k13=1.414213562373;}:{v.k0=0.538;v.k1=-0.075;v.k2=0.245;v.k3=0;v.k4=1;v.k5=0;v.k6=-1;v.k7=0;v.k8=0;v.k9=0;v.k10=0;v.k11=1;v.k12=0.01;v.k13=1.732050807569;};};};}:{(v.k44<19)?{(v.k44<17)?{v.k0=0.538;v.k1=-0.064;v.k2=0.256;v.k3=-1;v.k4=0;v.k5=0;v.k6=0;v.k7=0;v.k8=1;v.k9=0;v.k10=1;v.k11=0;v.k12=0.008;v.k13=1.322875655532;}:{(v.k44<18)?{v.k0=0.538;v.k1=-0.064;v.k2=0.234;v.k3=-1;v.k4=0;v.k5=0;v.k6=0;v.k7=0;v.k8=1;v.k9=0;v.k10=1;v.k11=0;v.k12=0.008;v.k13=1.322875655532;}:{v.k0=0.63;v.k1=-0.148;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.04;v.k13=2.318404623874;};};}:{(v.k44<20)?{v.k0=0.735;v.k1=-0.143;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.03;v.k13=1.414213562373;}:{(v.k44<21)?{v.k0=0.735;v.k1=-0.162;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.008;v.k13=2.5;}:{v.k0=0.515;v.k1=-0.143;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.03;v.k13=0.930949336251;};};};};};}:{(v.k44<33)?{(v.k44<27)?{(v.k44<24)?{(v.k44<23)?{v.k0=0.615;v.k1=-0.15;v.k2=0.266;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.008;v.k13=3.535533905933;}:{v.k0=0.615;v.k1=-0.15;v.k2=0.224;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.008;v.k13=3.535533905933;};}:{(v.k44<25)?{v.k0=0.61;v.k1=-0.148;v.k2=0.269;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.012;v.k13=1;}:{(v.k44<26)?{v.k0=0.632;v.k1=-0.134;v.k2=0.267;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.008;v.k13=1.936491673104;}:{v.k0=0.598;v.k1=-0.134;v.k2=0.268;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.008;v.k13=1;};};};}:{(v.k44<30)?{(v.k44<28)?{v.k0=0.65;v.k1=-0.134;v.k2=0.268;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.008;v.k13=1;}:{(v.k44<29)?{v.k0=0.64;v.k1=-0.184;v.k2=0.245;v.k3=-0.990268068742;v.k4=0;v.k5=0.13917310096;v.k6=0.13917310096;v.k7=0;v.k8=0.990268068742;v.k9=0;v.k10=1;v.k11=0;v.k12=0.012;v.k13=1.632993161855;}:{v.k0=0.674;v.k1=-0.19;v.k2=0.245;v.k3=0;v.k4=-0.970295726276;v.k5=0.2419218956;v.k6=0;v.k7=0.2419218956;v.k8=0.970295726276;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.012;v.k13=2.020725942164;};};}:{(v.k44<31)?{v.k0=0.643;v.k1=-0.214;v.k2=0.245;v.k3=0;v.k4=0;v.k5=1;v.k6=0;v.k7=1;v.k8=0;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.012;v.k13=2.041241452319;}:{(v.k44<32)?{v.k0=0.623;v.k1=-0.189;v.k2=0.245;v.k3=0;v.k4=-0.980614658547;v.k5=0.195946144243;v.k6=0;v.k7=0.195946144243;v.k8=0.980614658547;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.012;v.k13=2.061552812809;}:{v.k0=0.590333841759;v.k1=-0.218032325695;v.k2=0.245;v.k3=0;v.k4=0.939692620786;v.k5=-0.342020143326;v.k6=0;v.k7=-0.342020143326;v.k8=-0.939692620786;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.046;v.k13=1.581138830084;};};};};}:{(v.k44<38)?{(v.k44<35)?{(v.k44<34)?{v.k0=0.614681207637;v.k1=-0.224233597726;v.k2=0.257;v.k3=0;v.k4=0.939692620786;v.k5=-0.342020143326;v.k6=0;v.k7=-0.342020143326;v.k8=-0.939692620786;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.01;v.k13=3.162277660168;}:{v.k0=0.614681207637;v.k1=-0.224233597726;v.k2=0.233;v.k3=0;v.k4=0.939692620786;v.k5=-0.342020143326;v.k6=0;v.k7=-0.342020143326;v.k8=-0.939692620786;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.01;v.k13=3.162277660168;};}:{(v.k44<36)?{v.k0=0.566670516167;v.k1=-0.209951668422;v.k2=0.257;v.k3=0;v.k4=0.939692620786;v.k5=-0.342020143326;v.k6=0;v.k7=-0.342020143326;v.k8=-0.939692620786;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.01;v.k13=3.082207001484;}:{(v.k44<37)?{v.k0=0.566670516167;v.k1=-0.209951668422;v.k2=0.233;v.k3=0;v.k4=0.939692620786;v.k5=-0.342020143326;v.k6=0;v.k7=-0.342020143326;v.k8=-0.939692620786;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.01;v.k13=3.082207001484;}:{v.k0=0.591188892117;v.k1=-0.215683094143;v.k2=0.269;v.k3=0;v.k4=0.939692620786;v.k5=-0.342020143326;v.k6=0;v.k7=-0.342020143326;v.k8=-0.939692620786;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.008;v.k13=3.535533905933;};};};}:{(v.k44<41)?{(v.k44<39)?{v.k0=0.591188892117;v.k1=-0.215683094143;v.k2=0.221;v.k3=0;v.k4=0.939692620786;v.k5=-0.342020143326;v.k6=0;v.k7=-0.342020143326;v.k8=-0.939692620786;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.008;v.k13=3.535533905933;}:{(v.k44<40)?{v.k0=0.608289899283;v.k1=-0.168698463104;v.k2=0.245;v.k3=0;v.k4=0.939692620786;v.k5=-0.342020143326;v.k6=0;v.k7=-0.342020143326;v.k8=-0.939692620786;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.026;v.k13=0.679366220487;}:{v.k0=0.5894787914;v.k1=-0.220381557247;v.k2=0.245;v.k3=0;v.k4=0.939692620786;v.k5=-0.342020143326;v.k6=0;v.k7=-0.342020143326;v.k8=-0.939692620786;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.03;v.k13=2.081665999466;};};}:{(v.k44<42)?{v.k0=0.603318528378;v.k1=-0.223290454012;v.k2=0.259;v.k3=0;v.k4=0.939692620786;v.k5=-0.342020143326;v.k6=0;v.k7=-0.342020143326;v.k8=-0.939692620786;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.008;v.k13=3.535533905933;}:{(v.k44<43)?{v.k0=0.603318528378;v.k1=-0.223290454012;v.k2=0.231;v.k3=0;v.k4=0.939692620786;v.k5=-0.342020143326;v.k6=0;v.k7=-0.342020143326;v.k8=-0.939692620786;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.008;v.k13=3.535533905933;}:{v.k0=0.564853341081;v.k1=-0.288039425944;v.k2=0.245;v.k3=0;v.k4=0.939692620786;v.k5=-0.342020143326;v.k6=0;v.k7=-0.342020143326;v.k8=-0.939692620786;v.k9=-1;v.k10=0;v.k11=0;v.k12=0.05;v.k13=0.6;};};};};};};v.k110=(v.k110??2.6);v.k111=(v.k111??0);(v.k111==1)?{v.k110=math.min(2.6,v.k110+math.max(0,q.delta_time));(v.k110>=2.6)?{v.k111=0;};};t.k80=(v.k111==1)?v.k110:2.6;t.k81=math.max(0,math.min(1,t.k80/0.28));t.k81=t.k81*t.k81*(3-2*t.k81);t.k82=math.max(0,math.min(1,(t.k80-2.18)/0.42));t.k82=t.k82*t.k82*(3-2*t.k82);t.k81=t.k81*(1-t.k82);t.k82=math.max(0,math.min(1,(t.k80-0.35)/0.47));t.k82=t.k82*t.k82*(3-2*t.k82);t.k83=math.max(0,math.min(1,(t.k80-1.18)/0.60));t.k83=t.k83*t.k83*(3-2*t.k83);t.k84=t.k82-t.k83;t.k85=math.max(0,math.min(1,(t.k80-1.90)/0.14));t.k85=t.k85*t.k85*(3-2*t.k85);t.k86=math.max(0,math.min(1,(t.k80-2.04)/0.10));t.k86=t.k86*t.k86*(3-2*t.k86);t.k87=t.k85-t.k86;v.k90=(v.k90??0);v.k91=(v.k91??0);v.k92=(v.k92??0);v.k93=(v.k93??1);v.k94=(v.k94??0);v.k95=(v.k95??0);v.k96=(v.k96??0);v.k97=(v.k97??0);(v.k90!=v.k96)?{v.k94=v.k91;v.k95=v.k92;v.k93=0;v.k96=v.k90;};t.k50=math.max(0,q.delta_time);v.k93=math.min(1,v.k93+t.k50/0.22);v.k97=math.mod(v.k97+t.k50,5);t.k51=v.k93*v.k93*(3-2*v.k93);v.k91=v.k94+((v.k90==1)-v.k94)*t.k51;v.k92=v.k95+((v.k90==2)-v.k95)*t.k51;((v.k44>=39&&v.k44<=43))?{t.k88=math.cos(-18*t.k84);t.k89=math.sin(-18*t.k84);t.k90=v.k0-(0.593851817704);t.k91=v.k1-(-0.224740070864);v.k0=t.k88*t.k90-t.k89*t.k91+(0.593851817704)-0.07*t.k84;v.k1=t.k89*t.k90+t.k88*t.k91+(-0.224740070864)-0.52*t.k84;t.k90=v.k3;t.k91=v.k6;v.k3=t.k88*t.k90-t.k89*t.k91;v.k6=t.k89*t.k90+t.k88*t.k91;t.k90=v.k4;t.k91=v.k7;v.k4=t.k88*t.k90-t.k89*t.k91;v.k7=t.k89*t.k90+t.k88*t.k91;t.k90=v.k5;t.k91=v.k8;v.k5=t.k88*t.k90-t.k89*t.k91;v.k8=t.k89*t.k90+t.k88*t.k91;};((v.k44>=0&&v.k44<=17))?{v.k0=v.k0-0.075*t.k87;};t.k98=v.k91*(1-t.k81);t.k99=v.k92*(1-t.k81);t.k52=v.k97*792;t.k53=math.sin(t.k52);t.k54=math.cos(2*t.k52);t.k55=math.sin(75*t.k98+18*t.k81);t.k56=math.cos(75*t.k98+18*t.k81);t.k57=math.sin((-6+0.45*t.k54)*t.k98-8*t.k81);t.k58=math.cos((-6+0.45*t.k54)*t.k98-8*t.k81);t.k59=math.sin((-12+0.8*t.k53)*t.k98-24*t.k81);t.k60=math.cos((-12+0.8*t.k53)*t.k98-24*t.k81);t.k61=t.k58*t.k56;t.k62=-t.k57;t.k63=t.k58*t.k55;t.k64=t.k60*t.k57*t.k56-t.k59*t.k55;t.k65=t.k60*t.k58;t.k66=t.k60*t.k57*t.k55+t.k59*t.k56;t.k67=-t.k59*t.k57*t.k56-t.k60*t.k55;t.k68=-t.k59*t.k58;t.k69=-t.k59*t.k57*t.k55+t.k60*t.k56;t.k70=v.k0-0.66;t.k71=v.k1+0.174;t.k72=v.k2-0.245;v.k0=t.k61*t.k70+t.k62*t.k71+t.k63*t.k72+0.66-0.21*t.k98+0.03*t.k99;v.k1=t.k64*t.k70+t.k65*t.k71+t.k66*t.k72-0.174-0.116*t.k98+0.025*t.k99+0.006*(t.k54-1)*t.k98+0.15*t.k81;v.k2=t.k67*t.k70+t.k68*t.k71+t.k69*t.k72+0.245-0.125*t.k98-0.245*t.k99+0.010*t.k53*t.k98-0.07*t.k81;t.k70=v.k3;t.k71=v.k6;t.k72=v.k9;v.k3=t.k61*t.k70+t.k62*t.k71+t.k63*t.k72;v.k6=t.k64*t.k70+t.k65*t.k71+t.k66*t.k72;v.k9=t.k67*t.k70+t.k68*t.k71+t.k69*t.k72;t.k70=v.k4;t.k71=v.k7;t.k72=v.k10;v.k4=t.k61*t.k70+t.k62*t.k71+t.k63*t.k72;v.k7=t.k64*t.k70+t.k65*t.k71+t.k66*t.k72;v.k10=t.k67*t.k70+t.k68*t.k71+t.k69*t.k72;t.k70=v.k5;t.k71=v.k8;t.k72=v.k11;v.k5=t.k61*t.k70+t.k62*t.k71+t.k63*t.k72;v.k8=t.k64*t.k70+t.k65*t.k71+t.k66*t.k72;v.k11=t.k67*t.k70+t.k68*t.k71+t.k69*t.k72;t.k0=q.camera_rotation(0);t.k1=q.camera_rotation(1);t.k2=math.sin(t.k0);t.k3=math.cos(t.k0);t.k4=math.sin(t.k1);t.k5=math.cos(t.k1);t.k6=-t.k4*t.k3;t.k7=-t.k2;t.k8=t.k5*t.k3;t.k9=-t.k4*t.k2;t.k10=t.k3;t.k11=t.k5*t.k2;t.k12=-t.k5;t.k13=-t.k4;v.k20=t.k6*v.k3+t.k9*v.k6+t.k12*v.k9;v.k21=t.k6*v.k4+t.k9*v.k7+t.k12*v.k10;v.k22=t.k6*v.k5+t.k9*v.k8+t.k12*v.k11;v.k23=t.k7*v.k3+t.k10*v.k6;v.k24=t.k7*v.k4+t.k10*v.k7;v.k25=t.k7*v.k5+t.k10*v.k8;v.k26=t.k8*v.k3+t.k11*v.k6+t.k13*v.k9;v.k27=t.k8*v.k4+t.k11*v.k7+t.k13*v.k10;v.k28=t.k8*v.k5+t.k11*v.k8+t.k13*v.k11;return 0;" controller.animation.fox.move
+
+G07-003 | chain | 有条件 | 保持开启 | 延迟0
+playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f,tag=ga995c3x0] animation.player.attack.rotations none 0 "v.k41=0;v.attack_body_rot_y=math.atan2(-v.k24,math.sqrt(v.k23*v.k23+v.k25*v.k25));return 0;" ga995c3r
+
+G07-004 | chain | 有条件 | 保持开启 | 延迟0
+playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f,tag=ga995c3x1] animation.player.attack.rotations none 0 "v.k41=1;v.attack_body_rot_y=math.atan2(-v.k24,math.sqrt(v.k23*v.k23+v.k25*v.k25));return 0;" ga995c3r
+
+G07-005 | chain | 有条件 | 保持开启 | 延迟0
+playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f,tag=ga995c3x2] animation.player.attack.rotations none 0 "v.k41=2;v.attack_body_rot_y=math.atan2(-v.k24,math.sqrt(v.k23*v.k23+v.k25*v.k25));return 0;" ga995c3r
+
+G07-006 | chain | 有条件 | 保持开启 | 延迟0
+playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f,tag=ga995c3x3] animation.player.attack.rotations none 0 "v.k41=3;v.attack_body_rot_y=math.atan2(-v.k24,math.sqrt(v.k23*v.k23+v.k25*v.k25));return 0;" ga995c3r
+
+G07-007 | chain | 有条件 | 保持开启 | 延迟0
+playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f,tag=ga995c3x4] animation.player.attack.rotations none 0 "v.k41=4;v.attack_body_rot_y=math.atan2(-v.k24,math.sqrt(v.k23*v.k23+v.k25*v.k25));return 0;" ga995c3r
+
+G07-008 | chain | 有条件 | 保持开启 | 延迟0
+playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f,tag=ga995c3z0] animation.creeper.swelling none 0 "v.k42=0;v.swelling_scale1=math.sqrt(32/7*math.max(v.k12,0.000001));v.k33=v.swelling_scale1;v.swelling_scale2=math.max(v.k13,0.000001)*v.k33;return 0;" ga995c3s
+
+G07-009 | chain | 有条件 | 保持开启 | 延迟0
+playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f,tag=ga995c3z1] animation.creeper.swelling none 0 "v.k42=1;v.swelling_scale1=math.sqrt(32/7*math.max(v.k12,0.000001));v.k33=v.swelling_scale1;v.swelling_scale2=math.max(v.k13,0.000001)*v.k33;return 0;" ga995c3s
+
+G07-010 | chain | 有条件 | 保持开启 | 延迟0
+playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f,tag=ga995c3z2] animation.creeper.swelling none 0 "v.k42=2;v.swelling_scale1=math.sqrt(32/7*math.max(v.k12,0.000001));v.k33=v.swelling_scale1;v.swelling_scale2=math.max(v.k13,0.000001)*v.k33;return 0;" ga995c3s
+
+G07-011 | chain | 有条件 | 保持开启 | 延迟0
+playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f,tag=ga995c3z3] animation.creeper.swelling none 0 "v.k42=3;v.swelling_scale1=math.sqrt(32/7*math.max(v.k12,0.000001));v.k33=v.swelling_scale1;v.swelling_scale2=math.max(v.k13,0.000001)*v.k33;return 0;" ga995c3s
+
+G07-012 | chain | 有条件 | 保持开启 | 延迟0
+playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f,tag=ga995c3z4] animation.creeper.swelling none 0 "v.k42=4;v.swelling_scale1=math.sqrt(32/7*math.max(v.k12,0.000001));v.k33=v.swelling_scale1;v.swelling_scale2=math.max(v.k13,0.000001)*v.k33;return 0;" ga995c3s
+
+G07-013 | chain | 有条件 | 保持开启 | 延迟0
+playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f] animation.minecart.move.v1.0 none 0 "t.k0=q.frame_alpha;v.k73=(v.k73??t.k0);v.k74=(v.k74??0);v.k75=(v.k75??q.position(0));v.k76=(v.k76??q.position(1));v.k77=(v.k77??q.position(2));v.k70=(v.k70??0);v.k71=(v.k71??0);v.k72=(v.k72??0);(t.k0<v.k73)?{(v.k74<3)?{v.k74=v.k74+1;};v.k70=q.position(0)-v.k75;v.k71=q.position(1)-v.k76;v.k72=q.position(2)-v.k77;v.k75=q.position(0);v.k76=q.position(1);v.k77=q.position(2);(v.k74<3||math.abs(v.k70)+math.abs(v.k71)+math.abs(v.k72)>3)?{v.k70=0;v.k71=0;v.k72=0;};};v.k73=t.k0;t.k0=q.camera_rotation(0);t.k1=q.camera_rotation(1);t.k2=math.sin(t.k0);t.k3=math.cos(t.k0);t.k4=math.sin(t.k1);t.k5=math.cos(t.k1);t.k6=-t.k4*t.k3;t.k7=-t.k2;t.k8=t.k5*t.k3;t.k9=-t.k4*t.k2;t.k10=t.k3;t.k11=t.k5*t.k2;t.k12=-t.k5;t.k13=-t.k4;t.k2=(v.k64==1)?(1-q.frame_alpha):((v.k64==2)?(0-q.frame_alpha):0);t.k14=q.rotation_to_camera(0);t.k15=q.rotation_to_camera(1);t.k16=q.distance_from_camera;t.k17=math.cos(t.k14);t.k18=math.sin(t.k14);t.k19=-math.sin(t.k15)*t.k17*t.k16+t.k6*v.k0+t.k9*v.k1+t.k12*v.k2-1+t.k2*v.k70;t.k20=-t.k18*t.k16+t.k7*v.k0+t.k10*v.k1-0.0078125+t.k2*v.k71;t.k21=math.cos(t.k15)*t.k17*t.k16+t.k8*v.k0+t.k11*v.k1+t.k13*v.k2+t.k2*v.k72;t.k22=math.cos(q.body_y_rotation);t.k23=math.sin(q.body_y_rotation);t.k24=16*q.model_scale;v.hurt=0;v.rail_rotation.z=0;v.rail_offset.x=t.k24*(t.k22*t.k19+t.k23*t.k21);v.rail_offset.y=q.model_scale*(18.5+16*t.k20);v.rail_offset.z=t.k24*(t.k23*t.k19-t.k22*t.k21);return 0;" ga995c3u
+
+RY0 | chain | 有条件 | 保持开启 | 延迟0
+playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f,tag=ga995c3y0] animation.ender_dragon.neck_head_movement none 0 "v.k43=0;t.k0=16/math.sqrt(32/7*math.max(v.k12,0.000001));t.k1=math.max(v.k13,0.000001);v.head_position_x=0;v.head_position_y=t.k0*10/7*t.k1*v.k12;v.head_position_z=-t.k0*16/7*v.k12;v.head_rotation_x=180;v.head_rotation_y=0;v.head_rotation_z=180;return 0;" ga995c3h
+
+RY1 | chain | 有条件 | 保持开启 | 延迟0
+playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f,tag=ga995c3y1] animation.ender_dragon.neck_head_movement none 0 "v.k43=1;t.k0=16/math.sqrt(32/7*math.max(v.k12,0.000001));t.k1=math.max(v.k13,0.000001);v.head_position_x=0;v.head_position_y=t.k0*10/7*t.k1*v.k12;v.head_position_z=-t.k0*16/7*v.k12;v.head_rotation_x=180;v.head_rotation_y=0;v.head_rotation_z=180;return 0;" ga995c3h
+
+G07-017 | chain | 有条件 | 保持开启 | 延迟0
+playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f] animation.warden.move none 0 "v.head_x_rot=0;v.head_z_rot=0;v.body_x_rot=(math.abs(v.k25)+math.abs(v.k23)>0.0000001)?math.atan2(v.k25,-v.k23):math.atan2(-v.k20,-v.k22);v.body_z_rot=(math.abs(v.k25)+math.abs(v.k23)>0.0000001)?math.atan2(-v.k21,v.k27):0;return 0;" ga995c3b
+
+G07-018 | chain | 有条件 | 保持开启 | 延迟0
+playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f] animation.player.riding.arms none 0 "return 0;" ga995c3e
+
+G07-019 | chain | 有条件 | 保持开启 | 延迟0
+playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f] animation.player.riding.arms none 0 "v.k64=1;return 0;" ga995c3q
+
+G07-020 | chain | 有条件 | 保持开启 | 延迟0
+scoreboard players set @a[tag=初始化] ammo 30
+
+G07-021 | chain | 无条件 | 保持开启 | 延迟0
+tag @a remove 初始化
+
+
+【持枪狐狸跟随】
+G09-001 | repeating | 无条件 | 保持开启 | 延迟0
+execute as @a[tag=ga995c3p,c=1,hasitem={item=snowball,location=slot.weapon.mainhand}] at @s anchored eyes positioned ^ ^ ^2 run tp @e[type=fox,tag=ga995c3f] ~ ~ ~ 0 0
+
+
+【狐狸构建与材质标签初始化】
+S000 | impulse | 无条件 | 需要红石 | 延迟0
+kill @e[type=fox,name=ga995c3f]
+
+S1 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 0.5 100 0.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S2 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 2.5 100 0.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S3 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 4.5 100 0.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S4 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 6.5 100 0.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S5 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 8.5 100 0.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S6 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 0.5 100 2.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S7 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 2.5 100 2.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S8 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 4.5 100 2.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S9 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 6.5 100 2.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S10 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 8.5 100 2.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S11 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 0.5 100 4.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S12 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 2.5 100 4.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S13 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 4.5 100 4.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S14 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 6.5 100 4.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S15 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 8.5 100 4.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S16 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 0.5 100 6.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S17 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 2.5 100 6.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S18 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 4.5 100 6.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S19 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 6.5 100 6.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S20 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 8.5 100 6.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S21 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 0.5 100 8.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S22 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 2.5 100 8.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S23 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 4.5 100 8.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S24 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 6.5 100 8.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S25 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 8.5 100 8.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S26 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 0.5 102 0.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S27 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 2.5 102 0.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S28 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 4.5 102 0.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S29 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 6.5 102 0.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S30 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 8.5 102 0.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S31 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 0.5 102 2.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S32 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 2.5 102 2.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S33 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 4.5 102 2.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S34 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 6.5 102 2.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S35 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 8.5 102 2.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S36 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 0.5 102 4.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S37 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 2.5 102 4.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S38 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 4.5 102 4.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S39 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 6.5 102 4.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S40 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 8.5 102 4.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S41 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 0.5 102 6.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S42 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 2.5 102 6.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S43 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 4.5 102 6.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+S44 | chain | 无条件 | 保持开启 | 延迟0
+summon fox 6.5 102 6.5 0 0 minecraft:ageable_grow_up ga995c3f
+
+E45 | chain | 无条件 | 保持开启 | 延迟0
+effect @e[type=fox,name=ga995c3f] resistance infinite 4 true
+
+E46 | chain | 无条件 | 保持开启 | 延迟0
+effect @e[type=fox,name=ga995c3f] instant_health infinite 4 true
+
+E47 | chain | 无条件 | 保持开启 | 延迟0
+effect @e[type=fox,name=ga995c3f] invisibility infinite 0 true
+
+E48 | chain | 无条件 | 保持开启 | 延迟0
+effect @e[type=fox,name=ga995c3f] slowness infinite 255 true
+
+M0 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=0,y=100,z=0,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 gray_concrete 1
+
+M1 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=2,y=100,z=0,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M2 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=4,y=100,z=0,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M3 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=6,y=100,z=0,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M4 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=8,y=100,z=0,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M5 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=0,y=100,z=2,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M6 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=2,y=100,z=2,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M7 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=4,y=100,z=2,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M8 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=6,y=100,z=2,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M9 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=8,y=100,z=2,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M10 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=0,y=100,z=4,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M11 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=2,y=100,z=4,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 iron_block 1
+
+M12 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=4,y=100,z=4,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 iron_block 1
+
+M13 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=6,y=100,z=4,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 iron_block 1
+
+M14 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=8,y=100,z=4,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 iron_block 1
+
+M15 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=0,y=100,z=6,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 iron_block 1
+
+M16 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=2,y=100,z=6,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 iron_block 1
+
+M17 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=4,y=100,z=6,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 iron_block 1
+
+M18 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=6,y=100,z=6,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M19 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=8,y=100,z=6,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M20 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=0,y=100,z=8,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 gray_concrete 1
+
+M21 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=2,y=100,z=8,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M22 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=4,y=100,z=8,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 gray_concrete 1
+
+M23 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=6,y=100,z=8,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 gray_concrete 1
+
+M24 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=8,y=100,z=8,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M25 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=0,y=102,z=0,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 gray_concrete 1
+
+M26 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=2,y=102,z=0,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 iron_block 1
+
+M27 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=4,y=102,z=0,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 iron_block 1
+
+M28 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=6,y=102,z=0,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 iron_block 1
+
+M29 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=8,y=102,z=0,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M30 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=0,y=102,z=2,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M31 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=2,y=102,z=2,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M32 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=4,y=102,z=2,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M33 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=6,y=102,z=2,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 gray_concrete 1
+
+M34 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=8,y=102,z=2,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 gray_concrete 1
+
+M35 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=0,y=102,z=4,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 gray_concrete 1
+
+M36 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=2,y=102,z=4,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 gray_concrete 1
+
+M37 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=4,y=102,z=4,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 gray_concrete 1
+
+M38 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=6,y=102,z=4,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 gray_concrete 1
+
+M39 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=8,y=102,z=4,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 iron_block 1
+
+M40 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=0,y=102,z=6,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 black_concrete 1
+
+M41 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=2,y=102,z=6,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 gray_concrete 1
+
+M42 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=4,y=102,z=6,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 gray_concrete 1
+
+M43 | chain | 无条件 | 保持开启 | 延迟0
+replaceitem entity @e[type=fox,name=ga995c3f,x=6,y=102,z=6,dx=0,dy=0,dz=0] slot.weapon.mainhand 0 gray_concrete 1
+
+Tx0 | chain | 无条件 | 保持开启 | 延迟0
+tag @e[type=fox,name=ga995c3f,x=0,y=100,z=0,dx=0,dy=4,dz=8] add ga995c3x0
+
+Tx1 | chain | 无条件 | 保持开启 | 延迟0
+tag @e[type=fox,name=ga995c3f,x=2,y=100,z=0,dx=0,dy=4,dz=8] add ga995c3x1
+
+Tx2 | chain | 无条件 | 保持开启 | 延迟0
+tag @e[type=fox,name=ga995c3f,x=4,y=100,z=0,dx=0,dy=4,dz=8] add ga995c3x2
+
+Tx3 | chain | 无条件 | 保持开启 | 延迟0
+tag @e[type=fox,name=ga995c3f,x=6,y=100,z=0,dx=0,dy=4,dz=8] add ga995c3x3
+
+Tx4 | chain | 无条件 | 保持开启 | 延迟0
+tag @e[type=fox,name=ga995c3f,x=8,y=100,z=0,dx=0,dy=4,dz=8] add ga995c3x4
+
+Tz0 | chain | 无条件 | 保持开启 | 延迟0
+tag @e[type=fox,name=ga995c3f,x=0,y=100,z=0,dx=8,dy=4,dz=0] add ga995c3z0
+
+Tz1 | chain | 无条件 | 保持开启 | 延迟0
+tag @e[type=fox,name=ga995c3f,x=0,y=100,z=2,dx=8,dy=4,dz=0] add ga995c3z1
+
+Tz2 | chain | 无条件 | 保持开启 | 延迟0
+tag @e[type=fox,name=ga995c3f,x=0,y=100,z=4,dx=8,dy=4,dz=0] add ga995c3z2
+
+Tz3 | chain | 无条件 | 保持开启 | 延迟0
+tag @e[type=fox,name=ga995c3f,x=0,y=100,z=6,dx=8,dy=4,dz=0] add ga995c3z3
+
+Tz4 | chain | 无条件 | 保持开启 | 延迟0
+tag @e[type=fox,name=ga995c3f,x=0,y=100,z=8,dx=8,dy=4,dz=0] add ga995c3z4
+
+Ty0 | chain | 无条件 | 保持开启 | 延迟0
+tag @e[type=fox,name=ga995c3f,x=0,y=100,z=0,dx=8,dy=0,dz=8] add ga995c3y0
+
+Ty1 | chain | 无条件 | 保持开启 | 延迟0
+tag @e[type=fox,name=ga995c3f,x=0,y=102,z=0,dx=8,dy=0,dz=8] add ga995c3y1
+
+TAG | chain | 无条件 | 保持开启 | 延迟0
+tag @e[type=fox,name=ga995c3f] add ga995c3f
+
+FOLLOW | chain | 无条件 | 保持开启 | 延迟0
+execute as @a[tag=ga995c3p,c=1] at @s anchored eyes positioned ^ ^ ^2 run tp @e[type=fox,tag=ga995c3f] ~ ~ ~ 0 0
+
+
+【射击弹药与换弹逻辑】
+G11-001 | repeating | 无条件 | 保持开启 | 延迟0
+execute as @a[tag=ga995c3p,c=1,tag=!休止] at @s anchored eyes run tp @e[type=snowball] ^ ^ ^
+
+G11-002 | chain | 无条件 | 保持开启 | 延迟0
+execute at @a[tag=ga995c3p,c=1,tag=!休止] if entity @e[type=snowball] as @e[type=fox,tag=ga995c3f,c=2] as @e[type=fox,tag=ga995c3f,c=2] as @e[type=fox,tag=ga995c3f,c=2] as @e[type=fox,tag=ga995c3f,c=2] as @e[type=fox,tag=ga995c3f,c=2] as @e[type=fox,tag=ga995c3f,c=2] as @e[type=fox,tag=ga995c3f,c=2] as @e[type=fox,tag=ga995c3f,c=2] as @e[type=fox,tag=ga995c3f,c=2] run execute as @e[type=snowball] at @s rotated as @a[tag=ga995c3p,c=1] positioned ~-0.5 ~-0.5 ~-0.5 unless entity @e[type=!fox,type=!player,type=!snowball,dx=0,dy=0,dz=0] positioned ~0.5 ~0.5 ~0.5 run tp @s ^ ^ ^0.5 true
+
+G11-003 | chain | 无条件 | 保持开启 | 延迟0
+execute at @a[tag=ga995c3p,c=1,tag=!休止] at @e[type=snowball] positioned ~-0.5 ~-0.5 ~-0.5 run damage @e[type=!fox,type=!player,type=!snowball,dx=0,dy=0,dz=0,c=1] 11 projectile entity @a[tag=ga995c3p,c=1]
+
+G11-004 | chain | 无条件 | 保持开启 | 延迟0
+execute at @a[tag=ga995c3p,c=1,tag=!休止] at @e[type=snowball] run particle minecraft:basic_crit_particle ~ ~ ~
+
+G11-005 | chain | 无条件 | 保持开启 | 延迟0
+execute if entity @e[type=snowball] run camerashake add @a[tag=ga995c3p,tag=!休止] 0.1 0.3 rotational
+
+G11-006 | chain | 无条件 | 保持开启 | 延迟0
+execute if entity @e[type=snowball] run scoreboard players set test fire 5
+
+G11-007 | chain | 无条件 | 保持开启 | 延迟0
+execute if score test fire matches 1..6 run scoreboard players remove test fire 1
+
+G11-008 | chain | 无条件 | 保持开启 | 延迟0
+execute if score test fire matches 1..6 run tag @a[tag=ga995c3p,tag=!潜行,tag=!休止] add 回调
+
+G11-009 | chain | 无条件 | 保持开启 | 延迟0
+execute if score test fire matches 1..6 run tag @a[tag=ga995c3p,tag=!潜行,tag=!休止] add testa
+
+G11-010 | chain | 无条件 | 保持开启 | 延迟0
+execute if entity @e[type=snowball] as @a[tag=ga995c3p,tag=!休止] at @s run playsound mob.zombie.woodbreak @s ~ ~ ~ 1 1
+
+G11-011 | chain | 无条件 | 保持开启 | 延迟0
+stopsound @a[tag=ga995c3p] random.bow
+
+G11-012 | chain | 无条件 | 保持开启 | 延迟0
+execute if entity @e[type=snowball] as @a[scores={ammo=1..30},tag=!休止] run scoreboard players remove @s ammo 1
+
+G11-013 | chain | 无条件 | 保持开启 | 延迟0
+execute if entity @e[type=snowball] as @a[scores={ammo=0..30},tag=!休止] run titleraw @s actionbar {"rawtext":[{"translate":"%%3","with":{"rawtext":[{"selector":"@s[scores={ammo=0..19}]"},{"selector":"@s[scores={ammo=0..9}]"},{"text":"§4"},{"text":"§6"},{"text":"§r"}]}},{"score":{"name":"@s","objective":"ammo"}}]}
+
+G11-014 | chain | 无条件 | 保持开启 | 延迟0
+execute if entity @e[type=snowball] as @a[scores={ammo=..0},tag=!休止] run scoreboard players set @s reload 1
+
+G11-015 | chain | 无条件 | 保持开启 | 延迟0
+execute if entity @e[type=snowball] as @a[scores={ammo=..0},tag=!休止] run playanimation @e[type=fox,name=ga995c3f,tag=ga995c3f] animation.player.riding.arms none 0 "v.k90=0;return 1;" ga995c3t22
+
+G11-016 | chain | 无条件 | 保持开启 | 延迟0
+execute if entity @e[type=snowball] as @a[scores={ammo=..0},tag=!休止] run tag @s add 休止
+
+G11-017 | chain | 无条件 | 保持开启 | 延迟0
+tag @a[scores={reload=1}] add 换弹
+
+G11-018 | chain | 无条件 | 保持开启 | 延迟0
+scoreboard players add @a[scores={reload=1..}] reload 1
+
+G11-019 | chain | 无条件 | 保持开启 | 延迟0
+tag @a[scores={reload=65..}] remove 休止
+
+G11-020 | chain | 无条件 | 保持开启 | 延迟0
+title @a[scores={reload=65..}] actionbar 30
+
+G11-021 | chain | 无条件 | 保持开启 | 延迟0
+scoreboard players set @a[scores={reload=65..}] ammo 30
+
+G11-022 | chain | 无条件 | 保持开启 | 延迟0
+tag @a[scores={reload=65..}] add testa
+
+G11-023 | chain | 无条件 | 保持开启 | 延迟0
+scoreboard players set @a[scores={reload=65..}] reload 0
+
+G11-024 | chain | 无条件 | 保持开启 | 延迟0
+execute at @a[tag=ga995c3p,c=1] run kill @e[type=snowball]
+
+G11-025 | chain | 无条件 | 保持开启 | 延迟0
+stopsound @a[tag=ga995c3p] random.bow
+
+
+【静音（原存档声音命令）】
+G12-003 | repeating | 无条件 | 保持开启 | 延迟0
+stopsound @a[tag=ga995c3p] random.bow
+
+G12-004 | chain | 无条件 | 保持开启 | 延迟0
+stopsound @a[tag=ga995c3p] mob.fox.ambient
+
+G12-005 | chain | 无条件 | 保持开启 | 延迟0
+stopsound @a[tag=ga995c3p] mob.fox.aggro
+
+G12-006 | chain | 无条件 | 保持开启 | 延迟0
+stopsound @a[tag=ga995c3p] mob.fox.bite
+
+G12-007 | chain | 无条件 | 保持开启 | 延迟0
+stopsound @a[tag=ga995c3p] mob.fox.death
+
+G12-008 | chain | 无条件 | 保持开启 | 延迟0
+stopsound @a[tag=ga995c3p] mob.fox.eat
+
+G12-009 | chain | 无条件 | 保持开启 | 延迟0
+stopsound @a[tag=ga995c3p] mob.fox.hurt
+
+G12-010 | chain | 无条件 | 保持开启 | 延迟0
+stopsound @a[tag=ga995c3p] mob.fox.screech
+
+G12-011 | chain | 无条件 | 保持开启 | 延迟0
+stopsound @a[tag=ga995c3p] mob.fox.sleep
+
+G12-012 | chain | 无条件 | 保持开启 | 延迟0
+stopsound @a[tag=ga995c3p] mob.fox.sniff
+
+G12-013 | chain | 无条件 | 保持开启 | 延迟0
+stopsound @a[tag=ga995c3p] mob.fox.spit
+
+G12-014 | chain | 无条件 | 保持开启 | 延迟0
+stopsound @a[tag=ga995c3p] entity.fox.teleport

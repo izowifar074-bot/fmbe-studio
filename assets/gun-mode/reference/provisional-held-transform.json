@@ -1,0 +1,60 @@
+{
+  "matrix": [
+    3.3779393780465595e-15,
+    3.4999999999988205,
+    1.2066083756109564e-15,
+    0,
+    2.1431318985078676e-16,
+    -1.0582679163990795e-16,
+    -3.4999999999999996,
+    0,
+    3.4999999999999996,
+    2.121483097157394e-17,
+    2.143131898507866e-16,
+    0,
+    2.000000000000003,
+    -2.0000000000000027,
+    -1.0000000000000058,
+    1
+  ],
+  "renderOrigin": [
+    -2.680147770384167e-16,
+    0.007812500000000076,
+    -1.1449174941446927e-16
+  ],
+  "rotationSigns": [
+    -1,
+    1,
+    -1
+  ],
+  "rotationOrder": "ZYX",
+  "modelBasis": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "calibrationIds": [
+    0,
+    2,
+    3,
+    4,
+    7,
+    8
+  ],
+  "method": "Fixed rotation convention and shared render-origin/held-item transform selected by independent source geometry fixtures; remaining parts and camera views checked. NOT measured in game.",
+  "maxSourceCornerError": 1.085800956073111e-13,
+  "profile": "ak47-reference-command-profile"
+}

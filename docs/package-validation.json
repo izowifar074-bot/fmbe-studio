@@ -1,0 +1,41 @@
+{
+  "version": "0.2.1",
+  "health": true,
+  "referenceFoxes": 75,
+  "exampleFoxes": 72,
+  "cases": [
+    {
+      "id": "mp5",
+      "foxes": 73,
+      "construction": true,
+      "pureCommandExport": true,
+      "rootPreserved": true
+    },
+    {
+      "id": "g17",
+      "foxes": 44,
+      "construction": true,
+      "pureCommandExport": true,
+      "rootPreserved": true
+    },
+    {
+      "id": "awp",
+      "foxes": 74,
+      "construction": true,
+      "pureCommandExport": true,
+      "rootPreserved": true
+    },
+    {
+      "id": "aug",
+      "foxes": 66,
+      "construction": true,
+      "pureCommandExport": true,
+      "rootPreserved": true
+    }
+  ],
+  "reload": true,
+  "pureCommandExport": true,
+  "noCredential": true,
+  "archiveCrc": "passed",
+  "isolatedServer": true
+}

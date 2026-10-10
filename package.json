@@ -1,0 +1,28 @@
+{
+  "name": "fmbe-studio",
+  "version": "0.2.1",
+  "private": true,
+  "type": "module",
+  "description": "Local FMBE authoring and command simulation workbench for the Bedrock 1.21.120 resource baseline",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node dist/server.mjs",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "acorn": "^8.15.0",
+    "fflate": "^0.8.2",
+    "three": "^0.180.0",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/three": "^0.180.0",
+    "@types/ws": "^8.18.1",
+    "esbuild": "^0.25.0",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

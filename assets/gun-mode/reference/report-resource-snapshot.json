@@ -1,0 +1,691 @@
+{
+  "animation_definitions": [
+    {
+      "source_url": "https://github.com/Mojang/bedrock-samples/blob/main/resource_pack/animations/player.animation.json",
+      "animation": "animation.player.sleeping",
+      "definition": {
+        "loop": true,
+        "override_previous_animation": true,
+        "bones": {
+          "head": {
+            "rotation": [
+              "30.0 - this",
+              "-this",
+              "-this"
+            ]
+          },
+          "root": {
+            "position": [
+              "24.0 * math.cos(query.body_y_rotation) * math.cos(query.sleep_rotation) - 24.0 * math.sin(query.body_y_rotation) * math.sin(query.sleep_rotation)",
+              0,
+              "24.0 * math.cos(query.body_y_rotation) * math.sin(query.sleep_rotation) + 24.0 * math.sin(query.body_y_rotation) * math.cos(query.sleep_rotation)"
+            ],
+            "rotation": [
+              -90,
+              "270.0 - query.sleep_rotation - query.body_y_rotation",
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "source_url": "https://github.com/Mojang/bedrock-samples/blob/main/resource_pack/animations/player.animation.json",
+      "animation": "animation.player.attack.rotations",
+      "definition": {
+        "loop": true,
+        "bones": {
+          "body": {
+            "rotation": [
+              0,
+              "variable.attack_body_rot_y",
+              0
+            ]
+          },
+          "leftarm": {
+            "rotation": [
+              "-(math.sin((1 - math.pow((1 - variable.attack_time), 4)) * 180) * 1.2 + math.sin(variable.attack_time * 180)) * 10.0",
+              0,
+              0
+            ]
+          },
+          "rightarm": {
+            "rotation": [
+              "-(math.sin((1 - math.pow((1 - variable.attack_time), 4)) * 180) * 1.2 + math.sin(variable.attack_time * 180)) * 30.0",
+              "-(math.sin((1 - math.pow((1 - variable.attack_time), 4)) * 180) ? (-90.0 * math.sin((1 - math.pow((1 - variable.attack_time), 4)) * 180)) + 30.0 : 0.0)",
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "source_url": "https://github.com/Mojang/bedrock-samples/blob/main/resource_pack/animations/creeper.animation.json",
+      "animation": "animation.creeper.swelling",
+      "definition": {
+        "loop": true,
+        "bones": {
+          "body": {
+            "scale": [
+              "variable.swelling_scale1",
+              "variable.swelling_scale2",
+              "variable.swelling_scale1"
+            ]
+          },
+          "head": {
+            "scale": [
+              "variable.swelling_scale1",
+              "variable.swelling_scale2",
+              "variable.swelling_scale1"
+            ]
+          },
+          "leg0": {
+            "scale": [
+              "variable.swelling_scale1",
+              "variable.swelling_scale2",
+              "variable.swelling_scale1"
+            ]
+          },
+          "leg1": {
+            "scale": [
+              "variable.swelling_scale1",
+              "variable.swelling_scale2",
+              "variable.swelling_scale1"
+            ]
+          },
+          "leg2": {
+            "scale": [
+              "variable.swelling_scale1",
+              "variable.swelling_scale2",
+              "variable.swelling_scale1"
+            ]
+          },
+          "leg3": {
+            "scale": [
+              "variable.swelling_scale1",
+              "variable.swelling_scale2",
+              "variable.swelling_scale1"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "source_url": "https://github.com/Mojang/bedrock-samples/blob/main/resource_pack/animations/ender_dragon.animation.json",
+      "animation": "animation.ender_dragon.neck_head_movement",
+      "definition": {
+        "loop": true,
+        "bones": {
+          "neck1": {
+            "rotation": [
+              "variable.neck_1_rotation_x - this",
+              "variable.neck_1_rotation_y - this",
+              "variable.neck_1_rotation_z - this"
+            ],
+            "position": [
+              "variable.neck_1_position_x - this",
+              "variable.neck_1_position_y - this",
+              "variable.neck_1_position_z - this"
+            ]
+          },
+          "neck2": {
+            "rotation": [
+              "variable.neck_2_rotation_x - this",
+              "variable.neck_2_rotation_y - this",
+              "variable.neck_2_rotation_z - this"
+            ],
+            "position": [
+              "variable.neck_2_position_x - this",
+              "variable.neck_2_position_y - this",
+              "variable.neck_2_position_z - this"
+            ]
+          },
+          "neck3": {
+            "rotation": [
+              "variable.neck_3_rotation_x - this",
+              "variable.neck_3_rotation_y - this",
+              "variable.neck_3_rotation_z - this"
+            ],
+            "position": [
+              "variable.neck_3_position_x - this",
+              "variable.neck_3_position_y - this",
+              "variable.neck_3_position_z - this"
+            ]
+          },
+          "neck4": {
+            "rotation": [
+              "variable.neck_4_rotation_x - this",
+              "variable.neck_4_rotation_y - this",
+              "variable.neck_4_rotation_z - this"
+            ],
+            "position": [
+              "variable.neck_4_position_x - this",
+              "variable.neck_4_position_y - this",
+              "variable.neck_4_position_z - this"
+            ]
+          },
+          "neck5": {
+            "rotation": [
+              "variable.neck_5_rotation_x - this",
+              "variable.neck_5_rotation_y - this",
+              "variable.neck_5_rotation_z - this"
+            ],
+            "position": [
+              "variable.neck_5_position_x - this",
+              "variable.neck_5_position_y - this",
+              "variable.neck_5_position_z - this"
+            ]
+          },
+          "head": {
+            "rotation": [
+              "variable.head_rotation_x - this",
+              "variable.head_rotation_y - this",
+              "variable.head_rotation_z - this"
+            ],
+            "position": [
+              "variable.head_position_x - this",
+              "variable.head_position_y - this",
+              "variable.head_position_z - this"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "source_url": "https://github.com/Mojang/bedrock-samples/blob/main/resource_pack/animations/warden.animation.json",
+      "animation": "animation.warden.move",
+      "definition": {
+        "loop": true,
+        "bones": {
+          "head": {
+            "rotation": [
+              "variable.head_x_rot",
+              0,
+              "variable.head_z_rot"
+            ]
+          },
+          "body": {
+            "rotation": [
+              "variable.body_x_rot",
+              0,
+              "variable.body_z_rot"
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              "variable.left_leg_x_rot",
+              0,
+              0
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              "variable.right_leg_x_rot",
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              "variable.left_arm_x_rot",
+              0,
+              0
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              "variable.right_arm_x_rot",
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "source_url": "https://github.com/Mojang/bedrock-samples/blob/main/resource_pack/animations/fox.animation.json",
+      "animation": "animation.fox.setup",
+      "definition": {
+        "loop": true,
+        "bones": {
+          "body": {
+            "rotation": [
+              "-this",
+              0,
+              0
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "fox_geometry": {
+    "format_version": "1.21.0",
+    "minecraft:geometry": [
+      {
+        "description": {
+          "identifier": "geometry.fox",
+          "texture_width": 64,
+          "texture_height": 32,
+          "visible_bounds_width": 3,
+          "visible_bounds_height": 2.5,
+          "visible_bounds_offset": [
+            0,
+            0.75,
+            0
+          ]
+        },
+        "bones": [
+          {
+            "name": "world",
+            "pivot": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "root",
+            "parent": "world",
+            "pivot": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "body",
+            "parent": "root",
+            "pivot": [
+              0,
+              8,
+              0
+            ],
+            "cubes": [
+              {
+                "origin": [
+                  -3,
+                  0,
+                  -3
+                ],
+                "size": [
+                  6,
+                  11,
+                  6
+                ],
+                "uv": [
+                  30,
+                  15
+                ]
+              }
+            ],
+            "locators": {
+              "lead_hold": [
+                0,
+                28,
+                0
+              ]
+            }
+          },
+          {
+            "name": "head",
+            "parent": "body",
+            "pivot": [
+              0,
+              8,
+              -3
+            ],
+            "cubes": [
+              {
+                "origin": [
+                  -4,
+                  4,
+                  -9
+                ],
+                "size": [
+                  8,
+                  6,
+                  6
+                ],
+                "uv": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "origin": [
+                  -4,
+                  10,
+                  -8
+                ],
+                "size": [
+                  2,
+                  2,
+                  1
+                ],
+                "uv": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "origin": [
+                  2,
+                  10,
+                  -8
+                ],
+                "size": [
+                  2,
+                  2,
+                  1
+                ],
+                "uv": [
+                  22,
+                  0
+                ]
+              },
+              {
+                "origin": [
+                  -2,
+                  4,
+                  -12
+                ],
+                "size": [
+                  4,
+                  2,
+                  3
+                ],
+                "uv": [
+                  0,
+                  24
+                ]
+              }
+            ],
+            "locators": {
+              "lead": [
+                0,
+                4,
+                -4
+              ]
+            }
+          },
+          {
+            "name": "head_sleeping",
+            "parent": "head",
+            "pivot": [
+              0,
+              8,
+              -3
+            ],
+            "cubes": [
+              {
+                "origin": [
+                  -4,
+                  4,
+                  -9
+                ],
+                "size": [
+                  8,
+                  6,
+                  6
+                ],
+                "uv": [
+                  0,
+                  12
+                ]
+              },
+              {
+                "origin": [
+                  -4,
+                  10,
+                  -8
+                ],
+                "size": [
+                  2,
+                  2,
+                  1
+                ],
+                "uv": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "origin": [
+                  2,
+                  10,
+                  -8
+                ],
+                "size": [
+                  2,
+                  2,
+                  1
+                ],
+                "uv": [
+                  22,
+                  0
+                ]
+              },
+              {
+                "origin": [
+                  -2,
+                  4,
+                  -12
+                ],
+                "size": [
+                  4,
+                  2,
+                  3
+                ],
+                "uv": [
+                  0,
+                  24
+                ]
+              }
+            ]
+          },
+          {
+            "name": "held_item",
+            "parent": "head",
+            "pivot": [
+              -2,
+              3.3,
+              -13
+            ]
+          },
+          {
+            "name": "leg0",
+            "parent": "body",
+            "pivot": [
+              -3,
+              6,
+              6
+            ],
+            "cubes": [
+              {
+                "origin": [
+                  -3.005,
+                  0,
+                  5
+                ],
+                "size": [
+                  2,
+                  6,
+                  2
+                ],
+                "uv": [
+                  14,
+                  24
+                ]
+              }
+            ]
+          },
+          {
+            "name": "leg1",
+            "parent": "body",
+            "pivot": [
+              1,
+              6,
+              6
+            ],
+            "cubes": [
+              {
+                "origin": [
+                  1.005,
+                  0,
+                  5
+                ],
+                "size": [
+                  2,
+                  6,
+                  2
+                ],
+                "uv": [
+                  22,
+                  24
+                ]
+              }
+            ]
+          },
+          {
+            "name": "leg2",
+            "parent": "body",
+            "pivot": [
+              -3,
+              6,
+              -1
+            ],
+            "cubes": [
+              {
+                "origin": [
+                  -3.005,
+                  0,
+                  -2
+                ],
+                "size": [
+                  2,
+                  6,
+                  2
+                ],
+                "uv": [
+                  14,
+                  24
+                ]
+              }
+            ]
+          },
+          {
+            "name": "leg3",
+            "parent": "body",
+            "pivot": [
+              1,
+              6,
+              -1
+            ],
+            "cubes": [
+              {
+                "origin": [
+                  1.005,
+                  0,
+                  -2
+                ],
+                "size": [
+                  2,
+                  6,
+                  2
+                ],
+                "uv": [
+                  22,
+                  24
+                ]
+              }
+            ]
+          },
+          {
+            "name": "tail",
+            "parent": "body",
+            "pivot": [
+              0,
+              8,
+              7
+            ],
+            "cubes": [
+              {
+                "origin": [
+                  -2,
+                  -2,
+                  4.75
+                ],
+                "size": [
+                  4,
+                  9,
+                  5
+                ],
+                "uv": [
+                  28,
+                  0
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "fox_geometry_source": "https://github.com/Mojang/bedrock-samples/blob/main/resource_pack/models/entity/fox.geo.json",
+  "fox_client_entity": {
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+      "description": {
+        "identifier": "minecraft:fox",
+        "materials": {
+          "default": "fox"
+        },
+        "textures": {
+          "red": "textures/entity/fox/fox",
+          "arctic": "textures/entity/fox/arctic_fox",
+          "baby_red": "textures/entity/fox/fox_baby",
+          "baby_arctic": "textures/entity/fox/fox_snow_baby",
+          "baby_sleep_red": "textures/entity/fox/fox_sleep_baby",
+          "baby_sleep_arctic": "textures/entity/fox/fox_snow_sleep_baby"
+        },
+        "geometry": {
+          "default": "geometry.fox",
+          "baby": "geometry.fox.baby"
+        },
+        "animations": {
+          "walk": "animation.quadruped.walk",
+          "look_at_target": "animation.common.look_at_target",
+          "baby_transform": "animation.fox.baby_transform",
+          "crouch": "animation.fox.crouch",
+          "sleep": "animation.fox.sleep",
+          "setup": "animation.fox.setup",
+          "sit": "animation.fox.sit",
+          "wiggle": "animation.fox.wiggle",
+          "stuck": "animation.fox.stuck",
+          "pounce": "animation.fox.pounce",
+          "move": "controller.animation.fox.move",
+          "baby_walk": "animation.fox.baby_walk",
+          "baby_pounce": "animation.fox.baby_pounce",
+          "baby_sit": "animation.fox.baby_sit",
+          "baby_sleep": "animation.fox.baby_sleep",
+          "baby_wiggle": "animation.fox.baby_wiggle"
+        },
+        "scripts": {
+          "animate": [
+            "setup",
+            "move"
+          ],
+          "scale": "query.is_baby ? 2.0 : 1.0"
+        },
+        "render_controllers": [
+          "controller.render.fox.v2"
+        ],
+        "spawn_egg": {
+          "texture": "spawn_egg_fox"
+        }
+      }
+    }
+  },
+  "fox_client_source": "https://github.com/Mojang/bedrock-samples/blob/main/resource_pack/entity/fox.entity.json"
+}

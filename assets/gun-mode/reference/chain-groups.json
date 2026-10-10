@@ -1,0 +1,4790 @@
+{
+  "source": "AK47存档_1007(2).zip",
+  "commandCount": 124,
+  "groupCount": 12,
+  "ordering": "Within each group, follow the actual block palette facing_direction and require the next block to be chain_command_block. Group list order is not a cross-chain tick execution order.",
+  "redstoneMapping": "block.redstone = !NBT.auto (requires redstone). poweredAtSave is separate transient state.",
+  "conditionalMapping": "conditional from current subchunk palette conditional_bit; last-execution and LP fields are not used as block mode truth.",
+  "referenceOnly": true,
+  "executed": false,
+  "graphWarnings": [],
+  "groups": [
+    {
+      "id": "G01",
+      "title": "换弹触发及标签复位",
+      "dimension": 0,
+      "startPosition": [
+        -14,
+        -60,
+        5
+      ],
+      "startBlockName": "minecraft:repeating_command_block",
+      "startBlockType": "repeating",
+      "optional": false,
+      "referenceOnly": true,
+      "caution": "",
+      "count": 2,
+      "termination": {
+        "reason": "noCommandBlockAtNextPosition",
+        "targetPosition": [
+          -14,
+          -58,
+          5
+        ]
+      },
+      "items": [
+        {
+          "order": 1,
+          "label": "G01-001",
+          "position": [
+            -14,
+            -60,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute if entity @a[tag=换弹] run playanimation @e[type=fox,name=k47f,tag=k47f] animation.player.riding.arms none 0 \"((v.k111??0)==0)?{v.k110=0;v.k111=1;};return 1;\" k47t23",
+          "commandSha256": "cdf46d8cb806e699edde91850fa968392b5a7c3524a95de16c3995d6c727957b",
+          "block": {
+            "type": "repeating",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:repeating_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -14,
+            -59,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -14,
+            -61,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": true,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 2,
+          "label": "G01-002",
+          "position": [
+            -14,
+            -59,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a remove 换弹",
+          "commandSha256": "3f0cda7167aeb3debfdd64d189adab6b5df8a8408a119d3874eac708e94b7867",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -14,
+            -58,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -14,
+            -60,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        }
+      ]
+    },
+    {
+      "id": "G02",
+      "title": "普通姿态触发",
+      "dimension": 0,
+      "startPosition": [
+        -12,
+        -60,
+        5
+      ],
+      "startBlockName": "minecraft:repeating_command_block",
+      "startBlockType": "repeating",
+      "optional": false,
+      "referenceOnly": true,
+      "caution": "",
+      "count": 2,
+      "termination": {
+        "reason": "noCommandBlockAtNextPosition",
+        "targetPosition": [
+          -12,
+          -58,
+          5
+        ]
+      },
+      "items": [
+        {
+          "order": 1,
+          "label": "G02-001",
+          "position": [
+            -12,
+            -60,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute if entity @a[tag=testa,tag=!休止] run playanimation @e[type=fox,name=k47f,tag=k47f] animation.player.riding.arms none 0 \"v.k90=0;return 1;\" k47t22",
+          "commandSha256": "1f480a248beabed08c767cf25b710c6616c297abba8fddf1459d2bef5cf969ac",
+          "block": {
+            "type": "repeating",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:repeating_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -12,
+            -59,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -12,
+            -61,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": true,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 2,
+          "label": "G02-002",
+          "position": [
+            -12,
+            -59,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a remove testa",
+          "commandSha256": "57c2872a54549255ccfc73e9c50fe7324a518cf3298bf678884455410eb81aea",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -12,
+            -58,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -12,
+            -60,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        }
+      ]
+    },
+    {
+      "id": "G03",
+      "title": "跑动姿态触发",
+      "dimension": 0,
+      "startPosition": [
+        -10,
+        -60,
+        5
+      ],
+      "startBlockName": "minecraft:repeating_command_block",
+      "startBlockType": "repeating",
+      "optional": false,
+      "referenceOnly": true,
+      "caution": "",
+      "count": 2,
+      "termination": {
+        "reason": "noCommandBlockAtNextPosition",
+        "targetPosition": [
+          -10,
+          -58,
+          5
+        ]
+      },
+      "items": [
+        {
+          "order": 1,
+          "label": "G03-001",
+          "position": [
+            -10,
+            -60,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute if entity @a[tag=k47p,tag=testc,c=1,tag=!休止] run playanimation @e[type=fox,name=k47f,tag=k47f] animation.player.holding.zombie none 0 \"v.k90=2;return 1;\" k47t22",
+          "commandSha256": "cd842635daf12a793f93080e14c27b95d6e53605a6632140401383cf642423e1",
+          "block": {
+            "type": "repeating",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:repeating_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -10,
+            -59,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -10,
+            -61,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": true,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 2,
+          "label": "G03-002",
+          "position": [
+            -10,
+            -59,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a remove testc",
+          "commandSha256": "1c36a9dcb1a9fc416c1fa0369f44cc6468789db2c55208500ef0057cd8c9a431",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -10,
+            -58,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -10,
+            -60,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        }
+      ]
+    },
+    {
+      "id": "G04",
+      "title": "机瞄姿态触发",
+      "dimension": 0,
+      "startPosition": [
+        -8,
+        -60,
+        5
+      ],
+      "startBlockName": "minecraft:repeating_command_block",
+      "startBlockType": "repeating",
+      "optional": false,
+      "referenceOnly": true,
+      "caution": "",
+      "count": 2,
+      "termination": {
+        "reason": "noCommandBlockAtNextPosition",
+        "targetPosition": [
+          -8,
+          -58,
+          5
+        ]
+      },
+      "items": [
+        {
+          "order": 1,
+          "label": "G04-001",
+          "position": [
+            -8,
+            -60,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute if entity @a[tag=k47p,tag=testb,c=1,tag=!休止] run playanimation @e[type=fox,name=k47f,tag=k47f] animation.player.riding.arms.zombie none 0 \"v.k90=1;return 1;\" k47t22",
+          "commandSha256": "94dd0be111b30ad1a8fc6c7b194f3a417f20852234d741070bbc7b90d241fa0d",
+          "block": {
+            "type": "repeating",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:repeating_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -8,
+            -59,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -8,
+            -61,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": true,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 2,
+          "label": "G04-002",
+          "position": [
+            -8,
+            -59,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a remove testb",
+          "commandSha256": "f80fc12f4d3776b48e4f13b09d1577fc49ddcb50636e0b6868a77ee77efe0d39",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -8,
+            -58,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -8,
+            -60,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        }
+      ]
+    },
+    {
+      "id": "G05",
+      "title": "持握及玩家姿态检测",
+      "dimension": 0,
+      "startPosition": [
+        -6,
+        -60,
+        5
+      ],
+      "startBlockName": "minecraft:repeating_command_block",
+      "startBlockType": "repeating",
+      "optional": false,
+      "referenceOnly": true,
+      "caution": "",
+      "count": 20,
+      "termination": {
+        "reason": "noCommandBlockAtNextPosition",
+        "targetPosition": [
+          -6,
+          -40,
+          5
+        ]
+      },
+      "items": [
+        {
+          "order": 1,
+          "label": "G05-001",
+          "position": [
+            -6,
+            -60,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a remove k47p",
+          "commandSha256": "c0c68013f1dc92cf9cbc70ab241c6307d0f3cbd844148c30440b01a05889007e",
+          "block": {
+            "type": "repeating",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:repeating_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -59,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -61,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": true,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 2,
+          "label": "G05-002",
+          "position": [
+            -6,
+            -59,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a[hasitem={item=snowball,location=slot.weapon.mainhand}] add k47p",
+          "commandSha256": "5012ba0d92f993773e567adb5d604a3c11b530c98873a6719ec17b680e262e9c",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -58,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -60,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 3,
+          "label": "G05-003",
+          "position": [
+            -6,
+            -58,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute unless entity @a[tag=k47p] as @a[hasitem={item=snowball}] at @s run tp @e[type=fox] ~~50~",
+          "commandSha256": "d42fa4b14eab980f80dcc07dd283bfa408a3b15b0c6df6ecb099c341a0558559",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -57,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -59,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 4,
+          "label": "G05-004",
+          "position": [
+            -6,
+            -57,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a remove 跳跃",
+          "commandSha256": "dceae689bb00e815ec3ca4c3fe7abfda5a23e45bd558183a8b3390d3e0ed3aad",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -56,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -58,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 5,
+          "label": "G05-005",
+          "position": [
+            -6,
+            -56,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a remove 潜行",
+          "commandSha256": "8345de118cf0bef5cbfd9ac4abdbfa8bb52ffd19823bd9f763baacd4bf9dfff0",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -55,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -57,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 6,
+          "label": "G05-006",
+          "position": [
+            -6,
+            -55,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a remove 移动",
+          "commandSha256": "0c06591c8dbf5a8deea29f49bdfd606d8bc99634c6d92a68eee640b27930a4d1",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -54,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -56,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 7,
+          "label": "G05-007",
+          "position": [
+            -6,
+            -54,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute as @a[tag=k47p] at @s anchored feet unless entity @s[r=0.03] as @s at @s unless block ~ ~ ~ water 0 unless block ~ ~ ~ lava 0 unless entity @s[y=~1.82,dy=0] if entity @s[y=~1.80,dy=0] run tag @s add 移动",
+          "commandSha256": "c131a512eedc07eb7c4698880afcf756076b47a371bac953fa09194f03dfa929",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -53,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -55,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 8,
+          "label": "G05-008",
+          "position": [
+            -6,
+            -53,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute as @a[tag=k47p] at @s unless entity @s[y=~1.5,dy=0] if entity @s[y=~0.7,dy=0] run tag @s add 潜行",
+          "commandSha256": "45128441152d259fa0e9dd95f2b18d2eff92b74b720bf375ed25ca8a8c173d4b",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -52,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -54,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 9,
+          "label": "G05-009",
+          "position": [
+            -6,
+            -52,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute as @a[tag=k47p] at @s if block ~~-0.1~ air 0 run tag @s add 跳跃",
+          "commandSha256": "71b8bd86b4b6015642b2bf447f9e7fa5cbbe34e3c49d9cb304ab4205cb4b14ae",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -51,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -53,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 10,
+          "label": "G05-010",
+          "position": [
+            -6,
+            -51,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute as @a[tag=!移动] if entity @s[tag=移动2] run tag @s add 回调",
+          "commandSha256": "81b9adca0cd541a22e4c9b4cec9a6dac988119010017edc348141d7bd7191c20",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -50,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -52,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 11,
+          "label": "G05-011",
+          "position": [
+            -6,
+            -50,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute as @a[tag=!潜行] if entity @s[tag=潜行2] run tag @s add 回调",
+          "commandSha256": "7a0a86098c8374b3430f5b75441e94cf7608507477bd5df838c0bf9f59b51c86",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -49,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -51,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 12,
+          "label": "G05-012",
+          "position": [
+            -6,
+            -49,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a[tag=!跳跃] remove 跳跃2",
+          "commandSha256": "029e94aced334eed6a92bd4dc461e8552fea9c03f4f439b62b9f83eed2e5f804",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -48,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -50,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 13,
+          "label": "G05-013",
+          "position": [
+            -6,
+            -48,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute as @a[tag=移动,tag=!移动2] run tag @s[tag=!跳跃,tag=!回调] add testb",
+          "commandSha256": "878cf7fabb441b07341f01ecf0f2362f830c6125a372cf99e433ef90cf84dd9f",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -47,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -49,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        },
+        {
+          "order": 14,
+          "label": "G05-014",
+          "position": [
+            -6,
+            -47,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a[tag=移动] add 移动2",
+          "commandSha256": "7c25d3da45b4c3a98a58daf88e959ed8b179fd8f3f010131563c9b88464e9853",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -46,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -48,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        },
+        {
+          "order": 15,
+          "label": "G05-015",
+          "position": [
+            -6,
+            -46,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute as @a[tag=潜行,tag=!潜行2] run tag @s[tag=!跳跃] add testc",
+          "commandSha256": "9629f8eb839fb33dbbb09ea2024b632bc3e3521af7ccec4a343ceec67452e17b",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -45,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -47,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        },
+        {
+          "order": 16,
+          "label": "G05-016",
+          "position": [
+            -6,
+            -45,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a[tag=潜行] add 潜行2",
+          "commandSha256": "e719fbe193acd82d750c8f029e2c894d700ba97e994792fd8fcfa3dad60163aa",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -44,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -46,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        },
+        {
+          "order": 17,
+          "label": "G05-017",
+          "position": [
+            -6,
+            -44,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a[tag=回调] add testa",
+          "commandSha256": "61334bc732ed45a144118d1f9f3a56550a7b11eb471701d054265a12112e60de",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -43,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -45,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        },
+        {
+          "order": 18,
+          "label": "G05-018",
+          "position": [
+            -6,
+            -43,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a[tag=回调] remove 潜行2",
+          "commandSha256": "c559711e0df27211c1c5eee3237aa889d8df21e0c7b51ad6c4e6fb082c57f76b",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -42,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -44,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        },
+        {
+          "order": 19,
+          "label": "G05-019",
+          "position": [
+            -6,
+            -42,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a[tag=回调] remove 移动2",
+          "commandSha256": "75382ac215f546dac0fa70ae57920a74694323cac809ed8bd2ee566475d9e138",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -41,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -43,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        },
+        {
+          "order": 20,
+          "label": "G05-020",
+          "position": [
+            -6,
+            -41,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a remove 回调",
+          "commandSha256": "d5eb4e476bc5224d9041056bf2ccbde705f1a062c72d978e2fc8c658c3c27259",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -6,
+            -40,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -6,
+            -42,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        }
+      ]
+    },
+    {
+      "id": "G06",
+      "title": "初始化触发按钮",
+      "dimension": 0,
+      "startPosition": [
+        -5,
+        -60,
+        -5
+      ],
+      "startBlockName": "minecraft:command_block",
+      "startBlockType": "impulse",
+      "optional": false,
+      "referenceOnly": true,
+      "caution": "",
+      "count": 1,
+      "termination": {
+        "reason": "noCommandBlockAtNextPosition",
+        "targetPosition": [
+          -5,
+          -60,
+          -4
+        ]
+      },
+      "items": [
+        {
+          "order": 1,
+          "label": "G06-001",
+          "position": [
+            -5,
+            -60,
+            -5
+          ],
+          "dimension": 0,
+          "command": "tag @p add 初始化",
+          "commandSha256": "a754e1e6dc1b125a75d92e87b6a03ad01e99c0254ee0af3dc07d8439bf935550",
+          "block": {
+            "type": "impulse",
+            "conditional": false,
+            "redstone": true,
+            "delay": 0
+          },
+          "blockName": "minecraft:command_block",
+          "facingDirection": 3,
+          "facingName": "south",
+          "nextPosition": [
+            -5,
+            -60,
+            -4
+          ],
+          "conditionalCheckPosition": [
+            -5,
+            -60,
+            -6
+          ],
+          "auto": false,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffffffffffff31",
+          "sourceSubchunkKeyHex": "ffffffffffffffff2ffc"
+        }
+      ]
+    },
+    {
+      "id": "G07",
+      "title": "初始化与动画控制器链",
+      "dimension": 0,
+      "startPosition": [
+        -4,
+        -60,
+        5
+      ],
+      "startBlockName": "minecraft:repeating_command_block",
+      "startBlockType": "repeating",
+      "optional": false,
+      "referenceOnly": true,
+      "caution": "",
+      "count": 21,
+      "termination": {
+        "reason": "noCommandBlockAtNextPosition",
+        "targetPosition": [
+          -4,
+          -39,
+          5
+        ]
+      },
+      "items": [
+        {
+          "order": 1,
+          "label": "G07-001",
+          "position": [
+            -4,
+            -60,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute as @a[tag=初始化] run testfor @s",
+          "commandSha256": "2c69855b2e9f05c7788e579d5b1cdac5550351a2f1fc86d1b28e31717d731793",
+          "block": {
+            "type": "repeating",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:repeating_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -59,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -61,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": true,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 2,
+          "label": "G07-002",
+          "position": [
+            -4,
+            -59,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute if entity @a[tag=k47p,tag=初始化,c=1] run playanimation @e[type=fox,name=k47f,tag=k47f] animation.player.sleeping none 0 \"v.k44=v.k41+5*v.k42+25*v.k43;v.k3=0;v.k4=0;v.k5=1;v.k6=1;v.k7=0;v.k8=0;v.k9=0;v.k10=1;v.k11=0;(v.k44<37)?{(v.k44<18)?{(v.k44<9)?{(v.k44<4)?{(v.k44<2)?{(v.k44<1)?{v.k0=0.595;v.k1=-0.174;v.k2=0.245;v.k12=0.076;v.k13=2.250730875446;}:{v.k0=0.577;v.k1=-0.111;v.k2=0.245;v.k12=0.058;v.k13=2.421170990558;};}:{(v.k44<3)?{v.k0=0.4;v.k1=(-0.328/2);v.k2=0.245;v.k12=0.071;v.k13=1;}:{v.k0=0.734;v.k1=-0.117;v.k2=0.298;v.k3=1;v.k5=0;v.k6=0;v.k7=1;v.k10=0;v.k11=1;v.k12=0.013;v.k13=2.353393621658;};};}:{(v.k44<6)?{(v.k44<5)?{v.k0=0.031;v.k1=-0.222;v.k2=0.224;v.k4=1;v.k5=0;v.k6=0;v.k8=1;v.k9=1;v.k10=0;v.k12=0.021;v.k13=2.992052966172;}:{v.k0=0.031;v.k1=-0.222;v.k2=0.245;v.k4=1;v.k5=0;v.k6=0;v.k8=1;v.k9=1;v.k10=0;v.k12=0.021;v.k13=2.992052966172;};}:{(v.k44<7)?{v.k0=0.031;v.k1=-0.222;v.k2=0.266;v.k4=1;v.k5=0;v.k6=0;v.k8=1;v.k9=1;v.k10=0;v.k12=0.021;v.k13=2.992052966172;}:{(v.k44<8)?{v.k0=0.475;v.k1=-0.221;v.k2=0.245;v.k3=0.258819045103;v.k5=0.965925826289;v.k6=0.965925826289;v.k8=-0.258819045103;v.k12=0.032;v.k13=1.391941090708;}:{v.k0=0.418;v.k1=-0.4175;v.k2=0.245;v.k3=(1.92304789529/2);v.k5=-0.274721127882;v.k6=-0.274721127882;v.k8=(-1.92304789529/2);v.k12=0.058;v.k13=(1.227284639441/2);};};};};}:{(v.k44<13)?{(v.k44<11)?{(v.k44<10)?{v.k0=0.515;v.k1=-0.2745;v.k2=0.245;v.k3=0.997833411043;v.k5=0.065791213751;v.k6=0.065791213751;v.k8=-0.997833411043;v.k12=0.011;v.k13=2.879355988601;}:{v.k0=0.5715;v.k1=-0.32;v.k2=0.245;v.k12=0.011;v.k13=3.118857599711;};}:{(v.k44<12)?{v.k0=(1.283/2);v.k1=-0.289;v.k2=0.245;v.k3=-0.882746759342;v.k5=0.469849080951;v.k6=0.469849080951;v.k8=0.882746759342;v.k12=0.011;v.k13=2.526861150267;}:{v.k0=0.65;v.k1=-0.239;v.k2=0.245;v.k4=0.984807753012;v.k5=(0.347296355334/2);v.k6=0;v.k7=(-0.347296355334/2);v.k8=0.984807753012;v.k9=1;v.k10=0;v.k12=0.025;v.k13=(2.77128129211/2);};};}:{(v.k44<15)?{(v.k44<14)?{v.k0=0.728;v.k1=-0.242;v.k2=0.245;v.k12=0.045;v.k13=1.831817555205;}:{v.k0=0.728;v.k1=-0.267;v.k2=0.245;v.k12=0.039;v.k13=1.894661866863;};}:{(v.k44<16)?{v.k0=0.7295585;v.k1=-0.3004619;v.k2=0.245;v.k3=-0.09294986035;v.k5=0.995670790704;v.k6=0.995670790704;v.k8=0.09294986035;v.k12=0.039;v.k13=1.894661866863;}:{(v.k44<17)?{v.k0=0.7342206;v.k1=-0.3336342;v.k2=0.245;v.k3=-0.185094923616;v.k5=(1.965441293197/2);v.k6=(1.965441293197/2);v.k8=0.185094923616;v.k12=0.039;v.k13=1.894661866863;}:{v.k0=0.7419458;v.k1=-0.3662294;v.k2=0.245;v.k3=-0.275637355817;v.k5=0.961261695938;v.k6=0.961261695938;v.k8=0.275637355817;v.k12=0.039;v.k13=1.894661866863;};};};};};}:{(v.k44<27)?{(v.k44<22)?{(v.k44<20)?{(v.k44<19)?{v.k0=0.7526673;v.k1=-0.3979656;v.k2=0.245;v.k3=-0.363793204411;v.k5=0.931479739138;v.k6=0.931479739138;v.k8=0.363793204411;v.k12=0.039;v.k13=1.894661866863;}:{v.k0=0.7662922;v.k1=-0.4285677;v.k2=0.245;v.k3=-0.44879918072;v.k5=(1.787265280125/2);v.k6=(1.787265280125/2);v.k8=0.44879918072;v.k12=0.039;v.k13=1.894661866863;};}:{(v.k44<21)?{v.k0=0.565;v.k1=-0.08;v.k2=0.245;v.k12=0.014;v.k13=4.511889056387;}:{v.k0=0.597;v.k1=-0.205;v.k2=0.204;v.k12=0.009;v.k13=6.018490028423;};};}:{(v.k44<24)?{(v.k44<23)?{v.k0=0.597;v.k1=-0.205;v.k2=0.286;v.k12=0.009;v.k13=6.018490028423;}:{v.k0=0.558;v.k1=-0.171;v.k2=0.288;v.k3=-0.121869343405;v.k5=(1.985092303283/2);v.k6=(1.985092303283/2);v.k8=0.121869343405;v.k12=0.008;v.k13=4.344536799246;};}:{(v.k44<25)?{v.k0=0.731;v.k1=-0.117;v.k2=0.334;v.k12=0.014;v.k13=1.511857892037;}:{(v.k44<26)?{v.k0=0.7827027;v.k1=-0.4577709;v.k2=0.245;v.k3=(-1.059838528466/2);v.k5=0.848048096156;v.k6=0.848048096156;v.k8=(1.059838528466/2);v.k12=0.039;v.k13=1.894661866863;}:{v.k0=0.8017565;v.k1=-0.4853224;v.k2=0.245;v.k3=(-1.212902169872/2);v.k5=0.795120796848;v.k6=0.795120796848;v.k8=(1.212902169872/2);v.k12=0.039;v.k13=1.894661866863;};};};};}:{(v.k44<32)?{(v.k44<29)?{(v.k44<28)?{v.k0=0.8232888;v.k1=-0.5109835;v.k2=0.245;v.k3=-0.677731999574;v.k5=0.735309007666;v.k6=0.735309007666;v.k8=0.677731999574;v.k12=0.039;v.k13=1.894661866863;}:{v.k0=0.847113;v.k1=-0.5345321;v.k2=0.245;v.k3=-0.743144825477;v.k5=0.669130606359;v.k6=0.669130606359;v.k8=0.743144825477;v.k12=0.039;v.k13=1.894661866863;};}:{(v.k44<30)?{v.k0=0.785;v.k1=-0.171;v.k2=0.245;v.k12=0.08;v.k13=0.460977222865;}:{(v.k44<31)?{v.k0=1.028;v.k1=-0.171;v.k2=0.245;v.k12=0.08;v.k13=0.460977222865;}:{v.k0=0.804;v.k1=-0.095;v.k2=0.245;v.k12=0.048;v.k13=0.540061724867;};};};}:{(v.k44<34)?{(v.k44<33)?{v.k0=0.993;v.k1=-0.095;v.k2=0.245;v.k12=0.048;v.k13=0.540061724867;}:{v.k0=1.207;v.k1=-0.151;v.k2=0.245;v.k12=0.023;v.k13=4.196271637081;};}:{(v.k44<35)?{v.k0=1.128;v.k1=-0.126;v.k2=0.245;v.k4=1;v.k5=0;v.k6=0;v.k8=1;v.k9=1;v.k10=0;v.k12=0.032;v.k13=1.802775637732;}:{(v.k44<36)?{v.k0=1.111;v.k1=-0.096;v.k2=0.245;v.k3=(1.168609452981/2);v.k5=0.811534340987;v.k6=0.811534340987;v.k8=(-1.168609452981/2);v.k12=0.026;v.k13=1.539376747009;}:{v.k0=1.299;v.k1=-0.151;v.k2=0.245;v.k12=0.036;v.k13=0.763762615826;};};};};};};}:{(v.k44<56)?{(v.k44<46)?{(v.k44<41)?{(v.k44<39)?{(v.k44<38)?{v.k0=1.443;v.k1=-0.151;v.k2=0.245;v.k12=0.022;v.k13=(0.522232967867/2);}:{v.k0=1.316;v.k1=-0.107;v.k2=0.245;v.k4=1;v.k5=0;v.k6=0;v.k8=1;v.k9=1;v.k10=0;v.k12=0.027;v.k13=1.972026594367;};}:{(v.k44<40)?{v.k0=1.316;v.k1=-0.031;v.k2=0.218;v.k4=1;v.k5=0;v.k6=0;v.k8=1;v.k9=1;v.k10=0;v.k12=0.009;v.k13=2.494438257849;}:{v.k0=1.316;v.k1=-0.031;v.k2=0.272;v.k4=1;v.k5=0;v.k6=0;v.k8=1;v.k9=1;v.k10=0;v.k12=0.009;v.k13=2.494438257849;};};}:{(v.k44<43)?{(v.k44<42)?{v.k0=1.316;v.k1=-0.003;v.k2=0.245;v.k3=1;v.k5=0;v.k6=0;v.k7=1;v.k10=0;v.k11=1;v.k12=0.009;v.k13=(5.291502622129/2);}:{v.k0=0.758;v.k1=-0.058;v.k2=0.245;v.k12=0.026;v.k13=(3.328201177351/2);};}:{(v.k44<44)?{v.k0=0.712;v.k1=-0.026;v.k2=0.227;v.k12=0.016;v.k13=1;}:{(v.k44<45)?{v.k0=0.712;v.k1=-0.026;v.k2=0.263;v.k12=0.016;v.k13=1;}:{v.k0=0.432;v.k1=(-0.328/2);v.k2=0.2865;v.k12=0.007;v.k13=1;};};};};}:{(v.k44<51)?{(v.k44<48)?{(v.k44<47)?{v.k0=0.463;v.k1=(-0.328/2);v.k2=0.2865;v.k12=0.007;v.k13=1;}:{v.k0=0.753;v.k1=(-0.328/2);v.k2=0.2865;v.k12=0.007;v.k13=1;};}:{(v.k44<49)?{v.k0=0.5815;v.k1=-0.2495;v.k2=0.245;v.k3=0.983060298916;v.k5=0.183282428768;v.k6=0.183282428768;v.k8=-0.983060298916;v.k12=0.009;v.k13=2.58234819926;}:{(v.k44<50)?{v.k0=0.5795;v.k1=-0.288;v.k2=0.245;v.k3=0.768221279511;v.k5=(-1.280368799536/2);v.k6=(-1.280368799536/2);v.k8=-0.768221279511;v.k12=0.009;v.k13=1.613508943611;}:{v.k0=0.353;v.k1=-0.168;v.k2=0.245;v.k3=-0.087155742748;v.k5=0.996194698092;v.k6=0.996194698092;v.k8=0.087155742748;v.k12=0.061;v.k13=1.384930607245;};};};}:{(v.k44<53)?{(v.k44<52)?{v.k0=0.2;v.k1=-0.165;v.k2=0.245;v.k12=0.06;v.k13=2.309401076759;}:{v.k0=0.185;v.k1=-0.222;v.k2=0.245;v.k12=0.06;v.k13=2.198484326379;};}:{(v.k44<54)?{v.k0=0.15;v.k1=-0.279;v.k2=0.245;v.k12=0.06;v.k13=1.914854215513;}:{(v.k44<55)?{v.k0=0.4455;v.k1=-0.319;v.k2=0.245;v.k3=0.962083357855;v.k5=-0.272755591213;v.k6=-0.272755591213;v.k8=-0.962083357855;v.k12=0.055;v.k13=1.914754672157;}:{v.k0=0.905;v.k1=-0.171;v.k2=0.245;v.k12=0.074;v.k13=1.782042557201;};};};};};}:{(v.k44<65)?{(v.k44<60)?{(v.k44<58)?{(v.k44<57)?{v.k0=0.898;v.k1=-0.095;v.k2=0.245;v.k12=0.044;v.k13=2.01133153544;}:{v.k0=0.8538759;v.k1=-0.5404701;v.k2=0.245;v.k3=-0.759639127639;v.k5=0.650344828349;v.k6=0.650344828349;v.k8=0.759639127639;v.k12=0.043;v.k13=1.855225179086;};}:{(v.k44<59)?{v.k0=0.6977936;v.k1=-0.3321591;v.k2=0.223;v.k3=0.986342748607;v.k5=(0.329411488991/2);v.k6=(0.329411488991/2);v.k8=-0.986342748607;v.k12=0.005;v.k13=4.556573273854;}:{v.k0=0.7278098;v.k1=-0.4306148;v.k2=0.223;v.k3=0.910469268407;v.k5=0.413576729624;v.k6=0.413576729624;v.k8=-0.910469268407;v.k12=0.005;v.k13=4.556573273854;};};}:{(v.k44<62)?{(v.k44<61)?{v.k0=0.7822086;v.k1=-0.5179949;v.k2=0.223;v.k3=0.772962888119;v.k5=0.63445123815;v.k6=0.63445123815;v.k8=-0.772962888119;v.k12=0.005;v.k13=4.556573273854;}:{v.k0=0.7740745;v.k1=-0.3194213;v.k2=0.223;v.k3=0.986342748607;v.k5=(0.329411488991/2);v.k6=(0.329411488991/2);v.k8=-0.986342748607;v.k12=0.005;v.k13=(8.173992904328/2);};}:{(v.k44<63)?{v.k0=0.7982229;v.k1=-0.39863;v.k2=0.223;v.k3=0.910469268407;v.k5=0.413576729624;v.k6=0.413576729624;v.k8=-0.910469268407;v.k12=0.005;v.k13=(8.173992904328/2);}:{(v.k44<(192/3))?{v.k0=0.8419874;v.k1=-0.4689282;v.k2=0.223;v.k3=0.772962888119;v.k5=0.63445123815;v.k6=0.63445123815;v.k8=-0.772962888119;v.k12=0.005;v.k13=(8.173992904328/2);}:{v.k0=0.6977936;v.k1=-0.3321591;v.k2=0.267;v.k3=0.986342748607;v.k5=(0.329411488991/2);v.k6=(0.329411488991/2);v.k8=-0.986342748607;v.k12=0.005;v.k13=4.556573273854;};};};};}:{(v.k44<70)?{(v.k44<67)?{(v.k44<66)?{v.k0=0.7278098;v.k1=-0.4306148;v.k2=0.267;v.k3=0.910469268407;v.k5=0.413576729624;v.k6=0.413576729624;v.k8=-0.910469268407;v.k12=0.005;v.k13=4.556573273854;}:{v.k0=0.7822086;v.k1=-0.5179949;v.k2=0.267;v.k3=0.772962888119;v.k5=0.63445123815;v.k6=0.63445123815;v.k8=-0.772962888119;v.k12=0.005;v.k13=4.556573273854;};}:{(v.k44<68)?{v.k0=0.7740745;v.k1=-0.3194213;v.k2=0.267;v.k3=0.986342748607;v.k5=(0.329411488991/2);v.k6=(0.329411488991/2);v.k8=-0.986342748607;v.k12=0.005;v.k13=(8.173992904328/2);}:{(v.k44<69)?{v.k0=0.7982229;v.k1=-0.39863;v.k2=0.267;v.k3=0.910469268407;v.k5=0.413576729624;v.k6=0.413576729624;v.k8=-0.910469268407;v.k12=0.005;v.k13=(8.173992904328/2);}:{v.k0=0.8419874;v.k1=-0.4689282;v.k2=0.267;v.k3=0.772962888119;v.k5=0.63445123815;v.k6=0.63445123815;v.k8=-0.772962888119;v.k12=0.005;v.k13=(8.173992904328/2);};};};}:{(v.k44<72)?{(v.k44<71)?{v.k0=1.055;v.k1=-0.091;v.k2=0.245;v.k12=0.019;v.k13=2.762531257265;}:{v.k0=1.193;v.k1=-0.188;v.k2=0.245;v.k12=0.008;v.k13=(19.297020495403/3);};}:{(v.k44<73)?{v.k0=1.416;v.k1=-0.151;v.k2=0.245;v.k12=0.033;v.k13=(2.534608929252/2);}:{(v.k44<74)?{v.k0=1.316;v.k1=-0.035;v.k2=0.245;v.k4=1;v.k5=0;v.k6=0;v.k8=1;v.k9=1;v.k10=0;v.k12=0.006;v.k13=2.309401076759;}:{v.k0=0.744;v.k1=-0.039;v.k2=0.245;v.k12=0.01;v.k13=3;};};};};};};};v.k110=(v.k110??2.6);v.k111=(v.k111??0);(v.k111==1)?{v.k110=math.min(2.6,v.k110+math.max(0,q.delta_time));(v.k110>=2.6)?{v.k111=0;};};t.k80=(v.k111==1)?v.k110:2.6;t.k81=math.max(0,math.min(1,t.k80/0.28));t.k81=t.k81*t.k81*(3-2*t.k81);t.k82=math.max(0,math.min(1,(t.k80-2.18)/0.42));t.k82=t.k82*t.k82*(3-2*t.k82);t.k81=t.k81*(1-t.k82);t.k82=math.max(0,math.min(1,(t.k80-0.35)/0.47));t.k82=t.k82*t.k82*(3-2*t.k82);t.k83=math.max(0,math.min(1,(t.k80-1.18)/0.60));t.k83=t.k83*t.k83*(3-2*t.k83);t.k84=t.k82-t.k83;t.k85=math.max(0,math.min(1,(t.k80-1.90)/0.14));t.k85=t.k85*t.k85*(3-2*t.k85);t.k86=math.max(0,math.min(1,(t.k80-2.04)/0.10));t.k86=t.k86*t.k86*(3-2*t.k86);t.k87=t.k85-t.k86;v.k90=(v.k90??0);v.k91=(v.k91??0);v.k92=(v.k92??0);v.k93=(v.k93??1);v.k94=(v.k94??0);v.k95=(v.k95??0);v.k96=(v.k96??0);v.k97=(v.k97??0);(v.k90!=v.k96)?{v.k94=v.k91;v.k95=v.k92;v.k93=0;v.k96=v.k90;};t.k50=math.max(0,q.delta_time);v.k93=math.min(1,v.k93+t.k50/0.22);v.k97=math.mod(v.k97+t.k50,5);t.k51=v.k93*v.k93*(3-2*v.k93);v.k91=v.k94+((v.k90==1)-v.k94)*t.k51;v.k92=v.k95+((v.k90==2)-v.k95)*t.k51;((v.k44>=13&&v.k44<=19)||(v.k44>=25&&v.k44<=28)||(v.k44>=57&&v.k44<=69))?{t.k88=math.cos(-18*t.k84);t.k89=math.sin(-18*t.k84);t.k90=v.k0-0.728;t.k91=v.k1+0.242;v.k0=t.k88*t.k90-t.k89*t.k91+0.728-0.07*t.k84;v.k1=t.k89*t.k90+t.k88*t.k91-0.242-0.52*t.k84;t.k90=v.k3;t.k91=v.k6;v.k3=t.k88*t.k90-t.k89*t.k91;v.k6=t.k89*t.k90+t.k88*t.k91;t.k90=v.k4;t.k91=v.k7;v.k4=t.k88*t.k90-t.k89*t.k91;v.k7=t.k89*t.k90+t.k88*t.k91;t.k90=v.k5;t.k91=v.k8;v.k5=t.k88*t.k90-t.k89*t.k91;v.k8=t.k89*t.k90+t.k88*t.k91;};(v.k44==3||v.k44==24)?{v.k0=v.k0-0.075*t.k87;};t.k98=v.k91*(1-t.k81);t.k99=v.k92*(1-t.k81);t.k52=v.k97*792;t.k53=math.sin(t.k52);t.k54=math.cos(2*t.k52);t.k55=math.sin(75*t.k98+18*t.k81);t.k56=math.cos(75*t.k98+18*t.k81);t.k57=math.sin((-6+0.45*t.k54)*t.k98-8*t.k81);t.k58=math.cos((-6+0.45*t.k54)*t.k98-8*t.k81);t.k59=math.sin((-12+0.8*t.k53)*t.k98-24*t.k81);t.k60=math.cos((-12+0.8*t.k53)*t.k98-24*t.k81);t.k61=t.k58*t.k56;t.k62=-t.k57;t.k63=t.k58*t.k55;t.k64=t.k60*t.k57*t.k56-t.k59*t.k55;t.k65=t.k60*t.k58;t.k66=t.k60*t.k57*t.k55+t.k59*t.k56;t.k67=-t.k59*t.k57*t.k56-t.k60*t.k55;t.k68=-t.k59*t.k58;t.k69=-t.k59*t.k57*t.k55+t.k60*t.k56;t.k70=v.k0-0.66;t.k71=v.k1+0.174;t.k72=v.k2-0.245;v.k0=t.k61*t.k70+t.k62*t.k71+t.k63*t.k72+0.66-0.21*t.k98+0.03*t.k99;v.k1=t.k64*t.k70+t.k65*t.k71+t.k66*t.k72-0.174-0.116*t.k98+0.025*t.k99+0.006*(t.k54-1)*t.k98+0.15*t.k81;v.k2=t.k67*t.k70+t.k68*t.k71+t.k69*t.k72+0.245-0.125*t.k98-0.245*t.k99+0.010*t.k53*t.k98-0.07*t.k81;t.k70=v.k3;t.k71=v.k6;t.k72=v.k9;v.k3=t.k61*t.k70+t.k62*t.k71+t.k63*t.k72;v.k6=t.k64*t.k70+t.k65*t.k71+t.k66*t.k72;v.k9=t.k67*t.k70+t.k68*t.k71+t.k69*t.k72;t.k70=v.k4;t.k71=v.k7;t.k72=v.k10;v.k4=t.k61*t.k70+t.k62*t.k71+t.k63*t.k72;v.k7=t.k64*t.k70+t.k65*t.k71+t.k66*t.k72;v.k10=t.k67*t.k70+t.k68*t.k71+t.k69*t.k72;t.k70=v.k5;t.k71=v.k8;t.k72=v.k11;v.k5=t.k61*t.k70+t.k62*t.k71+t.k63*t.k72;v.k8=t.k64*t.k70+t.k65*t.k71+t.k66*t.k72;v.k11=t.k67*t.k70+t.k68*t.k71+t.k69*t.k72;t.k0=q.camera_rotation(0);t.k1=q.camera_rotation(1);t.k2=math.sin(t.k0);t.k3=math.cos(t.k0);t.k4=math.sin(t.k1);t.k5=math.cos(t.k1);t.k6=-t.k4*t.k3;t.k7=-t.k2;t.k8=t.k5*t.k3;t.k9=-t.k4*t.k2;t.k10=t.k3;t.k11=t.k5*t.k2;t.k12=-t.k5;t.k13=-t.k4;v.k20=t.k6*v.k3+t.k9*v.k6+t.k12*v.k9;v.k21=t.k6*v.k4+t.k9*v.k7+t.k12*v.k10;v.k22=t.k6*v.k5+t.k9*v.k8+t.k12*v.k11;v.k23=t.k7*v.k3+t.k10*v.k6;v.k24=t.k7*v.k4+t.k10*v.k7;v.k25=t.k7*v.k5+t.k10*v.k8;v.k26=t.k8*v.k3+t.k11*v.k6+t.k13*v.k9;v.k27=t.k8*v.k4+t.k11*v.k7+t.k13*v.k10;v.k28=t.k8*v.k5+t.k11*v.k8+t.k13*v.k11;return 0;\" controller.animation.fox.move",
+          "commandSha256": "9a4165c3b9c5fb9e2e72649b127227ed49922f4009726a49cb6614ccd51fed16",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -58,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -60,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 3,
+          "label": "G07-003",
+          "position": [
+            -4,
+            -58,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47x0] animation.player.attack.rotations none 0 \"v.k41=0;v.attack_body_rot_y=math.atan2(-v.k24,math.sqrt(v.k23*v.k23+v.k25*v.k25));return 0;\" k47r",
+          "commandSha256": "561dc3a8657298cec5430655511747b5d092804e5a1d36fca3e7f096fa90c425",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -57,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -59,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 4,
+          "label": "G07-004",
+          "position": [
+            -4,
+            -57,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47x1] animation.player.attack.rotations none 0 \"v.k41=1;v.attack_body_rot_y=math.atan2(-v.k24,math.sqrt(v.k23*v.k23+v.k25*v.k25));return 0;\" k47r",
+          "commandSha256": "65d5f587df9e1d82b83a4889ab2582979f90a625231141ee41847f18b694bb34",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -56,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -58,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 5,
+          "label": "G07-005",
+          "position": [
+            -4,
+            -56,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47x2] animation.player.attack.rotations none 0 \"v.k41=2;v.attack_body_rot_y=math.atan2(-v.k24,math.sqrt(v.k23*v.k23+v.k25*v.k25));return 0;\" k47r",
+          "commandSha256": "4b93a73a29e1318175299ae6c1a6c1a41b108120ffa8ebebb5f05f1ce68e40d8",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -55,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -57,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 6,
+          "label": "G07-006",
+          "position": [
+            -4,
+            -55,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47x3] animation.player.attack.rotations none 0 \"v.k41=3;v.attack_body_rot_y=math.atan2(-v.k24,math.sqrt(v.k23*v.k23+v.k25*v.k25));return 0;\" k47r",
+          "commandSha256": "0008d5696e7c9c2f9aab7c29b878502bdaf97f81a76e435881a183261d018c2e",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -54,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -56,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 7,
+          "label": "G07-007",
+          "position": [
+            -4,
+            -54,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47x4] animation.player.attack.rotations none 0 \"v.k41=4;v.attack_body_rot_y=math.atan2(-v.k24,math.sqrt(v.k23*v.k23+v.k25*v.k25));return 0;\" k47r",
+          "commandSha256": "18e8af2dbe3ebf21ec300805a2701961f5df0f3abf8b14135fa897b596c9fcab",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -53,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -55,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 8,
+          "label": "G07-008",
+          "position": [
+            -4,
+            -53,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47z0] animation.creeper.swelling none 0 \"v.k42=0;v.swelling_scale1=math.sqrt(32/7*math.max(v.k12,0.000001));v.k33=v.swelling_scale1;v.swelling_scale2=math.max(v.k13,0.000001)*v.k33;return 0;\" k47s",
+          "commandSha256": "3d54fddf7a6781de583f7833fd1af1bd451d3107c2eebde4730fe99c4697f725",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -52,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -54,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 9,
+          "label": "G07-009",
+          "position": [
+            -4,
+            -52,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47z1] animation.creeper.swelling none 0 \"v.k42=1;v.swelling_scale1=math.sqrt(32/7*math.max(v.k12,0.000001));v.k33=v.swelling_scale1;v.swelling_scale2=math.max(v.k13,0.000001)*v.k33;return 0;\" k47s",
+          "commandSha256": "28720f6f72f801c8726a09f58447475ebc40466ccec7a64778f0a16ea0f348c7",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -51,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -53,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 10,
+          "label": "G07-010",
+          "position": [
+            -4,
+            -51,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47z2] animation.creeper.swelling none 0 \"v.k42=2;v.swelling_scale1=math.sqrt(32/7*math.max(v.k12,0.000001));v.k33=v.swelling_scale1;v.swelling_scale2=math.max(v.k13,0.000001)*v.k33;return 0;\" k47s",
+          "commandSha256": "fd74bac22a5d04bda1f030731bed4f3296965d1fe632db787c249fd8f62903f3",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -50,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -52,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 11,
+          "label": "G07-011",
+          "position": [
+            -4,
+            -50,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47z3] animation.creeper.swelling none 0 \"v.k42=3;v.swelling_scale1=math.sqrt(32/7*math.max(v.k12,0.000001));v.k33=v.swelling_scale1;v.swelling_scale2=math.max(v.k13,0.000001)*v.k33;return 0;\" k47s",
+          "commandSha256": "e1f137ea1f229110208162eb5625409cc7fee8d46b14f3f6b2880243b010cdba",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -49,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -51,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 12,
+          "label": "G07-012",
+          "position": [
+            -4,
+            -49,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47z4] animation.creeper.swelling none 0 \"v.k42=4;v.swelling_scale1=math.sqrt(32/7*math.max(v.k12,0.000001));v.k33=v.swelling_scale1;v.swelling_scale2=math.max(v.k13,0.000001)*v.k33;return 0;\" k47s",
+          "commandSha256": "d5d40beb80ff6d5424fa203de217a07521013179c18035ae0b566638212f0672",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -48,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -50,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        },
+        {
+          "order": 13,
+          "label": "G07-013",
+          "position": [
+            -4,
+            -48,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f] animation.minecart.move.v1.0 none 0 \"t.k0=q.frame_alpha;v.k73=(v.k73??t.k0);v.k74=(v.k74??0);v.k75=(v.k75??q.position(0));v.k76=(v.k76??q.position(1));v.k77=(v.k77??q.position(2));v.k70=(v.k70??0);v.k71=(v.k71??0);v.k72=(v.k72??0);(t.k0<v.k73)?{(v.k74<3)?{v.k74=v.k74+1;};v.k70=q.position(0)-v.k75;v.k71=q.position(1)-v.k76;v.k72=q.position(2)-v.k77;v.k75=q.position(0);v.k76=q.position(1);v.k77=q.position(2);(v.k74<3||math.abs(v.k70)+math.abs(v.k71)+math.abs(v.k72)>3)?{v.k70=0;v.k71=0;v.k72=0;};};v.k73=t.k0;t.k0=q.camera_rotation(0);t.k1=q.camera_rotation(1);t.k2=math.sin(t.k0);t.k3=math.cos(t.k0);t.k4=math.sin(t.k1);t.k5=math.cos(t.k1);t.k6=-t.k4*t.k3;t.k7=-t.k2;t.k8=t.k5*t.k3;t.k9=-t.k4*t.k2;t.k10=t.k3;t.k11=t.k5*t.k2;t.k12=-t.k5;t.k13=-t.k4;t.k2=(v.k64==1)?(1-q.frame_alpha):((v.k64==2)?(0-q.frame_alpha):0);t.k14=q.rotation_to_camera(0);t.k15=q.rotation_to_camera(1);t.k16=q.distance_from_camera;t.k17=math.cos(t.k14);t.k18=math.sin(t.k14);t.k19=-math.sin(t.k15)*t.k17*t.k16+t.k6*v.k0+t.k9*v.k1+t.k12*v.k2-1+t.k2*v.k70;t.k20=-t.k18*t.k16+t.k7*v.k0+t.k10*v.k1-0.0078125+t.k2*v.k71;t.k21=math.cos(t.k15)*t.k17*t.k16+t.k8*v.k0+t.k11*v.k1+t.k13*v.k2+t.k2*v.k72;t.k22=math.cos(q.body_y_rotation);t.k23=math.sin(q.body_y_rotation);t.k24=16*q.model_scale;v.hurt=0;v.rail_rotation.z=0;v.rail_offset.x=t.k24*(t.k22*t.k19+t.k23*t.k21);v.rail_offset.y=q.model_scale*(18.5+16*t.k20);v.rail_offset.z=t.k24*(t.k23*t.k19-t.k22*t.k21);return 0;\" k47u",
+          "commandSha256": "621fcf261b6c20421875790aaae8f60777b3a9e4578bfd8392256ecd1953308e",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -47,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -49,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        },
+        {
+          "order": 14,
+          "label": "G07-014",
+          "position": [
+            -4,
+            -47,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47y0] animation.ender_dragon.neck_head_movement none 0 \"v.k43=0;t.k0=16/math.sqrt(32/7*math.max(v.k12,0.000001));t.k1=math.max(v.k13,0.000001);v.head_position_x=0;v.head_position_y=t.k0*10/7*t.k1*v.k12;v.head_position_z=-t.k0*16/7*v.k12;v.head_rotation_x=180;v.head_rotation_y=0;v.head_rotation_z=180;return 0;\" k47h",
+          "commandSha256": "04fe85e4d293035ee14192fbd3a98a9cea94d8e50d92b84966373e3f6986b6d1",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -46,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -48,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        },
+        {
+          "order": 15,
+          "label": "G07-015",
+          "position": [
+            -4,
+            -46,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47y1] animation.ender_dragon.neck_head_movement none 0 \"v.k43=1;t.k0=16/math.sqrt(32/7*math.max(v.k12,0.000001));t.k1=math.max(v.k13,0.000001);v.head_position_x=0;v.head_position_y=t.k0*10/7*t.k1*v.k12;v.head_position_z=-t.k0*16/7*v.k12;v.head_rotation_x=180;v.head_rotation_y=0;v.head_rotation_z=180;return 0;\" k47h",
+          "commandSha256": "e86fccb2920e36ef48cefa8c7123ff4403ef5f96f6c8685747415e17d0b9b1ff",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -45,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -47,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        },
+        {
+          "order": 16,
+          "label": "G07-016",
+          "position": [
+            -4,
+            -45,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f,tag=k47y2] animation.ender_dragon.neck_head_movement none 0 \"v.k43=2;t.k0=16/math.sqrt(32/7*math.max(v.k12,0.000001));t.k1=math.max(v.k13,0.000001);v.head_position_x=0;v.head_position_y=t.k0*10/7*t.k1*v.k12;v.head_position_z=-t.k0*16/7*v.k12;v.head_rotation_x=180;v.head_rotation_y=0;v.head_rotation_z=180;return 0;\" k47h",
+          "commandSha256": "f66f29a794f642e685d7ff29071f4a584a64e1234124b6a277f276c9055efdae",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -44,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -46,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        },
+        {
+          "order": 17,
+          "label": "G07-017",
+          "position": [
+            -4,
+            -44,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f] animation.warden.move none 0 \"v.head_x_rot=0;v.head_z_rot=0;v.body_x_rot=(math.abs(v.k25)+math.abs(v.k23)>0.0000001)?math.atan2(v.k25,-v.k23):math.atan2(-v.k20,-v.k22);v.body_z_rot=(math.abs(v.k25)+math.abs(v.k23)>0.0000001)?math.atan2(-v.k21,v.k27):0;return 0;\" k47b",
+          "commandSha256": "3bd5ace6ca1ff6eb10997ff7d756903f7fbb389c7144fea947009abac13ffafa",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -43,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -45,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        },
+        {
+          "order": 18,
+          "label": "G07-018",
+          "position": [
+            -4,
+            -43,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f] animation.player.riding.arms none 0 \"return 0;\" k47e",
+          "commandSha256": "756f3f539e7c608d97faf744f1f191483422bdde9514a303dab0a98cc55f8c67",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -42,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -44,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        },
+        {
+          "order": 19,
+          "label": "G07-019",
+          "position": [
+            -4,
+            -42,
+            5
+          ],
+          "dimension": 0,
+          "command": "playanimation @e[type=fox,name=k47f,tag=k47f] animation.player.riding.arms none 0 \"v.k64=1;return 0;\" k47q",
+          "commandSha256": "68a38276fa4ed0ce7e843389d09ab3741039e391305c9c4571925d106f9b94db",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -41,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -43,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        },
+        {
+          "order": 20,
+          "label": "G07-020",
+          "position": [
+            -4,
+            -41,
+            5
+          ],
+          "dimension": 0,
+          "command": "scoreboard players set @a[tag=初始化] ammo 30",
+          "commandSha256": "020ed5aa6c7d1b3b57a42464530f0c458f069a80883d28738f73fbe45935e1f2",
+          "block": {
+            "type": "chain",
+            "conditional": true,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -40,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -42,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        },
+        {
+          "order": 21,
+          "label": "G07-021",
+          "position": [
+            -4,
+            -40,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a remove 初始化",
+          "commandSha256": "638184a1184034ffc175a13253d39e9661450a1b71a3c87eb6edfa45440f969f",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -4,
+            -39,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -4,
+            -41,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffd"
+        }
+      ]
+    },
+    {
+      "id": "G08",
+      "title": "全局清除实体按钮（原文参考）",
+      "dimension": 0,
+      "startPosition": [
+        -3,
+        -60,
+        -5
+      ],
+      "startBlockName": "minecraft:command_block",
+      "startBlockType": "impulse",
+      "optional": true,
+      "referenceOnly": true,
+      "caution": "包含无选择器限制的 kill @e；保持为原文参考，不自动执行。",
+      "count": 1,
+      "termination": {
+        "reason": "noCommandBlockAtNextPosition",
+        "targetPosition": [
+          -3,
+          -60,
+          -4
+        ]
+      },
+      "items": [
+        {
+          "order": 1,
+          "label": "G08-001",
+          "position": [
+            -3,
+            -60,
+            -5
+          ],
+          "dimension": 0,
+          "command": "kill @e",
+          "commandSha256": "5a5d521df21727c3ae19af8776058a082c579d3b633d456bfc6fe0e6c42db630",
+          "block": {
+            "type": "impulse",
+            "conditional": false,
+            "redstone": true,
+            "delay": 0
+          },
+          "blockName": "minecraft:command_block",
+          "facingDirection": 3,
+          "facingName": "south",
+          "nextPosition": [
+            -3,
+            -60,
+            -4
+          ],
+          "conditionalCheckPosition": [
+            -3,
+            -60,
+            -6
+          ],
+          "auto": false,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "ffffffffffffffff31",
+          "sourceSubchunkKeyHex": "ffffffffffffffff2ffc"
+        }
+      ]
+    },
+    {
+      "id": "G09",
+      "title": "持枪狐狸跟随",
+      "dimension": 0,
+      "startPosition": [
+        -2,
+        -60,
+        5
+      ],
+      "startBlockName": "minecraft:repeating_command_block",
+      "startBlockType": "repeating",
+      "optional": false,
+      "referenceOnly": true,
+      "caution": "",
+      "count": 1,
+      "termination": {
+        "reason": "noCommandBlockAtNextPosition",
+        "targetPosition": [
+          -2,
+          -59,
+          5
+        ]
+      },
+      "items": [
+        {
+          "order": 1,
+          "label": "G09-001",
+          "position": [
+            -2,
+            -60,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute as @a[tag=k47p,c=1,hasitem={item=snowball,location=slot.weapon.mainhand}] at @s anchored eyes positioned ^ ^ ^2 run tp @e[type=fox,tag=k47f] ~ ~ ~ 0 0",
+          "commandSha256": "5b1202905c5fa72f8c32c2d929f286c154d223d69bd427d44d1b8455174e1e4f",
+          "block": {
+            "type": "repeating",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:repeating_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            -2,
+            -59,
+            5
+          ],
+          "conditionalCheckPosition": [
+            -2,
+            -61,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": true,
+          "sourceKeyHex": "ffffffff0000000031",
+          "sourceSubchunkKeyHex": "ffffffff000000002ffc"
+        }
+      ]
+    },
+    {
+      "id": "G10",
+      "title": "狐狸构建与材质标签初始化",
+      "dimension": 0,
+      "startPosition": [
+        0,
+        -60,
+        5
+      ],
+      "startBlockName": "minecraft:command_block",
+      "startBlockType": "impulse",
+      "optional": false,
+      "referenceOnly": true,
+      "caution": "",
+      "count": 33,
+      "termination": {
+        "reason": "noCommandBlockAtNextPosition",
+        "targetPosition": [
+          0,
+          -27,
+          5
+        ]
+      },
+      "items": [
+        {
+          "order": 1,
+          "label": "G10-001",
+          "position": [
+            0,
+            -60,
+            5
+          ],
+          "dimension": 0,
+          "command": "kill @e[type=fox,name=k47f]",
+          "commandSha256": "3b382e6556342fd0f3bd22128a8fa59d87a976160f1ddbe827d55d29aa3f0469",
+          "block": {
+            "type": "impulse",
+            "conditional": false,
+            "redstone": true,
+            "delay": 0
+          },
+          "blockName": "minecraft:command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -59,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -61,
+            5
+          ],
+          "auto": false,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 2,
+          "label": "G10-002",
+          "position": [
+            0,
+            -59,
+            5
+          ],
+          "dimension": 0,
+          "command": "summon fox 0.5 100 0.5 0 0 minecraft:ageable_grow_up k47f",
+          "commandSha256": "53aa819a763a0bfc85e93582d29dff2ecfded2958171977483178689db186517",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -58,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -60,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 3,
+          "label": "G10-003",
+          "position": [
+            0,
+            -58,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute at @e[type=fox,name=k47f] run summon fox ~2 ~ ~ 0 0 minecraft:ageable_grow_up k47f",
+          "commandSha256": "d214acdc13db07d6ba6c2b3d9b6a82a3c1b67f4743ad7c7ca64716ee49159b74",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -57,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -59,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 4,
+          "label": "G10-004",
+          "position": [
+            0,
+            -57,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute at @e[type=fox,name=k47f] run summon fox ~4 ~ ~ 0 0 minecraft:ageable_grow_up k47f",
+          "commandSha256": "7eddbdf0b2fc936bf54a52c681ef29fd58fbf56582f66e1e7dc84cc17342df30",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -56,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -58,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 5,
+          "label": "G10-005",
+          "position": [
+            0,
+            -56,
+            5
+          ],
+          "dimension": 0,
+          "command": "summon fox 8.5 100 0.5 0 0 minecraft:ageable_grow_up k47f",
+          "commandSha256": "4b5132be87e400a17817716a95b03a379bd706584cc9e7c5d739bc8e132c30ab",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -55,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -57,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 6,
+          "label": "G10-006",
+          "position": [
+            0,
+            -55,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute at @e[type=fox,name=k47f] run summon fox ~ ~ ~2 0 0 minecraft:ageable_grow_up k47f",
+          "commandSha256": "09810a86099f78d5c8b22800d514017296569b31da1ea4b09d8187b05f394cab",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -54,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -56,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 7,
+          "label": "G10-007",
+          "position": [
+            0,
+            -54,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute at @e[type=fox,name=k47f] run summon fox ~ ~ ~4 0 0 minecraft:ageable_grow_up k47f",
+          "commandSha256": "9bbd53854258864a8a2046ae84acc9ec66180cfcce76049871d664ab70b20f5b",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -53,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -55,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 8,
+          "label": "G10-008",
+          "position": [
+            0,
+            -53,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute at @e[type=fox,name=k47f,x=0,y=100,z=0,dx=8,dy=0,dz=0] run summon fox ~ ~ ~8 0 0 minecraft:ageable_grow_up k47f",
+          "commandSha256": "42c62b5f8cddcd4f87681a2056f50961cdea52e371a507b8650d10ce0a4eaa81",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -52,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -54,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 9,
+          "label": "G10-009",
+          "position": [
+            0,
+            -52,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute at @e[type=fox,name=k47f] run summon fox ~ ~2 ~ 0 0 minecraft:ageable_grow_up k47f",
+          "commandSha256": "d07817562ef3ca8b5c48bbbee7020fc3cc84475cbf6cf54f218e2306f1827f1a",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -51,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -53,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 10,
+          "label": "G10-010",
+          "position": [
+            0,
+            -51,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute at @e[type=fox,name=k47f,x=0,y=100,z=0,dx=8,dy=0,dz=8] run summon fox ~ ~4 ~ 0 0 minecraft:ageable_grow_up k47f",
+          "commandSha256": "ea09ab84949ed0d3914dd6cb9752f654941585aa7728ca65920b073297eb8e88",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -50,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -52,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 11,
+          "label": "G10-011",
+          "position": [
+            0,
+            -50,
+            5
+          ],
+          "dimension": 0,
+          "command": "effect @e[type=fox,name=k47f] resistance infinite 4 true",
+          "commandSha256": "89babbecb749384d6f1cae5ec9132e29a8ab8ff890b88d10d95416f63dcd8e1f",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -49,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -51,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 12,
+          "label": "G10-012",
+          "position": [
+            0,
+            -49,
+            5
+          ],
+          "dimension": 0,
+          "command": "effect @e[type=fox,name=k47f] instant_health infinite 4 true",
+          "commandSha256": "a7950b4b1b5329327e328fc91c59c2dc03023e4cc5d1ad7b06940371962917e6",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -48,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -50,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 13,
+          "label": "G10-013",
+          "position": [
+            0,
+            -48,
+            5
+          ],
+          "dimension": 0,
+          "command": "effect @e[type=fox,name=k47f] invisibility infinite 0 true",
+          "commandSha256": "db0d68b20c1b517efff2521f7496f62a5081dfa42c9e834a4538540118f14fc6",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -47,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -49,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 14,
+          "label": "G10-014",
+          "position": [
+            0,
+            -47,
+            5
+          ],
+          "dimension": 0,
+          "command": "effect @e[type=fox,name=k47f] slowness infinite 255 true",
+          "commandSha256": "2e998f204a35b0030833e84cd5155b16c29fce0fc1a5094b1b06fbeddc6b5923",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -46,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -48,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 15,
+          "label": "G10-015",
+          "position": [
+            0,
+            -46,
+            5
+          ],
+          "dimension": 0,
+          "command": "replaceitem entity @e[type=fox,name=k47f] slot.weapon.mainhand 0 gray_concrete 1",
+          "commandSha256": "74583ea4c06d076d316bbf451dcf805fc6cdf23e96adfd6275eda2aba43dcf79",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -45,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -47,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 16,
+          "label": "G10-016",
+          "position": [
+            0,
+            -45,
+            5
+          ],
+          "dimension": 0,
+          "command": "replaceitem entity @e[type=fox,name=k47f,x=0,y=100,z=0,dx=8,dy=2,dz=6] slot.weapon.mainhand 0 black_concrete 1",
+          "commandSha256": "de274b90e0f377410c94996f8ca3e5497cce1684831908e45d98e6d320095701",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -44,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -46,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 17,
+          "label": "G10-017",
+          "position": [
+            0,
+            -44,
+            5
+          ],
+          "dimension": 0,
+          "command": "replaceitem entity @e[type=fox,name=k47f,x=0,y=104,z=0,dx=8,dy=0,dz=0] slot.weapon.mainhand 0 acacia_planks 1",
+          "commandSha256": "994f05e0a5df5c96de6a5dd6c106d0bdd3b1ef4bc667d9b19911e4cd5b830507",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -43,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -45,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 18,
+          "label": "G10-018",
+          "position": [
+            0,
+            -43,
+            5
+          ],
+          "dimension": 0,
+          "command": "replaceitem entity @e[type=fox,name=k47f,x=0,y=104,z=2,dx=2,dy=0,dz=0] slot.weapon.mainhand 0 acacia_planks 1",
+          "commandSha256": "365d2cf6947b668344f5aacd08f36bce8cefcaf0920a158b5d9b9dd5a2363ac3",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -42,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -44,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 19,
+          "label": "G10-019",
+          "position": [
+            0,
+            -42,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @e[type=fox,name=k47f,x=0,y=100,z=0,dx=0,dy=4,dz=8] add k47x0",
+          "commandSha256": "f98303a1e22e4d07282700244c35300b8efa05c3b229cc8357d232a5a63cf211",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -41,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -43,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 20,
+          "label": "G10-020",
+          "position": [
+            0,
+            -41,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @e[type=fox,name=k47f,x=2,y=100,z=0,dx=0,dy=4,dz=8] add k47x1",
+          "commandSha256": "44c0b2643aa70eb386d3169bcf299fc5d6c6c81afb3086ad0196685b140a373b",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -40,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -42,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 21,
+          "label": "G10-021",
+          "position": [
+            0,
+            -40,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @e[type=fox,name=k47f,x=4,y=100,z=0,dx=0,dy=4,dz=8] add k47x2",
+          "commandSha256": "334bc167568fb7385b1ad9f5546898a6398c3dccd0e48aa59fc65a66598f642a",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -39,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -41,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 22,
+          "label": "G10-022",
+          "position": [
+            0,
+            -39,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @e[type=fox,name=k47f,x=6,y=100,z=0,dx=0,dy=4,dz=8] add k47x3",
+          "commandSha256": "3256e3f42c1eda096f7d8bd278940b03545a276e9a5e5841145b498875a97235",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -38,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -40,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 23,
+          "label": "G10-023",
+          "position": [
+            0,
+            -38,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @e[type=fox,name=k47f,x=8,y=100,z=0,dx=0,dy=4,dz=8] add k47x4",
+          "commandSha256": "8b49d51e5abcb6b185c46d75ca4de75ca977e541c9a51fff61e21787223bd234",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -37,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -39,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 24,
+          "label": "G10-024",
+          "position": [
+            0,
+            -37,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @e[type=fox,name=k47f,x=0,y=100,z=0,dx=8,dy=4,dz=0] add k47z0",
+          "commandSha256": "0d6bfdbbc00e7a99260060a63c545784391be7b9f279606ac9de3924a547dbfd",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -36,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -38,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 25,
+          "label": "G10-025",
+          "position": [
+            0,
+            -36,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @e[type=fox,name=k47f,x=0,y=100,z=2,dx=8,dy=4,dz=0] add k47z1",
+          "commandSha256": "85931e302c54d1b3eafda2a10fe2ec63a744f636213787e29f6f2410cfe5622c",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -35,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -37,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 26,
+          "label": "G10-026",
+          "position": [
+            0,
+            -35,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @e[type=fox,name=k47f,x=0,y=100,z=4,dx=8,dy=4,dz=0] add k47z2",
+          "commandSha256": "f970d556c52adbcb51a637e93081090fa97b8d6e62d41b9e77be66338af82527",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -34,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -36,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 27,
+          "label": "G10-027",
+          "position": [
+            0,
+            -34,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @e[type=fox,name=k47f,x=0,y=100,z=6,dx=8,dy=4,dz=0] add k47z3",
+          "commandSha256": "520c3cd5637af484e3e46a5a050b2042b356b2245cf97c6d61da8db227b2ba0e",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -33,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -35,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 28,
+          "label": "G10-028",
+          "position": [
+            0,
+            -33,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @e[type=fox,name=k47f,x=0,y=100,z=8,dx=8,dy=4,dz=0] add k47z4",
+          "commandSha256": "5e68c528e68e06480ada043caa489fa46f0ca7aa93ef119a3f2a833669e516e6",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -32,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -34,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 29,
+          "label": "G10-029",
+          "position": [
+            0,
+            -32,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @e[type=fox,name=k47f,x=0,y=100,z=0,dx=8,dy=0,dz=8] add k47y0",
+          "commandSha256": "d522acd7357c83772141f1d47522cc71345cf53a554306d6a28852fe500e76d2",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -31,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -33,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffe"
+        },
+        {
+          "order": 30,
+          "label": "G10-030",
+          "position": [
+            0,
+            -31,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @e[type=fox,name=k47f,x=0,y=102,z=0,dx=8,dy=0,dz=8] add k47y1",
+          "commandSha256": "bc348ce8de6496da10b8e754589c3b27ee010cabba6c216856ddca6f3c793782",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -30,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -32,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffe"
+        },
+        {
+          "order": 31,
+          "label": "G10-031",
+          "position": [
+            0,
+            -30,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @e[type=fox,name=k47f,x=0,y=104,z=0,dx=8,dy=0,dz=8] add k47y2",
+          "commandSha256": "9bb156095554146d75a75ab613fdd2315321d52575837dd00360c55a4b01b720",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -29,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -31,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffe"
+        },
+        {
+          "order": 32,
+          "label": "G10-032",
+          "position": [
+            0,
+            -29,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @e[type=fox,name=k47f] add k47f",
+          "commandSha256": "bf34fff8850a4a87f58d786ae3956fdc4d6cc784f76dd01c0c8d54118b5a74c8",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -28,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -30,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffe"
+        },
+        {
+          "order": 33,
+          "label": "G10-033",
+          "position": [
+            0,
+            -28,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute as @a[tag=k47p,c=1] at @s anchored eyes positioned ^ ^ ^2 run tp @e[type=fox,tag=k47f] ~ ~ ~ 0 0",
+          "commandSha256": "c789c0b5f20b6b115edcb15cb57bfefa50b8924f5a0ad41e796c970f76cab220",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            0,
+            -27,
+            5
+          ],
+          "conditionalCheckPosition": [
+            0,
+            -29,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffe"
+        }
+      ]
+    },
+    {
+      "id": "G11",
+      "title": "射击弹药与换弹逻辑",
+      "dimension": 0,
+      "startPosition": [
+        2,
+        -60,
+        5
+      ],
+      "startBlockName": "minecraft:repeating_command_block",
+      "startBlockType": "repeating",
+      "optional": false,
+      "referenceOnly": true,
+      "caution": "",
+      "count": 25,
+      "termination": {
+        "reason": "noCommandBlockAtNextPosition",
+        "targetPosition": [
+          2,
+          -35,
+          5
+        ]
+      },
+      "items": [
+        {
+          "order": 1,
+          "label": "G11-001",
+          "position": [
+            2,
+            -60,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute as @a[tag=k47p,c=1,tag=!休止] at @s anchored eyes run tp @e[type=snowball] ^ ^ ^",
+          "commandSha256": "7e164a9e059d8ce23c6a86907193c38c48b92f938a85c366c289b581d3512271",
+          "block": {
+            "type": "repeating",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:repeating_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -59,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -61,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": true,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 2,
+          "label": "G11-002",
+          "position": [
+            2,
+            -59,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute at @a[tag=k47p,c=1,tag=!休止] if entity @e[type=snowball] as @e[type=fox,tag=k47f,c=2] as @e[type=fox,tag=k47f,c=2] as @e[type=fox,tag=k47f,c=2] as @e[type=fox,tag=k47f,c=2] as @e[type=fox,tag=k47f,c=2] as @e[type=fox,tag=k47f,c=2] as @e[type=fox,tag=k47f,c=2] as @e[type=fox,tag=k47f,c=2] as @e[type=fox,tag=k47f,c=2] run execute as @e[type=snowball] at @s rotated as @a[tag=k47p,c=1] positioned ~-0.5 ~-0.5 ~-0.5 unless entity @e[type=!fox,type=!player,type=!snowball,dx=0,dy=0,dz=0] positioned ~0.5 ~0.5 ~0.5 run tp @s ^ ^ ^0.5 true",
+          "commandSha256": "90d08b9a6df62767c678b14e8d6bcba270ecbe424fe5f3a5598c5ccd1bedf1c1",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -58,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -60,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 3,
+          "label": "G11-003",
+          "position": [
+            2,
+            -58,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute at @a[tag=k47p,c=1,tag=!休止] at @e[type=snowball] positioned ~-0.5 ~-0.5 ~-0.5 run damage @e[type=!fox,type=!player,type=!snowball,dx=0,dy=0,dz=0,c=1] 11 projectile entity @a[tag=k47p,c=1]",
+          "commandSha256": "b369ec1adfd85fdad102efc34d06932042f516cadfafd6557108bd7fcf48bffe",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -57,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -59,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 4,
+          "label": "G11-004",
+          "position": [
+            2,
+            -57,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute at @a[tag=k47p,c=1,tag=!休止] at @e[type=snowball] run particle minecraft:basic_crit_particle ~ ~ ~",
+          "commandSha256": "bbd95df64afd0e84b70d02e8860028195a16ab2747923b2326c8ef52fe196ed0",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -56,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -58,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 5,
+          "label": "G11-005",
+          "position": [
+            2,
+            -56,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute if entity @e[type=snowball] run camerashake add @a[tag=k47p,tag=!休止] 0.1 0.3 rotational",
+          "commandSha256": "3461904b0493af680352e2b908c65ddc8ebe68ad5d22db5a0b59be4ad210f575",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -55,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -57,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 6,
+          "label": "G11-006",
+          "position": [
+            2,
+            -55,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute if entity @e[type=snowball] run scoreboard players set test fire 5",
+          "commandSha256": "d06206169b676f56036dbf27f8ba63e064087f632d710db0444731e1480989c1",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -54,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -56,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 7,
+          "label": "G11-007",
+          "position": [
+            2,
+            -54,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute if score test fire matches 1..6 run scoreboard players remove test fire 1",
+          "commandSha256": "ca5de1caedc1e8dfed42a60445b12ba7390fe5dad7c64e2cad8d2325d9d14808",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -53,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -55,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 8,
+          "label": "G11-008",
+          "position": [
+            2,
+            -53,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute if score test fire matches 1..6 run tag @a[tag=k47p,tag=!潜行,tag=!休止] add 回调",
+          "commandSha256": "32cc19dbdef16e3a52ffd357c87f32313f9d094c926f3573ac8c3363fe991ace",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -52,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -54,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 9,
+          "label": "G11-009",
+          "position": [
+            2,
+            -52,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute if score test fire matches 1..6 run tag @a[tag=k47p,tag=!潜行,tag=!休止] add testa",
+          "commandSha256": "ca043b8f3dc73d8d9d958ad480709f11fd4102a11c80565b203988570c161e9b",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -51,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -53,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 10,
+          "label": "G11-010",
+          "position": [
+            2,
+            -51,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute if entity @e[type=snowball] as @a[tag=k47p,tag=!休止] at @s run playsound mob.zombie.woodbreak @s ~ ~ ~ 1 1",
+          "commandSha256": "ae355004a63d872bd6a4d77bd6772289661eee3448019e4eda2373d05be32d0e",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -50,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -52,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 11,
+          "label": "G11-011",
+          "position": [
+            2,
+            -50,
+            5
+          ],
+          "dimension": 0,
+          "command": "stopsound @a[tag=k47p] random.bow",
+          "commandSha256": "24226b4be0d86f6eecf8a9cffdce95e43494dbd70a871eb739982ed1e820e744",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -49,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -51,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 12,
+          "label": "G11-012",
+          "position": [
+            2,
+            -49,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute if entity @e[type=snowball] as @a[scores={ammo=1..30},tag=!休止] run scoreboard players remove @s ammo 1",
+          "commandSha256": "89155399e8dad5c111575351c6f754ba4f74f48122e42480486b116f634173fb",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -48,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -50,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 13,
+          "label": "G11-013",
+          "position": [
+            2,
+            -48,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute if entity @e[type=snowball] as @a[scores={ammo=0..30},tag=!休止] run titleraw @s actionbar {\"rawtext\":[{\"translate\":\"%%3\",\"with\":{\"rawtext\":[{\"selector\":\"@s[scores={ammo=0..19}]\"},{\"selector\":\"@s[scores={ammo=0..9}]\"},{\"text\":\"§4\"},{\"text\":\"§6\"},{\"text\":\"§r\"}]}},{\"score\":{\"name\":\"@s\",\"objective\":\"ammo\"}}]}",
+          "commandSha256": "4ee94516e8b2d69fb6059cd94799c96885e587be893ce9f404832975b80a0264",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -47,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -49,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 14,
+          "label": "G11-014",
+          "position": [
+            2,
+            -47,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute if entity @e[type=snowball] as @a[scores={ammo=..0},tag=!休止] run scoreboard players set @s reload 1",
+          "commandSha256": "f6419dbd85558e534f97caca92f3c3c8cddae45c25dff4ac404043d29bac0d43",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -46,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -48,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 15,
+          "label": "G11-015",
+          "position": [
+            2,
+            -46,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute if entity @e[type=snowball] as @a[scores={ammo=..0},tag=!休止] run playanimation @e[type=fox,name=k47f,tag=k47f] animation.player.riding.arms none 0 \"v.k90=0;return 1;\" k47t22",
+          "commandSha256": "911097f333b7c76d72af23f7becb92c6ee0bba2fb5ea9a135cde17722cee7ef6",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -45,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -47,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 16,
+          "label": "G11-016",
+          "position": [
+            2,
+            -45,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute if entity @e[type=snowball] as @a[scores={ammo=..0},tag=!休止] run tag @s add 休止",
+          "commandSha256": "aa82221a799c8da0e0fd97d59d59d1425108b1fa8a0c128f5e22bf58731f5112",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -44,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -46,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 17,
+          "label": "G11-017",
+          "position": [
+            2,
+            -44,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a[scores={reload=1}] add 换弹",
+          "commandSha256": "20d39f5d0d3fa92f3003657eda0a76dbdd5582e53fb868d35ad6b062b38b9cbb",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -43,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -45,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 18,
+          "label": "G11-018",
+          "position": [
+            2,
+            -43,
+            5
+          ],
+          "dimension": 0,
+          "command": "scoreboard players add @a[scores={reload=1..}] reload 1",
+          "commandSha256": "29826b7de4b1210b86e87c9ecef9636ae43d7157a8731c18fe6172ecb5f597d3",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -42,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -44,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 19,
+          "label": "G11-019",
+          "position": [
+            2,
+            -42,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a[scores={reload=65..}] remove 休止",
+          "commandSha256": "f8122d7916d4964bb1188c6ba6e1a39ff830ce54d78eda1932579e23df1fa5f2",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -41,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -43,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 20,
+          "label": "G11-020",
+          "position": [
+            2,
+            -41,
+            5
+          ],
+          "dimension": 0,
+          "command": "title @a[scores={reload=65..}] actionbar 30",
+          "commandSha256": "6ecc8850b1fb1e7aec262e385ea96e96b3256f6a1e435d8e1574d25083557198",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -40,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -42,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 21,
+          "label": "G11-021",
+          "position": [
+            2,
+            -40,
+            5
+          ],
+          "dimension": 0,
+          "command": "scoreboard players set @a[scores={reload=65..}] ammo 30",
+          "commandSha256": "ccf36753c796512b5b19576f5e909d25a097556b5a156ea2092331ec63e06518",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -39,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -41,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 22,
+          "label": "G11-022",
+          "position": [
+            2,
+            -39,
+            5
+          ],
+          "dimension": 0,
+          "command": "tag @a[scores={reload=65..}] add testa",
+          "commandSha256": "af0683fd20e5b0ea0f2ef192fdbb858d74d89491e06394d36b6361ea1ef20eaa",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -38,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -40,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 23,
+          "label": "G11-023",
+          "position": [
+            2,
+            -38,
+            5
+          ],
+          "dimension": 0,
+          "command": "scoreboard players set @a[scores={reload=65..}] reload 0",
+          "commandSha256": "e0177d93f35d7a6da2b2fb9e5049039b0461af335c0077a286f682975d787ed8",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -37,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -39,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 24,
+          "label": "G11-024",
+          "position": [
+            2,
+            -37,
+            5
+          ],
+          "dimension": 0,
+          "command": "execute at @a[tag=k47p,c=1] run kill @e[type=snowball]",
+          "commandSha256": "a53be07e218ffd88802dee7a637793d19039defe6019dfd46ba771f4e8c060e8",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -36,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -38,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 25,
+          "label": "G11-025",
+          "position": [
+            2,
+            -36,
+            5
+          ],
+          "dimension": 0,
+          "command": "stopsound @a[tag=k47p] random.bow",
+          "commandSha256": "24226b4be0d86f6eecf8a9cffdce95e43494dbd70a871eb739982ed1e820e744",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            2,
+            -35,
+            5
+          ],
+          "conditionalCheckPosition": [
+            2,
+            -37,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        }
+      ]
+    },
+    {
+      "id": "G12",
+      "title": "全局掉落物清理与声音抑制",
+      "dimension": 0,
+      "startPosition": [
+        4,
+        -60,
+        5
+      ],
+      "startBlockName": "minecraft:repeating_command_block",
+      "startBlockType": "repeating",
+      "optional": true,
+      "referenceOnly": true,
+      "caution": "包含全世界掉落物/经验球清理；保持为可选原文参考。",
+      "count": 14,
+      "termination": {
+        "reason": "noCommandBlockAtNextPosition",
+        "targetPosition": [
+          4,
+          -46,
+          5
+        ]
+      },
+      "items": [
+        {
+          "order": 1,
+          "label": "G12-001",
+          "position": [
+            4,
+            -60,
+            5
+          ],
+          "dimension": 0,
+          "command": "kill @e[type=item]",
+          "commandSha256": "203b26713e8856b1ed730b74deef6d76f42dbe70bbe28e85f4afb282aa273c32",
+          "block": {
+            "type": "repeating",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:repeating_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            4,
+            -59,
+            5
+          ],
+          "conditionalCheckPosition": [
+            4,
+            -61,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": true,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 2,
+          "label": "G12-002",
+          "position": [
+            4,
+            -59,
+            5
+          ],
+          "dimension": 0,
+          "command": "kill @e[type=xp_orb]",
+          "commandSha256": "766f9f7c2432cf0a9dbc0dbfc603f5a5766d4892afe7836569dc8a3e807ada43",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            4,
+            -58,
+            5
+          ],
+          "conditionalCheckPosition": [
+            4,
+            -60,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 3,
+          "label": "G12-003",
+          "position": [
+            4,
+            -58,
+            5
+          ],
+          "dimension": 0,
+          "command": "stopsound @a[tag=k47p] random.bow",
+          "commandSha256": "24226b4be0d86f6eecf8a9cffdce95e43494dbd70a871eb739982ed1e820e744",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            4,
+            -57,
+            5
+          ],
+          "conditionalCheckPosition": [
+            4,
+            -59,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 4,
+          "label": "G12-004",
+          "position": [
+            4,
+            -57,
+            5
+          ],
+          "dimension": 0,
+          "command": "stopsound @a[tag=k47p] mob.fox.ambient",
+          "commandSha256": "9bfcb7031321d5e6ff32d269435d496e35cbf8a458e09d75b11504310bfa4506",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            4,
+            -56,
+            5
+          ],
+          "conditionalCheckPosition": [
+            4,
+            -58,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 5,
+          "label": "G12-005",
+          "position": [
+            4,
+            -56,
+            5
+          ],
+          "dimension": 0,
+          "command": "stopsound @a[tag=k47p] mob.fox.aggro",
+          "commandSha256": "0415e165d2b3d4bbc2afc5a896eff1de087c2f6ed92792885f237515165fd4f8",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            4,
+            -55,
+            5
+          ],
+          "conditionalCheckPosition": [
+            4,
+            -57,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 6,
+          "label": "G12-006",
+          "position": [
+            4,
+            -55,
+            5
+          ],
+          "dimension": 0,
+          "command": "stopsound @a[tag=k47p] mob.fox.bite",
+          "commandSha256": "89f9dc47ef953965027ab47375b559ed09bc0e74b8655b736d7fa7d59e7fe3f0",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            4,
+            -54,
+            5
+          ],
+          "conditionalCheckPosition": [
+            4,
+            -56,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 7,
+          "label": "G12-007",
+          "position": [
+            4,
+            -54,
+            5
+          ],
+          "dimension": 0,
+          "command": "stopsound @a[tag=k47p] mob.fox.death",
+          "commandSha256": "d5093233a84aab971b4f730119350595eae97c2d2a9c33eec5ff997b26312995",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            4,
+            -53,
+            5
+          ],
+          "conditionalCheckPosition": [
+            4,
+            -55,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 8,
+          "label": "G12-008",
+          "position": [
+            4,
+            -53,
+            5
+          ],
+          "dimension": 0,
+          "command": "stopsound @a[tag=k47p] mob.fox.eat",
+          "commandSha256": "e7b04a6eb684c200c5228bb52c43381b4b139d9c16de3de1935149795ea02c53",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            4,
+            -52,
+            5
+          ],
+          "conditionalCheckPosition": [
+            4,
+            -54,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 9,
+          "label": "G12-009",
+          "position": [
+            4,
+            -52,
+            5
+          ],
+          "dimension": 0,
+          "command": "stopsound @a[tag=k47p] mob.fox.hurt",
+          "commandSha256": "d0b8499ab3bef7267aaa30d8071781dd26d07cc5bbd5be5ff04972070ea1cd6f",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            4,
+            -51,
+            5
+          ],
+          "conditionalCheckPosition": [
+            4,
+            -53,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 10,
+          "label": "G12-010",
+          "position": [
+            4,
+            -51,
+            5
+          ],
+          "dimension": 0,
+          "command": "stopsound @a[tag=k47p] mob.fox.screech",
+          "commandSha256": "f4038212faeea6cf23e7cc412e948f1ca62497857929cd2c74a871f6f09e813c",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            4,
+            -50,
+            5
+          ],
+          "conditionalCheckPosition": [
+            4,
+            -52,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 11,
+          "label": "G12-011",
+          "position": [
+            4,
+            -50,
+            5
+          ],
+          "dimension": 0,
+          "command": "stopsound @a[tag=k47p] mob.fox.sleep",
+          "commandSha256": "dacb93dd007d3bed20f85da81d6b25cdbec30f148470b2b5492da160cddd55fd",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            4,
+            -49,
+            5
+          ],
+          "conditionalCheckPosition": [
+            4,
+            -51,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 12,
+          "label": "G12-012",
+          "position": [
+            4,
+            -49,
+            5
+          ],
+          "dimension": 0,
+          "command": "stopsound @a[tag=k47p] mob.fox.sniff",
+          "commandSha256": "591ef63c30ae534acf89c2d3c34baa74f6c72976af2ad71f89b078d4ad8e825b",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            4,
+            -48,
+            5
+          ],
+          "conditionalCheckPosition": [
+            4,
+            -50,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffc"
+        },
+        {
+          "order": 13,
+          "label": "G12-013",
+          "position": [
+            4,
+            -48,
+            5
+          ],
+          "dimension": 0,
+          "command": "stopsound @a[tag=k47p] mob.fox.spit",
+          "commandSha256": "d5a4935d2e788c19941100a6aea8aa11f945795e244b49a31bbfde3acfbea3ee",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            4,
+            -47,
+            5
+          ],
+          "conditionalCheckPosition": [
+            4,
+            -49,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        },
+        {
+          "order": 14,
+          "label": "G12-014",
+          "position": [
+            4,
+            -47,
+            5
+          ],
+          "dimension": 0,
+          "command": "stopsound @a[tag=k47p] entity.fox.teleport",
+          "commandSha256": "cf7c0eb6b3b2145ec0b325db873d3fe6c18b1aa8c206c9b9db24818976f2caaa",
+          "block": {
+            "type": "chain",
+            "conditional": false,
+            "redstone": false,
+            "delay": 0
+          },
+          "blockName": "minecraft:chain_command_block",
+          "facingDirection": 1,
+          "facingName": "up",
+          "nextPosition": [
+            4,
+            -46,
+            5
+          ],
+          "conditionalCheckPosition": [
+            4,
+            -48,
+            5
+          ],
+          "auto": true,
+          "poweredAtSave": false,
+          "executeOnFirstTick": false,
+          "sourceKeyHex": "000000000000000031",
+          "sourceSubchunkKeyHex": "00000000000000002ffd"
+        }
+      ]
+    }
+  ],
+  "structureTemplatesExcluded": 16
+}

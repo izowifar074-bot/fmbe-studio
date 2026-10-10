@@ -1,0 +1,166 @@
+{
+  "id": "g17",
+  "budget": 55,
+  "prompt": "制作一把 G17 风格游戏手枪，黑灰材质，具有明显倾斜握把、完整扳机护圈孔、滑套与刻槽、准星照门和独立弹匣底板。套筒作为 bolt 动作组，整个弹匣作为 magazine 动作组，支持参考系统的三姿态和换弹。用少量狐狸保留可辨认的结构层次，提交完整造型和命令。",
+  "jobId": "6fb57b11-a612-481c-9547-dadc25af9f03",
+  "status": "completed",
+  "usage": [
+    {
+      "prompt_tokens": 2213,
+      "completion_tokens": 79,
+      "total_tokens": 2292,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 1408,
+      "prompt_cache_miss_tokens": 805
+    },
+    {
+      "prompt_tokens": 3081,
+      "completion_tokens": 77,
+      "total_tokens": 3158,
+      "prompt_tokens_details": {
+        "cached_tokens": 2176
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 9
+      },
+      "prompt_cache_hit_tokens": 2176,
+      "prompt_cache_miss_tokens": 905
+    },
+    {
+      "prompt_tokens": 9081,
+      "completion_tokens": 18000,
+      "total_tokens": 27081,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 18000
+      },
+      "prompt_cache_hit_tokens": 3072,
+      "prompt_cache_miss_tokens": 6009
+    },
+    {
+      "prompt_tokens": 27102,
+      "completion_tokens": 3193,
+      "total_tokens": 30295,
+      "prompt_tokens_details": {
+        "cached_tokens": 26880
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 26880,
+      "prompt_cache_miss_tokens": 222
+    },
+    {
+      "prompt_tokens": 30451,
+      "completion_tokens": 17649,
+      "total_tokens": 48100,
+      "prompt_tokens_details": {
+        "cached_tokens": 30208
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 14557
+      },
+      "prompt_cache_hit_tokens": 30208,
+      "prompt_cache_miss_tokens": 243
+    }
+  ],
+  "events": [
+    {
+      "at": "2026-10-10T17:52:05.120Z",
+      "stage": "skill_loaded",
+      "message": "已自动加载 fmbe-guns 技能与几何接口",
+      "detail": {
+        "skill": "fmbe-guns",
+        "baselineBlocks": 124
+      }
+    },
+    {
+      "at": "2026-10-10T17:52:05.120Z",
+      "stage": "model_call",
+      "message": "DeepSeek 正在设计 / 修正（第 1 轮）"
+    },
+    {
+      "at": "2026-10-10T17:52:06.380Z",
+      "stage": "reference_read",
+      "message": "模型读取资料：overview"
+    },
+    {
+      "at": "2026-10-10T17:52:06.381Z",
+      "stage": "reference_read",
+      "message": "模型读取资料：geometry"
+    },
+    {
+      "at": "2026-10-10T17:52:06.381Z",
+      "stage": "model_call",
+      "message": "DeepSeek 正在设计 / 修正（第 2 轮）"
+    },
+    {
+      "at": "2026-10-10T17:52:07.716Z",
+      "stage": "reference_read",
+      "message": "模型读取资料：runtime"
+    },
+    {
+      "at": "2026-10-10T17:52:07.717Z",
+      "stage": "reference_read",
+      "message": "模型读取资料：model"
+    },
+    {
+      "at": "2026-10-10T17:52:07.718Z",
+      "stage": "model_call",
+      "message": "DeepSeek 正在设计 / 修正（第 3 轮）"
+    },
+    {
+      "at": "2026-10-10T17:53:21.018Z",
+      "stage": "model_call",
+      "message": "DeepSeek 正在设计 / 修正（第 4 轮）"
+    },
+    {
+      "at": "2026-10-10T17:53:31.229Z",
+      "stage": "compiling",
+      "message": "编译几何、重建狐狸编号与换弹绑定"
+    },
+    {
+      "at": "2026-10-10T17:53:31.268Z",
+      "stage": "validation_failed",
+      "message": "当前 5×5×5 身份编码最多支持 125 只狐狸；实际需要 240 只狐狸，预算 55；R001 表达式 46096 字符，超过当前导出上限 32000"
+    },
+    {
+      "at": "2026-10-10T17:53:31.268Z",
+      "stage": "model_call",
+      "message": "DeepSeek 正在设计 / 修正（第 5 轮）"
+    },
+    {
+      "at": "2026-10-10T17:54:37.571Z",
+      "stage": "compiling",
+      "message": "编译几何、重建狐狸编号与换弹绑定"
+    },
+    {
+      "at": "2026-10-10T17:54:37.744Z",
+      "stage": "candidate_ready",
+      "message": "候选已通过编译：44 只狐狸",
+      "detail": {
+        "entities": 44,
+        "parts": 44
+      }
+    },
+    {
+      "at": "2026-10-10T17:54:37.968Z",
+      "stage": "preview_observed",
+      "message": "已把实际命令预览交给模型检查"
+    },
+    {
+      "at": "2026-10-10T17:54:38.281Z",
+      "stage": "completed",
+      "message": "枪械已生成并载入，命令包已准备好"
+    }
+  ],
+  "name": "G17 风格游戏手枪",
+  "entities": 44
+}
